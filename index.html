@@ -9,41 +9,40 @@
 </head>
 
 <body>
-  <div class="py-5 text-white" style="background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(&quot;https://static.pingendo.com/cover-bubble-dark.svg&quot;); background-position: center center, center center; background-size: cover, cover; background-repeat: repeat, repeat;">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <ul class="nav">
-            <li class="nav-item">
-              <a href="#" class="nav-link active">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link active">Education &amp; Experience</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link active">Skills</a>
-            </li>
-            <li class="nav-item dropdown" style="" >
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Portfolio</a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Computer Science</a>
-                <a class="dropdown-item" href="#">Design &amp; Illustration</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Separated link</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link active">Contact</a>
-            </li>
-          </ul>
-        </div>
+
+  <div id="navbar" class="navbar">
+    <a class="active" href="">Home</a>
+    <a href="">Education &amp; Experience</a>
+    <a href="">Skills</a>
+    <div class="dropdown" id="portfolio" onmouseover="showDd()" onmouseout="hideDd()">
+      <button class="dropbtn" id="dropbtn">Portfolio 
+        <i class="fa fa-caret-right"></i>
+      </button>
+      <div class="dropdown-list" id="dropdown-list" hidden>
+        <a href="#">IT Projects</a>
+        <a href="#">Design & Illustration</a>
       </div>
+      <!--<div class="dropdown-content">
+        <a href="#">IT Projects</a>
+        <a href="#">Design & Illustration</a>
+      </div>-->
     </div>
+    <a href="" style="float:right">Contact</a>
+  </div>
+
+  <script>
+    function showDd() {
+      document.getElementById("dropdown-list").removeAttribute("hidden");
+    }
+    function hideDd() {
+      document.getElementById("dropdown-list").setAttribute("hidden","");
+    }
+  </script>
+
+  <div style="background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(&quot;https://static.pingendo.com/cover-bubble-dark.svg&quot;); background-position: center center, center center; background-size: cover, cover; background-repeat: repeat, repeat;">
     <div class="container">
       <div class="row">
         <div class="col-lg-5 p-0">
-          <div class="embed-responsive embed-responsive-4by3"> <video src="https://static.pingendo.com/video-placeholder.mp4" class="embed-responsive-item" type="video/mp4" controls="controls"> Your browser does not support HTML5 video. </video> </div>
         </div>
         <div class="p-5 col-lg-7 d-flex flex-column justify-content-center">
           <h3 class="display-4 mb-3">I'm Laura Scoccianti</h3>
@@ -52,6 +51,9 @@
       </div>
     </div>
   </div>
+    
+  
+
   <div class="py-5">
     <div class="container">
       <div class="row">
@@ -69,7 +71,7 @@
                 <li style="">
                   <h6 class="event-date"> September 2016 - Today </h6><br>
                   <a target="_blank" href="https://www.totoprayogo.com/#">
-                    <h5>Bachelor Degree in Computer Science</h5>
+                    <h5>Bachelor's Degree in Computer Science</h5>
                   </a>
                   <p>University of Trento</p>
                 </li>
@@ -216,6 +218,7 @@
       <div class="row">
         <div class="col-md-12"></div>
       </div>
+      <br><br><br>
       <div class="row">
         <div class="col-md-12">
           <h1 class="">Design Skills</h1>
@@ -327,6 +330,26 @@
       </div>
     </div>
   </div>
+
+
+  <script>
+    window.onscroll = function() {stickynavbar()};
+    
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    
+    function stickynavbar() {
+      if (window.pageYOffset >= sticky+1) {
+        navbar.setAttribute("class", "");
+        navbar.setAttribute("class", "navbar sticky");
+      } else {
+        navbar.setAttribute("class", "navbar");
+      }
+    }
+  </script>
+
+
+
 </body>
 
 </html>
