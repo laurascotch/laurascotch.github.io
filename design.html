@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="css\design.css" type="text/css">
+  <link rel="stylesheet" href="portfolio.css" type="text/css">
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+
+<body>
+
+        <div id="navbar" class="navbar" syle="height: 52px">
+          <a class="active" href="index.html" style="float:left">Home</a>
+          <div class="dropdown" id="portfolio" onmouseover="showDd()" onmouseout="hideDd()">
+            <button class="dropbtn" id="dropbtn" style="float:left">Portfolio 
+              <i class="fa fa-caret-right"></i>
+            </button>
+            <div class="dropdown-list" id="dropdown-list" hidden>
+              <a href="#">IT Projects</a>
+              <a href="#">Design & Illustration</a>
+            </div>
+            <!--<div class="dropdown-content">
+              <a href="#">IT Projects</a>
+              <a href="#">Design & Illustration</a>
+            </div>-->
+          </div>
+          <a href="" style="float:right">Contact</a>
+        </div>
+      
+        <script>
+          function showDd() {
+            document.getElementById("dropdown-list").removeAttribute("hidden");
+          }
+          function hideDd() {
+            document.getElementById("dropdown-list").setAttribute("hidden","");
+          }
+        </script>
+      
+      
+      
+      
+      
+        <script>
+          window.onscroll = function() {stickynavbar()};
+          
+          var navbar = document.getElementById("navbar");
+          var sticky = navbar.offsetTop;
+          
+          function stickynavbar() {
+            if (window.pageYOffset >= sticky+1) {
+              navbar.setAttribute("class", "");
+              navbar.setAttribute("class", "navbar sticky");
+            } else {
+              navbar.setAttribute("class", "navbar");
+            }
+          }
+        </script>
+      
+  
+      <!-- E-Agle TRT work section -->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="accordian">
+              <ul>
+              <li>
+                <div class="image_title">
+                  <a href="#">KungFu Panda</a>
+                </div> 
+                <a href="#">
+                  <img src="http://thecodeplayer.com/uploads/media/3yiC6Yq.jpg"/>
+                </a>
+              </li>
+              <li>
+                <div class="image_title">
+                  <a href="#">Toy Story 2</a>
+                </div>
+                <a href="#">
+                  <img src="http://thecodeplayer.com/uploads/media/40Ly3VB.jpg"/>
+                </a>
+              </li>
+              <li>
+                <div class="image_title">
+                  <a href="#">Wall-E</a>
+                </div>
+                <a href="#">
+                  <img src="http://thecodeplayer.com/uploads/media/00kih8g.jpg"/>
+                </a>
+              </li>
+              <li>
+                <div class="image_title">
+                  <a href="#">Up</a>
+                </div>
+                <a href="#">
+                  <img src="http://thecodeplayer.com/uploads/media/2rT2vdx.jpg"/>
+                </a>
+              </li>
+              <li>
+                <div class="image_title">
+                  <a href="#">Cars 2</a>
+                </div>
+                <a href="#">
+                  <img src="http://thecodeplayer.com/uploads/media/8k3N3EL.jpg"/>
+                </a>
+              </li>
+            </ul>
+          </div>
+          </div>
+          <div class="col-md-4">
+            <h2>Brand identity for E-Agle TRTeam</h2>
+            <p>E-Agle Trento Racing Team is the Formula SAE team of University of Trento (Italy). The goal of the team is to develop a an electric racing car every year.</p>
+          </div>
+        </div>
+      </div>
+      
+      
+  
+
+      
+</body>
+
+</html>
