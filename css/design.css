@@ -2217,6 +2217,11 @@ input[type="button"].btn-block {
   padding-top: 60px;
 }
 
+.coll-content {
+  max-height: 0;
+  transition: max-height 0.4s ease-out;
+}
+
 
 
 

@@ -70,12 +70,15 @@
         <div class="container">
 
           <!-- E-Agle TRT work section -->
+          <div class="collapsible">
           <div class="row">
             <div class="col-md-12">
               <h1 text-align="center">E-Agle TRT Brand Identity</h5>
               <p class="lead" >E-Agle Trento Racing Team is the Formula SAE team of the University of Trento.</p>
             </div>
           </div>
+        </div>
+          <div class="coll-content" hidden>
           <div class="row">
             <div class="col-md-8">
               <div class="carousel slide" data-ride="carousel" id="carousel-etrtbrochure">
@@ -151,6 +154,7 @@
                 </div>
               </div>
             </div>
+            </div> <!--end collapsible-->
 
         </div>
       </div>
@@ -197,7 +201,24 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
       
-  
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+          content.setAttribute("hidden","");
+        } else {
+          content.removeAttribute("hidden");
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
 
       
 </body>
