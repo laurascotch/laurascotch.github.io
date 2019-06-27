@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css\design.css" type="text/css">
 
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" crossorigin="anonymous">
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -73,7 +74,7 @@
           <div class="collapsible">
           <div class="row">
             <div class="col-md-12">
-              <h1 text-align="center">E-Agle TRT Brand Identity</h5>
+              <h1 text-align="center"><span class="fa fa-caret-right"></span> E-Agle TRT Brand Identity</h5>
               <p class="lead" >E-Agle Trento Racing Team is the Formula SAE team of the University of Trento.</p>
             </div>
           </div>
@@ -212,9 +213,11 @@
         if (content.style.maxHeight){
           content.style.maxHeight = null;
           content.setAttribute("hidden","");
+          $(this).find(".fa").removeClass("fa fa-caret-down").addClass("fa fa-caret-right");
         } else {
           content.removeAttribute("hidden");
           content.style.maxHeight = content.scrollHeight + "px";
+          $(this).find(".fa").removeClass("fa fa-caret-right").addClass("fa fa-caret-down");
         } 
       });
     }
