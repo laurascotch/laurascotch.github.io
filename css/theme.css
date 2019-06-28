@@ -2128,13 +2128,13 @@ input[type="button"].btn-block {
       transition: none; } }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
   .bgimg {
     background-image: linear-gradient(to right,rgba(254, 254, 254, 0.75), rgba(254, 254, 254, 0.25), rgba(254, 254, 254, 0.00)), url("https://i.ibb.co/P6pD0VB/laura-head-mobile.jpg");
   }
 }
 
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 751px) {
   .bgimg {
     background-image: linear-gradient(to right,rgba(254, 254, 254, 0.75), rgba(254, 254, 254, 0.25), rgba(254, 254, 254, 0.00)), url("https://i.ibb.co/j3rtvb3/laura-head.jpg");
   }
