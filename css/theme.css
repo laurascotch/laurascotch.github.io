@@ -2128,17 +2128,19 @@ input[type="button"].btn-block {
       transition: none; } }
 
 
-.bgimg {
-  @media (min-width: 801px){
-    /* The image used for desktop*/
-    background-image: linear-gradient(to right,rgba(254, 254, 254, 0.75), rgba(254, 254, 254, 0.25), rgba(254, 254, 254, 0.00)), url("https://i.ibb.co/j3rtvb3/laura-head.jpg");
-  }
-
-  @media (max-width: 800px){
-    /* The image used for mobile*/
+@media screen and (max-width: 600px) {
+  .bgimg {
     background-image: linear-gradient(to right,rgba(254, 254, 254, 0.75), rgba(254, 254, 254, 0.25), rgba(254, 254, 254, 0.00)), url("https://i.ibb.co/P6pD0VB/laura-head-mobile.jpg");
   }
-  
+}
+
+@media screen and (min-width: 601px) {
+  .bgimg {
+    background-image: linear-gradient(to right,rgba(254, 254, 254, 0.75), rgba(254, 254, 254, 0.25), rgba(254, 254, 254, 0.00)), url("https://i.ibb.co/j3rtvb3/laura-head.jpg");
+  }
+}
+      
+.bgimg {
       
   /* Full height */
   height: 50%; 
