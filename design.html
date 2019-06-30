@@ -19,49 +19,32 @@
 
 <body>
 
-        <div id="navbar" class="navbar" syle="height: 52px">
-          <a class="active" href="index.html" style="float:left">Home</a>
-          <div class="dropdown" id="portfolio" onmouseover="showDd()" onmouseout="hideDd()">
-            <button class="dropbtn" id="dropbtn" style="float:left">Portfolio 
-              <i class="fa fa-caret-right"></i>
-            </button>
-            <div class="dropdown-list" id="dropdown-list" hidden>
-              <a href="#">IT Projects</a>
-              <a href="#">Design & Illustration</a>
-            </div>
-            <!--<div class="dropdown-content">
-              <a href="#">IT Projects</a>
-              <a href="#">Design & Illustration</a>
-            </div>-->
-          </div>
-          <a href="" style="float:right">Contact</a>
+    <div id="navibar" class="navibar">
+      <a class="active" href="index.html">About me</a>
+      <div class="dropdown" id="portfolio">
+        <button class="dropbtn" id="dropbtn">Portfolio 
+          <i class="fa fa-caret-right"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">IT Projects</a>
+          <a href="./design.html">Design & Illustration</a>
         </div>
-      
-        <script>
-          function showDd() {
-            document.getElementById("dropdown-list").removeAttribute("hidden");
-          }
-          function hideDd() {
-            document.getElementById("dropdown-list").setAttribute("hidden","");
-          }
-        </script>
-      
-      
-      
-      
-      
+      </div>
+      <a href="index.html#contacts" style="float:right">Contact</a>
+    </div>
+
         <script>
           window.onscroll = function() {stickynavbar()};
           
-          var navbar = document.getElementById("navbar");
+          var navbar = document.getElementById("navibar");
           var sticky = navbar.offsetTop;
           
           function stickynavbar() {
             if (window.pageYOffset >= sticky+1) {
               navbar.setAttribute("class", "");
-              navbar.setAttribute("class", "navbar sticky");
+              navbar.setAttribute("class", "navibar sticky");
             } else {
-              navbar.setAttribute("class", "navbar");
+              navbar.setAttribute("class", "navibar");
             }
           }
         </script>
@@ -266,7 +249,7 @@
         </div>
       </div>
 
-      
+    
 
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
