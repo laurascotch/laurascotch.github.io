@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
+  <link rel="stylesheet" href=".\css\itshow.css" type="text/css">
+
+</head>
+
+
+<body>
+
+    <div id="navibar" class="navibar">
+      <a class="active" href="index.html">About me</a>
+      <div class="dropdown" id="portfolio">
+        <button class="dropbtn" id="dropbtn">Portfolio 
+          <i class="fa fa-caret-right"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">IT Projects</a>
+          <a href="#creativepf">Design & Illustration</a>
+        </div>
+      </div>
+      <a href="#contacts" style="float:right">Contact</a>
+    </div>
+
+        <script>
+          window.onscroll = function() {stickynavbar()};
+          
+          var navbar = document.getElementById("navibar");
+          var sticky = navbar.offsetTop;
+          
+          function stickynavbar() {
+            if (window.pageYOffset >= sticky+1) {
+              navbar.setAttribute("class", "");
+              navbar.setAttribute("class", "navibar sticky");
+            } else {
+              navbar.setAttribute("class", "navibar");
+            }
+          }
+        </script>
+
+
+  <div class="bgimg" id="creativepf">
+    <div class="container">
+      <div class="row" style="height: auto; max-height:100%">
+          <div class="p-5 col-lg-12 d-flex flex-column justify-content-center text-left">
+              <div class="row">
+                <div class="col-md-8">
+                  <h1 class="display-4 mt-3" style="color: white;">Recent Projects</h1>
+                  <h5 style="color: white;">Remarkable projects I developed since starting university</h5>
+                </div>
+              </div>
+            </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img class="card-img" src="https://i.ibb.co/Drr9kgR/rockemsockem.jpg" alt="">
+            <div class="card-img-overlay">
+                <div class="proj-title">
+                  <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <h2 style="color:#222">Rock 'Em Sock 'Em</h2>
+                  </div>
+                </div>
+                <div class="proj-detail">
+                <div class="row">
+                    <div class="col-md-8">
+                      <h5 class="card-title">Rock 'Em Sock 'Em</h5>
+                      <p class="card-text">Funny experiment to better learn about JavaFX</p><a class="btn btn-outline-primary" href="./projects/boxeJgame.html">Show me more</a>
+                    </div>
+                    <div class="col-md-4"><span class="badge badge-secondary">Java</span></div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img class="card-img" src="https://static.pingendo.com/cover-moon.svg" alt="Card image">
+            <div class="card-img-overlay">
+                    <div class="proj-title">
+                      <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                        <h2 style="color:#222">Upcoming project</h2>
+                      </div>
+                    </div>
+                    <div class="proj-detail">
+                    <div class="row">
+                        <div class="col-md-8">
+                          <h5 class="card-title">Work In Progress</h5>
+                          <p class="card-text">Working on a cool project right now!</p><button class="btn btn-outline-primary" href="#" disabled>See you soon!</button>
+                        </div>
+                        <div class="col-md-4"><span class="badge badge-secondary">???</span></div>
+                      </div>
+                    </div>
+                </div>
+          </div>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+      <div class="py-5" style="background-color: #222;" id="contacts">
+          <div class="container">
+            <br><br>
+                <h1 class="display-4" style="color:#ddd">Contacts</h1>
+                <p style="color:white;"><span class="fa fa-map-marker-alt text-light fa-lg mx-2"></span> Currently based in: Trento, Italy<br>
+                  <a href="mailto:laura.scoccianti@gmail.com" style="color:#e84855;"><span class="fa fa-envelope text-light fa-lg mx-2"></span> laura.scoccianti@gmail.com</a><br>
+                  <a href="https://t.me/laurascotch" style="color:#e84855;"><span class="fa fa-paper-plane text-light fa-lg mx-2"></span> Telegram: @laurascotch</a>
+                <br>
+                    <a href="https://github.com/laurascotch" style="color:#e84855;">
+                      <span class="fa fa-github text-light fa-lg mx-2"></span> /laurascotch
+                    </a> <br>
+                    <a href="https://www.instagram.com/laurascotch/" style="color:#e84855;">
+                      <span class="fa fa-instagram text-light fa-lg mx-2"></span> @laurascotch
+                    </a> </p>
+                <br><br>
+          </div>
+        </div>
+    
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+          content.setAttribute("hidden","");
+          $(this).find(".fa").removeClass("fa fa-caret-down").addClass("fa fa-caret-right");
+        } else {
+          content.removeAttribute("hidden");
+          content.style.maxHeight = content.scrollHeight + "px";
+          $(this).find(".fa").removeClass("fa fa-caret-right").addClass("fa fa-caret-down");
+        } 
+      });
+    }
+    </script>
+
+      
+</body>
+
+</html>
