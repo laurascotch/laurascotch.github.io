@@ -1,448 +1,365 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="css\theme.css" type="text/css">
-  <style type="text/css">
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
+<title>Laura Scoccianti</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<!-- 
+Impulse Template
+http://www.templatemo.com/tm-469-impulse
+-->
+<!-- STYLESHEET CSS FILES -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" type="text/css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/animate.min.css">
+<link rel="stylesheet" href="css/nivo-lightbox.css">
+<link rel="stylesheet" href="css/nivo_themes/default/default.css">
+<link rel="stylesheet" href="css/templatemo-style.css">
 </head>
-
-<body>
-
-  <div id="navbar" class="navbar">
-    <a class="active" href="#home">Home</a>
-    <a href="#eduexp">Education &amp; Experience</a>
-    <a href="#skillslink">Skills</a>
-    <div class="dropdown" id="portfolio" onmouseover="showDd()" onmouseout="hideDd()">
-      <button class="dropbtn" id="dropbtn">Portfolio 
-        <i class="fa fa-caret-right"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="./ITportfolio.html">IT Projects</a>
-        <a href="./design.html">Design & Illustration</a>
-      </div>
-    </div>
-    <a href="#contacts" style="float:right">Contact</a>
-  </div>
-
-  <script>
-    function showDd() {
-      document.getElementById("dropdown-list").removeAttribute("hidden");
-    }
-    function hideDd() {
-      document.getElementById("dropdown-list").setAttribute("hidden","");
-    }
-  </script>
-
-
-<div class="bgimg" id="home">
+<body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+<!-- preloader section -->
+<div class="preloader">
+  <div class="sk-spinner sk-spinner-rotating-plane"></div>
+</div>
+<!-- home section -->
+<section id="home">
   <div class="container">
-    <div class="row" style="height: auto; max-height:100%">
-      <div class="p-5 col-lg-7 d-flex flex-column justify-content-center">
-        <br>
-        <h3 class="display-4 mb-3"><br><br><br>I'm Laura Scoccianti</h3>
-        <p class="lead mb-0">I am a Computer Science undergraduate from Italy.<br>Visual arts, music and pop culture are my fascination.<br><br><br><br><br><br></p>
-      </div>
-      <div class="col-lg-5 p-0">
-      </div>
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <h1 class="wow bounceInDown rotate">I'm Laura Scoccianti</h1>
+        <p class="wow bounce">I am a Computer Science undergraduate from Italy.
+          Visual arts, music and pop culture are my fascination.</p>
+        <a href="#intro" class="btn btn-default smoothScroll">GET STARTED</a></div>
+    </div>
+  </div>
+</section>
+<!-- navigation section -->
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon icon-bar"></span> <span class="icon icon-bar"></span> <span class="icon icon-bar"></span> </button>
+      <a href="#" class="navbar-brand">Laura</a></div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#home" class="smoothScroll">HOME</a></li>
+        <li><a href="#intro" class="smoothScroll">EDUCATION & EXPERIENCE</a></li>
+        <li><a href="#work" class="smoothScroll">SKILLS</a></li>
+        <li><a href="#portfolio" class="smoothScroll">PORTFOLIO</a></li>
+        <li><a href="#contact" class="smoothScroll">CONTACT</a></li>
+      </ul>
     </div>
   </div>
 </div>
-
-    
-  <br><br>
-
-  <div id="eduexp" style="padding-top: 50px; margin-top: -50px;"><br><br></div>
-  <div class="py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <h1 class="display-4">Education</h1>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-10 offset-md-1">
-              <ul class="timeline">
-                <li style="">
-                  <h6 class="event-date"> September 2016 - Today </h6><br>
-                  <a target="_blank" href="https://www.totoprayogo.com/#">
-                    <h5>Bachelor's Degree in Computer Science</h5>
-                  </a>
-                  <p>University of Trento</p>
-                </li>
-                <li>
-                  <h6 class="event-date"> September 2011 - July 2016 </h6><br>
-                  <a href="#">
-                    <h5>Diploma di Maturità Scientifica - High School diploma</h5>
-                  </a>
-                  <p>I.I.S. Corridoni-Campana - Liceo Scientifico Federico e Muzio Campana, Osimo (AN)<br>Final mark: 100/100 with merit</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-        </div>
-        <div class="col-md-6">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <h1 class="display-4">Experience</h1>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-10 offset-md-1">
-              <ul class="timeline">
-                <li>
-                  <h6 class="event-date"> March 2019 - Today </h6><br>
-                  <a target="_blank" href="https://www.totoprayogo.com/#">
-                    <h5>IT Internship</h5>
-                  </a>
-                  <p><b><i>Fondazione Bruno Kessler (FBK)</i></b><br><i>Trento, Italy</i></p>
-                  <p> Currently working on ACROSS project. The aim is to develop an ad hoc communication protocol between wearable devices for climbers and mountaineering skiers. </p>
-                </li>
-                <li>
-                  <h6 class="event-date"> November 2017 - Today </h6><br>
-                  <a href="#">
-                    <h5>Graphic designer &amp; UI/UX designer</h5>
-                  </a>
-                  <p contenteditable="true"><b><i>E-Agle Trento Racing Team</i></b><br><i>Trento, Italy</i><br><br>I am a member of marketing team and I take care of the brand identity.<br>During the 2017/'18 season I participated as UI designer and front-end developer in the development of the new steering wheel software, which won the Lamborghini Award for Best Human-Machine Interaction Systen in FSAE international competition at Varano de' Melegari (July 2018).<br></p>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="skillslink" style="padding-top: 50px; margin-top: -50px;"><br><br></div>
-  <div class="py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class="display-4 text-center">Skills</h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class="">Coding Skills</h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="lx-bars-chart lx-ml-25">
-            <div class="lx-bar" data-max="100">
-              <p>C++</p>
-              <div class="lx-bar-bg">
-                <div class="lx-bar-fill" style="width: 95%;">
-                </div>
-              </div>
-            </div>
-          </div>
-          <br>
-        </div>
-        <div class="col-md-6">
-          <div class="lx-bars-chart lx-ml-25">
-            <div class="lx-bar" data-max="100">
-              <p>Java</p>
-              <div class="lx-bar-bg">
-                <div class="lx-bar-fill" style="width: 85%;">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <br>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="lx-bars-chart lx-ml-25">
-            <div class="lx-bar" data-max="100">
-              <p>HTML/CSS</p>
-              <div class="lx-bar-bg">
-                <div class="lx-bar-fill" style="width: 77%;">
-                </div>
-              </div>
-            </div>
-          </div>
-          <br>
-        </div>
-        <div class="col-md-6">
-          <div class="lx-bars-chart lx-ml-25">
-            <div class="lx-bar" data-max="100">
-              <p>Python</p>
-              <div class="lx-bar-bg">
-                <div class="lx-bar-fill" style="width: 65%;">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <br>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="lx-bars-chart lx-ml-25">
-            <div class="lx-bar" data-max="100">
-              <p>SQL</p>
-              <div class="lx-bar-bg">
-                <div class="lx-bar-fill" style="width: 70%;">
-                </div>
-              </div>
-            </div>
-          </div>
-          <br>
-        </div>
-        <div class="col-md-6">
-          <div class="lx-bars-chart lx-ml-25">
-            <div class="lx-bar" data-max="100">
-              <p>JavaScript</p>
-              <div class="lx-bar-bg">
-                <div class="lx-bar-fill" style="width: 70%;">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <br>
-      </div>
-      <div class="row">
-        <div class="col-md-12"></div>
-      </div>
-      <br><br>
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class="">Design Skills</h1>
-        </div>
-      </div>
-      <br>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="lx-bars-chart lx-ml-25">
-            <div class="lx-bar" data-max="100">
-              <p>Adobe Photoshop</p>
-              <div class="lx-bar-bg">
-                <div class="lx-bar-fill" style="width: 98%;">
-                </div>
-              </div>
-            </div>
-          </div>
-          <br>
-        </div>
-        <div class="col-md-6">
-          <div class="lx-bars-chart lx-ml-25">
-            <div class="lx-bar" data-max="100">
-              <p>Adobe Illustrator</p>
-              <div class="lx-bar-bg">
-                <div class="lx-bar-fill" style="width: 98%;">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <br>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="lx-bars-chart lx-ml-25">
-            <div class="lx-bar" data-max="100">
-              <p>Adobe InDesign</p>
-              <div class="lx-bar-bg">
-                <div class="lx-bar-fill" style="width: 90%;">
-                </div>
-              </div>
-            </div>
-          </div>
-          <br>
-        </div>
-        <div class="col-md-6">
-          <div class="lx-bars-chart lx-ml-25">
-            <div class="lx-bar" data-max="100">
-              <p>Free-Hand Drawing (Digital &amp; Traditional)</p>
-              <div class="lx-bar-bg">
-                <div class="lx-bar-fill" style="width: 90%;">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <br>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="lx-bars-chart lx-ml-25">
-            <div class="lx-bar" data-max="100">
-              <p>Prototyping</p>
-              <div class="lx-bar-bg">
-                <div class="lx-bar-fill" style="width: 85%;">
-                </div>
-              </div>
-            </div>
-          </div>
-          <br>
-        </div>
-        <div class="col-md-6">
-          <div class="lx-bars-chart lx-ml-25">
-            <div class="lx-bar" data-max="100">
-              <p>Print Design</p>
-              <div class="lx-bar-bg">
-                <div class="lx-bar-fill" style="width: 90%;">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <br>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="lx-bars-chart lx-ml-25">
-            <div class="lx-bar" data-max="100">
-              <p>Brand Identity Design</p>
-              <div class="lx-bar-bg">
-                <div class="lx-bar-fill" style="width: 87%;">
-                </div>
-              </div>
-            </div>
-          </div>
-          <br>
-        </div>
-        <div class="col-md-6">
-          <div class="lx-bars-chart lx-ml-25">
-            <div class="lx-bar" data-max="100">
-              <p>Social Media</p>
-              <div class="lx-bar-bg">
-                <div class="lx-bar-fill" style="width: 80%;">
-                </div>
-              </div>
-            </div>
-          </div>
-          <br>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <div id="hobbieslink" style="padding-top: 50px; margin-top: -50px;"><br><br></div>
-  <div class="py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class="display-4 text-center">Hobbies & interests</h1>
-        </div>
-      </div>
-      <div class="row">
-      <div class="col-md-3">
-          <div class="cuadro_intro_hover " style="overflow: hidden; background-size: cover; background-position: center; background-image: url('https://i.ibb.co/jJSdBd5/sports.jpg);">
-          <div class="caption">
-            <div class="blur"></div>
-            <div class="caption-text">
-              <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">Sports</h3>
-              <p>I'm a runner and I like skiing and trekking.</p>
-            </div>
-          </div>
-        </div>
-    </div>
-
-    <div class="col-md-3">
-            <div class="cuadro_intro_hover " style="overflow: hidden; background-size: cover; background-position: center; background-image: url('https://i.ibb.co/NVVf0C0/draw.jpg');">
-          <div class="caption">
-            <div class="blur"></div>
-            <div class="caption-text">
-              <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">Arts</h3>
-              <p>I took private drawing lessons when I was a child. I'm good at using pencils, watercolors, acrylics.<br>I'm self-taught in digital art.</p>
-            </div>
-          </div>
-        </div>
-    </div>
+<!-- intro section -->
+<section id="intro">
+  <div class="container">
+    <div class="row">
       
-    <div class="col-md-3">
-            <div class="cuadro_intro_hover " style="overflow: hidden; background-size: cover; background-position: center; background-image: url('https://i.ibb.co/x6JDJcV/music.jpg');">
-          <div class="caption">
-            <div class="blur"></div>
-            <div class="caption-text">
-              <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">Music</h3>
-              <p>I can play the piano - I studied it for 10 years.</p>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <h4>EDUCATION</h4>
+                    </div>
+                  <div class="row">
+                    <div class="col-md-10">
+                      <ul class="timeline">
+                        <li style="">
+                          <h6 class="event-date"> September 2016 - Today </h6><br>
+                            <h5>Bachelor's Degree in Computer Science</h5>
+                          <p>University of Trento</p>
+                        </li>
+                        <li>
+                          <h6 class="event-date"> September 2011 - July 2016 </h6><br>
+                            <h5>Diploma di Maturità Scientifica - High School diploma</h5>
+                          <p>I.I.S. Corridoni-Campana - Liceo Scientifico Federico e Muzio Campana, Osimo (AN)<br>Final mark: 100/100 with merit</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+                  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <h4>EXPERIENCE</h4>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                      <ul class="timeline">
+                        <li>
+                          <h6 class="event-date"> March 2019 - June 2019 </h6><br>
+                            <h5>IT Internship</h5>
+                          <p><b><i>Fondazione Bruno Kessler (FBK)</i></b><br><i>Trento, Italy</i></p>
+                          <p> I worked on ACROSS project. The aim is to develop an ad hoc communication protocol between wearable devices for climbers and mountaineering skiers. </p>
+                        </li>
+                        <li>
+                          <h6 class="event-date"> November 2017 - Today </h6><br>
+                            <h5>Graphic designer &amp; UI/UX designer</h5>
+                          <p contenteditable="true"><b><i>E-Agle Trento Racing Team</i></b><br><i>Trento, Italy</i><br><br>I am a member of marketing team and I take care of the brand identity.<br>During the 2017/'18 season I participated as UI designer and front-end developer in the development of the new steering wheel software, which won the Lamborghini Award for Best Human-Machine Interaction Systen in FSAE international competition at Varano de' Melegari (July 2018).<br></p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+                  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-    </div>
       
-    <div class="col-md-3">
-            <div class="cuadro_intro_hover " style="overflow: hidden; background-size: cover; background-position: center; background-image: url('https://i.ibb.co/LkVkBXH/photos.jpg');">
-          <div class="caption">
-            <div class="blur"></div>
-            <div class="caption-text">
-              <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">Photography</h3>
-              <p>I always bring my camera with me.</p>
-            </div>
+        
+    </div>
+  </div>
+</section>
+<!-- skills section -->
+<section id="work">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-4 title">
+        <h2>Skills</h2>
+        <hr>
+        <p>I developed my coding skills during the degree programme in Computer Science at University of Trento.<br>
+          On the other hand, I'm self-taught on almost everything I know about design: it's one of my biggest passions.
+        </p>
+      </div>
+      <div class="col-md-8 col-sm-8">
+        <div class="col-md-6 col-sm-6 bg-black"> <i class="fa fa-code"></i>
+          <h3>Coding</h3>
+          <div class="codingskills">
+              
+                  <div class="col-md-12">
+                    <div class="lx-bars-chart lx-ml-25">
+                      <div class="lx-bar" data-max="100">
+                        <p>C++</p>
+                        <div class="lx-bar-bg">
+                          <div class="lx-bar-fill" style="width: 95%;">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="lx-bars-chart lx-ml-25">
+                      <div class="lx-bar" data-max="100">
+                        <p>Java</p>
+                        <div class="lx-bar-bg">
+                          <div class="lx-bar-fill" style="width: 85%;">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="lx-bars-chart lx-ml-25">
+                      <div class="lx-bar" data-max="100">
+                        <p>HTML/CSS</p>
+                        <div class="lx-bar-bg">
+                          <div class="lx-bar-fill" style="width: 77%;">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="lx-bars-chart lx-ml-25">
+                      <div class="lx-bar" data-max="100">
+                        <p>Python</p>
+                        <div class="lx-bar-bg">
+                          <div class="lx-bar-fill" style="width: 65%;">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="lx-bars-chart lx-ml-25">
+                      <div class="lx-bar" data-max="100">
+                        <p>SQL</p>
+                        <div class="lx-bar-bg">
+                          <div class="lx-bar-fill" style="width: 70%;">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="lx-bars-chart lx-ml-25">
+                      <div class="lx-bar" data-max="100">
+                        <p>JavaScript</p>
+                        <div class="lx-bar-bg">
+                          <div class="lx-bar-fill" style="width: 70%;">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                  </div>
+
+
           </div>
         </div>
-    </div>
+        <div class="col-md-6 col-sm-6 bg-red"> <i class="fa fa-bezier-curve"></i>
+          <h3>Design & illustration</h3>
+          <div class="designskills">
 
-    </div>
-  </div>
-  </div>
-  <br><br>
+              <div class="col-md-12">
+                  <div class="lx-bars-chart lx-ml-25">
+                    <div class="lx-bar" data-max="100">
+                      <p>Adobe Illustrator</p>
+                      <div class="lx-bar-bg">
+                        <div class="lxb-bar-fill" style="width: 98%;">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lx-bars-chart lx-ml-25">
+                    <div class="lx-bar" data-max="100">
+                      <p>Adobe Photoshop</p>
+                      <div class="lx-bar-bg">
+                        <div class="lxb-bar-fill" style="width: 98%;">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lx-bars-chart lx-ml-25">
+                    <div class="lx-bar" data-max="100">
+                      <p>Adobe inDesign</p>
+                      <div class="lx-bar-bg">
+                        <div class="lxb-bar-fill" style="width: 90%;">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lx-bars-chart lx-ml-25">
+                    <div class="lx-bar" data-max="100">
+                      <p>Free-Hand Drawing (Digital & Traditional)</p>
+                      <div class="lx-bar-bg">
+                        <div class="lxb-bar-fill" style="width: 90%;">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lx-bars-chart lx-ml-25">
+                    <div class="lx-bar" data-max="100">
+                      <p>Prototyping</p>
+                      <div class="lx-bar-bg">
+                        <div class="lxb-bar-fill" style="width: 77%;">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lx-bars-chart lx-ml-25">
+                    <div class="lx-bar" data-max="100">
+                      <p>Brand Identity Design</p>
+                      <div class="lx-bar-bg">
+                        <div class="lxb-bar-fill" style="width: 85%;">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+                </div>
 
-
-  <div class="py-5 text-white" style="background-color: #222;" id="contacts">
-    <div class="container">
-      <br><br>
-      <div class="row">
-        <div class="col-md-12 text-center align-self-center p-4">
-          <h1 class="display-4 text-center" style="color:#ddd">Contacts</h1>
-          <p class="mb-5" style="color:#ddd"><i class="d-block fa fa-map-marker-alt text-light fa-lg mx-2"></i>Currently based in: Trento, Italy<br><a href="mailto:laura.scoccianti@gmail.com"><i class="d-block fa fa-envelope text-light fa-lg mx-2"></i> laura.scoccianti@gmail.com</a><br><a href="https://t.me/laurascotch"><i class="d-block fa fa-paper-plane text-light fa-lg mx-2"></i> Telegram: @laurascotch</a></p>
-          <div class="row">
-            <div class="col-md-12 d-flex align-items-center justify-content-around"> <a href="https://github.com/laurascotch">
-                <i class="d-block fa fa-github text-light fa-lg mx-2"></i> /laurascotch
-              </a> <br> <a href="https://www.instagram.com/laurascotch/">
-                <i class="d-block fa fa-instagram text-light fa-lg mx-2"></i> @laurascotch
-              </a>  </div>
           </div>
-          <br><br><br><br>
-        </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- hobbies section -->
+<section id="team">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8 ">
+          <h2>Hobbies & Interests</h2>
+          <hr>
+          <p>Something more about me.</p>
+        </div>
+      </div>
+        <div class="row">
+        <div class="col-md-3 col-sm-3 col-xs-6 wow fadeIn" data-wow-delay="0.9s"><img src="https://i.ibb.co/jJSdBd5/sports.jpg" class="img-responsive" alt="team img">
+          <div class="team-des">
+            <h4>Sports</h4>
+            <h6>I'm a runner and I like skiing and trekking.<br>I'm passionate about motorsports (F1 and Formula E)</h6>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-6 wow fadeIn" data-wow-delay="0.9s"><img src="https://i.ibb.co/NVVf0C0/draw.jpg" class="img-responsive" alt="team img">
+          <div class="team-des">
+            <h4>Arts</h4>
+            <h6>I took private drawing lessons when I was a child. I'm good with pencils, watercolors, acrylics.
+                <br>I'm self-taught in digital art.</h6>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-6 wow fadeIn" data-wow-delay="1.3s"><img src="https://i.ibb.co/x6JDJcV/music.jpg" class="img-responsive" alt="team img">
+          <div class="team-des">
+            <h4>Music</h4>
+            <h6>I can play the piano. <br> I took lessons for 10 years and I got a Diploma in Music Theory and Solfeggio.</h6>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-6 wow fadeIn" data-wow-delay="1.6s"><img src="https://i.ibb.co/LkVkBXH/photos.jpg" class="img-responsive" alt="team img">
+          <div class="team-des">
+            <h4>Photography</h4>
+            <h6>I always bring my camera with me.<br>You can see my best shots on Instagram!</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+
+
+
+
+<!-- portfolio section -->
+<div id="portfolio">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8 title">
+          <h2>Portfolio</h2>
+          <hr>
+          <p>Are you looking for coder-Laura or designer-Laura?</p>
+        </div>
+        <div class="col-md-12 col-sm-12"></div>
+        <div class="col-md-6 col-sm-6 wow fadeIn" data-wow-delay="0.6s"><a href="https://laurascotch.github.io/ITportfolio.html" data-lightbox-gallery="portfolio-gallery"><img src="https://i.ibb.co/NNRYv3H/ITpr.jpg" alt="portfolio img"></a></div>
+        <div class="col-md-6 col-sm-6 wow fadeIn" data-wow-delay="0.6s"><a href="https://laurascotch.github.io/design.html" data-lightbox-gallery="portfolio-gallery"><img src="https://i.ibb.co/wM8NphQ/illde.jpg" alt="portfolio img"></a></div>
       </div>
     </div>
   </div>
 
 
 
-  <script>
-    window.onscroll = function() {stickynavbar()};
-    
-    var navbar = document.getElementById("navbar");
-    var sticky = navbar.offsetTop;
-    
-    function stickynavbar() {
-      if (window.pageYOffset >= sticky+1) {
-        navbar.setAttribute("class", "");
-        navbar.setAttribute("class", "navbar sticky");
-      } else {
-        navbar.setAttribute("class", "navbar");
-      }
-    }
-  </script>
 
+<!-- footer section -->
+<footer id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <h2 class="wow fadeIn" data-wow-delay="0.9s">Contacts</h2>
 
-
+        <p><i class="fa fa-map-marker-alt"> Currently based in: Trento, Italy</i><br><a href="mailto:laura.scoccianti@gmail.com" style="color: white;"><i class="d-block fa fa-envelope text-light fa-lg mx-2"></i> laura.scoccianti@gmail.com</a></p>
+<br>
+        <ul class="social-icon">
+          <li><a href="https://t.me/laurascotch" class="fa fa-paper-plane wow bounceIn" data-wow-delay="0.9s"></a></li>
+          <li><a href="https://github.com/laurascotch" class="fab fa-github wow bounceIn" data-wow-delay="0.9s"></a></li>
+          <li><a href="https://www.instagram.com/laurascotch/" class="fab fa-instagram wow bounceIn" data-wow-delay="0.9s"></a></li>
+          <!--<li><a href="#" class="fa fa-behance wow bounceIn" data-wow-delay="0.9s"></a></li>-->
+        </ul>
+      </div>
+      <div class="col-md-12 col-sm-12 copyright">
+        <h6>Copyright © 2019 Laura Scoccianti 
+        
+        | Template by <a target="_blank" rel="nofollow" href="http://www.templatemo.com/tm-469-impulse">Impulse Design</a></h6>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- JAVASCRIPT JS FILES --> 
+<script src="js/jquery.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/nivo-lightbox.min.js"></script> 
+<script src="js/smoothscroll.js"></script> 
+<script src="js/jquery.sticky.js"></script> 
+<script src="js/jquery.parallax.js"></script> 
+<script src="js/wow.min.js"></script> 
+<script src="js/custom.js"></script>
 </body>
-
 </html>
