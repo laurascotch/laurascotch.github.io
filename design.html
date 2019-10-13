@@ -157,7 +157,7 @@
           modalImg.src = event.target.src;
           captionText.innerHTML += event.target.dataset.description;
           console.log(event.target.dataset.behance);
-          captionText.innerHTML = event.target.dataset.description + "<br><br><a href=\"" + event.target.dataset.behance + "\" id=\"fullproj\" class=\"btn btn-primary btn-lg\" style=\"background: #e84855;\" role=\"button\"><span class=\"fab fa-behance\"> See this project on Behance</span></a>"
+          captionText.innerHTML = event.target.dataset.description + "<br><br><a href=\"" + event.target.dataset.behance + "\" target=\"_new\" id=\"fullproj\" class=\"btn btn-primary btn-lg\" style=\"background: #e84855;\" role=\"button\"><span class=\"fab fa-behance\"> See this project on Behance</span></a>"
         }
 
         // Get the <span> element that closes the modal

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="../css/theme.css" type="text/css">
+
+
+  <style>
+  
+    .card-img-top {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+  </style>
+
+
+</head>
+
+<body>
+
+
+    <div id="navbar" class="navbar">
+      <a class="active" href="../ITportfolio.html"><span class="fa fa-caret-left">  Back to portfolio</span></a>
+      <a href="../index.html" style="float:right">Home</a>
+    </div>
+          
+    <script>
+        window.onscroll = function() {stickynavbar()};
+                    
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+                    
+        function stickynavbar() {
+          if (window.pageYOffset >= sticky+1) {
+            navbar.setAttribute("class", "");
+            navbar.setAttribute("class", "navbar sticky");
+          } else {
+            navbar.setAttribute("class", "navbar");
+          }
+        }
+    </script>
+
+
+<div class="bgimgdegree" id="creativepf">
+    <div class="container">
+      <div class="row" style="height: auto; max-height:100%">
+          <div class="p-5 col-lg-12 d-flex flex-column justify-content-center text-left">
+              <div class="row">
+                <div class="col-md-8">
+                  <h1 class="display-4 mt-3" style="color: white;"><br><br>My Bachelor's Degree Thesis</h1>
+                  <h5 style="color: white;"><b>Studio e sviluppo di un protocollo di comunicazione per servizi non verbali per dispositivi "wearable"</b><br>
+                    <i>Development of a communication protocol for wearable devices for non verbal communication</i><br><br></h5>
+                </div>
+              </div>
+            </div>
+      </div>
+    </div>
+  </div>
+
+
+  <br><br>
+  
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card text-center"> <img class="card-img-top" src="https://i.ibb.co/FW02MZ1/componenti-s.jpg" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <!--<a class="btn btn-link" href="https://github.com/laurascotch/rock-em-sock-em"><i class="fa fa-github fa-fw fa-1x py-1"></i> Find this project on GitHub!</a>-->
+          <h3 class="">Abstract</h3>
+          <p class=""> The aim of the project, which was developed during the internship at Fondazione Bruno Kessler (Trento), is to develop a network of wearable devices in support of basic communication between climbers.<br> Someone before me had started to work on the project, achieving a one-one communication (like walkie-talkies). The main objective of my work was to overcome the limitations of standard radios, by developing a protocol able to achieve message relaying between devices.<br> Such modifications to the existing software triggered a phase of re-design of the hardware and of human-machine interaction.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <h3>The importance of communication in climbing</h3>
+          <p>Communication has a fundamental importance in many activities. Verbal communication is considered the easiest and fastest, but this isn't always true.<br>The biggest difficulties involve the distance, the presence of physical obstacles or of some particular noisy events between speakers.<br><br>A real life example of these problems can be observed in climbing. In this sport, communication plays a key role in coordinating belaying operations between climbers. <br></p>
+          <h4>Existing solutions</h4>
+          <p>
+            A common approach for nonverbal communication between climbers is the use of rope tugs. Unfortunately, this system introduces a significant amount of ambiguity.<br>
+            Radios can be used too, but they have some drawbacks like weight and costs. More over, they couldn't be able to cover long distances or to deliver a good transmission clarity if there's a huge rock obstacle between the communicating devices.
+          </p>
+          <p>Speaking about smartphones (and smartwatches), the main problem is that many climbing environments don't have adequate telephone or internet/4G coverage.</p>
+          <p><i>If you want to know more about communication in climbing, I suggest you read <a href="https://americanalpineclub.org/resources-blog/2017/1/19/4xm1fcsag6b7xqf1p1w1qp7vdpp1ha">this article</a>.</i></p>
+        </div>
+        <div class="col-md-4"><img class="card-img-top" src="https://i.ibb.co/Bg05vqx/passamex-01.png" style="height: 30rem; width: auto;" alt="Card image cap"><div class="card-body text-center">
+            <p class="" style="font-size:8; font-style:italic;">One of the main problems with radios is the impossibility to communicate between A and C because of the rock obstacle. The developed protocol enables the communication between them by using a third device (B) as an intermediate hop in the network.</p>
+          </div></div>
+      </div>
+      <div class="row">
+        <div class="col-md-4"><img class="card-img-top" src="https://i.ibb.co/Y7bY3LL/diag-rx.png" style="height: 30rem; width: auto;" alt="Card image cap">
+          <div class="card-body text-center">
+            <p class="card-text"></p>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <h3 class="">Ad hoc protocol - Main features</h3>
+          <p class="">The protocol, which guarantees message relaying, is based upon a sequence number controlled flooding mechanism. The picture shows the flow diagram of the algorithm used for retransmissions. </p>
+          <p>Every node of the network keeps a counter (sequence) that is incremented at each message sent. Every node also keeps a data structure in which it saves the pair &lt;source_ID, sequence_number&gt;, where the sequence number is the last one received from that particular source. When a devices receives a message, checks if the destination ID is equal to its own ID, than checks for the sequence number to be newer that the last from the source device and decides if the message needs to be displayed, retransmitted in broadcast (after a random time of maximum 500ms), or dropped.<br><b>More details can be found in the full PDF and the end of the page (which is written in Italian... for now).</b></p>
+        </div>
+      </div>
+      <div align="center">
+      <h2>Full document of my Bachelor's Degree thesis - Italian</h2>
+      <embed src= "scoccianti_laura_laurea_2019.pdf" style="width: 70vw; height: 80vh">
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
