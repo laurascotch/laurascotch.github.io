@@ -1,0 +1,235 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>GuidaCorso</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+
+
+:root { --side-bar-bg-color: #fafafa; --control-text-color: #777; }
+html { font-size: 16px; }
+body { font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; color: rgb(51, 51, 51); line-height: 1.6; }
+#write { max-width: 860px; margin: 0px auto; padding: 30px 30px 100px; }
+#write > ul:first-child, #write > ol:first-child { margin-top: 30px; }
+a { color: rgb(65, 131, 196); }
+h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; }
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor { text-decoration: none; }
+h1 tt, h1 code { font-size: inherit; }
+h2 tt, h2 code { font-size: inherit; }
+h3 tt, h3 code { font-size: inherit; }
+h4 tt, h4 code { font-size: inherit; }
+h5 tt, h5 code { font-size: inherit; }
+h6 tt, h6 code { font-size: inherit; }
+h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+h3 { font-size: 1.5em; line-height: 1.43; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1em; }
+h6 { font-size: 1em; color: rgb(119, 119, 119); }
+p, blockquote, ul, ol, dl, table { margin: 0.8em 0px; }
+li > ol, li > ul { margin: 0px; }
+hr { height: 2px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; overflow: hidden; box-sizing: content-box; }
+li p.first { display: inline-block; }
+ul, ol { padding-left: 30px; }
+ul:first-child, ol:first-child { margin-top: 0px; }
+ul:last-child, ol:last-child { margin-bottom: 0px; }
+blockquote { border-left: 4px solid rgb(223, 226, 229); padding: 0px 15px; color: rgb(119, 119, 119); }
+blockquote blockquote { padding-right: 0px; }
+table { padding: 0px; word-break: initial; }
+table tr { border-top: 1px solid rgb(223, 226, 229); margin: 0px; padding: 0px; }
+table tr:nth-child(2n), thead { background-color: rgb(248, 248, 248); }
+table tr th { font-weight: bold; border-width: 1px 1px 0px; border-top-style: solid; border-right-style: solid; border-left-style: solid; border-top-color: rgb(223, 226, 229); border-right-color: rgb(223, 226, 229); border-left-color: rgb(223, 226, 229); border-image: initial; border-bottom-style: initial; border-bottom-color: initial; text-align: left; margin: 0px; padding: 6px 13px; }
+table tr td { border: 1px solid rgb(223, 226, 229); text-align: left; margin: 0px; padding: 6px 13px; }
+table tr th:first-child, table tr td:first-child { margin-top: 0px; }
+table tr th:last-child, table tr td:last-child { margin-bottom: 0px; }
+.CodeMirror-lines { padding-left: 4px; }
+.code-tooltip { box-shadow: rgba(0, 28, 36, 0.3) 0px 1px 1px 0px; border-top: 1px solid rgb(238, 242, 242); }
+.md-fences, code, tt { border: 1px solid rgb(231, 234, 237); background-color: rgb(248, 248, 248); border-radius: 3px; padding: 2px 4px 0px; font-size: 0.9em; }
+code { background-color: rgb(243, 244, 244); padding: 0px 2px; }
+.md-fences { margin-bottom: 15px; margin-top: 15px; padding-top: 8px; padding-bottom: 6px; }
+.md-task-list-item > input { margin-left: -1.3em; }
+@media print {
+  html { font-size: 13px; }
+  table, pre { break-inside: avoid; }
+  pre { overflow-wrap: break-word; }
+}
+.md-fences { background-color: rgb(248, 248, 248); }
+#write pre.md-meta-block { padding: 1rem; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border: 0px; border-radius: 3px; color: rgb(119, 119, 119); margin-top: 0px !important; }
+.mathjax-block > .code-tooltip { bottom: 0.375rem; }
+.md-mathjax-midline { background: rgb(250, 250, 250); }
+#write > h3.md-focus::before { left: -1.5625rem; top: 0.375rem; }
+#write > h4.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h5.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h6.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+.md-image > .md-meta { border-radius: 3px; padding: 2px 0px 0px 4px; font-size: 0.9em; color: inherit; }
+.md-tag { color: rgb(167, 167, 167); opacity: 1; }
+.md-toc { margin-top: 20px; padding-bottom: 20px; }
+.sidebar-tabs { border-bottom: none; }
+#typora-quick-open { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); }
+#typora-quick-open-item { background-color: rgb(250, 250, 250); border-color: rgb(254, 254, 254) rgb(229, 229, 229) rgb(229, 229, 229) rgb(238, 238, 238); border-style: solid; border-width: 1px; }
+.on-focus-mode blockquote { border-left-color: rgba(85, 85, 85, 0.12); }
+header, .context-menu, .megamenu-content, footer { font-family: "Segoe UI", Arial, sans-serif; }
+.file-node-content:hover .file-node-icon, .file-node-content:hover .file-node-open-state { visibility: visible; }
+.mac-seamless-mode #typora-sidebar { background-color: var(--side-bar-bg-color); }
+.md-lang { color: rgb(180, 101, 77); }
+.html-for-mac .context-menu { --item-hover-bg-color: #E6F0FE; }
+#md-notification .btn { border: 0px; }
+.dropdown-menu .divider { border-color: rgb(229, 229, 229); }
+
+
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><h3><a name="tech@nest-presenta" class="md-header-anchor"></a><span>Tech@NEST presenta</span></h3><h1><a name="graphic@nest" class="md-header-anchor"></a><span>Graphic@NEST</span></h1><h5><a name="corso-di-grafica-per-principianti-e-curiosi" class="md-header-anchor"></a><span>Corso di grafica per principianti e curiosi</span></h5><h6><a name="insegnante:-dott.ssa-laura-scoccianti" class="md-header-anchor"></a><span>Insegnante: Dott.ssa Laura Scoccianti</span></h6><p><span>Il corso si articola in 5 lezioni di due ore l&#39;una e vuole fornire una solida base per approcciarsi al mondo della grafica e della realizzazione di contenuti multimediali, dalla realizzazione di una brand identity all&#39;editing fotografico.</span></p><p><span>I software utilizzati durante il corso sono Adobe </span><strong><span>Illustrator</span></strong><span> e Adobe </span><strong><span>Photoshop</span></strong><span>.</span></p><h2><a name="lezione-1" class="md-header-anchor"></a><span>Lezione 1</span></h2><h2><a name="vector-vs-raster" class="md-header-anchor"></a><span>Vector VS Raster</span></h2><p><span>La prima cosa da imparare è la differenza tra grafica vettoriale e grafica raster. </span></p><p><span>La grafica </span><strong><span>vettoriale</span></strong><span> si basa sulla costruzione di forme mediante formule matematiche. Questo significa che tutte le creazioni in questo formato possono essere illimitatamente scalate senza mai incorrere in problemi di risoluzione. </span>
+<span>Questo tipo di realizzazione grafica è quindi particolarmente indicata per la creazione di loghi, icone e in generale ogni elemento che necessiti di essere stampato o mostrato in grandi dimensioni.</span></p><p><span>La grafica </span><strong><span>raster</span></strong><span>, al contrario, è basata sui singoli pixel. Un&#39;immagine raster, come ad esempio una qualsiasi foto, contiene una quantità di informazione molto più elevata di un&#39;immagine vettoriale, sia come dettagli che in termini di profondità del colore. Questo tipo di immagine si presta per fotografie (e post-produzione), mock-ups e in generale per la creazione di contenuti digitali. </span></p><p><span>Come facilmente immaginabile, un file di un immagine raster occupa molto più spazio sul disco di uno vettoriale, proprio a causa della mole di informazioni che contiene.</span></p><p><img src='https://i.ibb.co/2Y9VdDZ/rastervsvector1.jpg' alt='RasterVSVector' referrerPolicy='no-referrer' /></p><p>&nbsp;</p><h2><a name="adobe-illustrator:-introduzione" class="md-header-anchor"></a><span>Adobe Illustrator: Introduzione</span></h2><p><span>Illustrator è purosangue di casa Adobe per la realizzazione di grafica vettoriale. È il software più completo disponibile sul mercato, ma purtroppo non è affatto economico.</span></p><blockquote><p><code>Alternative gratuite a Illustrator</code>
+<span>Sicuramente è da tenerein considerazione InkScape</span></p></blockquote><h3><a name="workspace" class="md-header-anchor"></a><span>Workspace</span></h3><p><span>Iniziamo esplorando la schermata principale di Illustrator. </span>
+<img src='https://i.ibb.co/9hg4gp9/mainscreen.png' alt='' referrerPolicy='no-referrer' /></p><p><span>Per prima cosa, utilizzando il menu a tendina in alto a destra (vicino alla barra di ricerca), selezioniamo &quot;Essenziali&quot;. Questo imposterà il menù degli strumenti con tutti tools più comunemente utilizzati.</span></p><p><span>I menu sui lati destro e sinistro si chiamano </span><code>Toolbar</code><span>. In quella a sinistra troviamo tutti gli strumenti (li descriveremo presto), mentre sulla destra troviamo una serie di menu di opzioni e azioni rapide.</span></p><p><span>Il menu in alto contiene tutte le voci presenti nelle </span><code>toolbars</code><span> e altre funzionalità più avanzate. Sotto al menu principale troviamo la barra delle opzioni, che ci permette di impostare le proprietà dei tracciati e di alcuni strumenti.</span></p><h4><a name="creazione-di-un-nuovo-documento" class="md-header-anchor"></a><span>Creazione di un nuovo documento</span></h4><p><span>Procediamo a creare un nuovo documento. Dal menu in alto, </span><code>File &gt; Nuovo...</code><span> oppure, da tastiera </span><code>Ctrl+N</code><span> (Windows, per Mac dovrebbe essere sufficiente rimpiazzare </span><code>Ctrl</code><span> con </span><code>cmd</code><span>).</span>
+<span>Nella finestra di dialogo possiamo inserire il nome del file (potremo farlo al salvataggio in ogni caso), decidere quante tavole utilizzare (modificabile in seguito) e scegliere la dimensione della tavola. Una volta pronti, facciamo click su </span><code>OK</code><span>.</span></p><h4><a name="salvataggio-di-un-documento" class="md-header-anchor"></a><span>Salvataggio di un documento</span></h4><p><span>Esistono due opzioni principali di salvataggio: </span><strong><span>salva</span></strong><span> (più veloce) e </span><strong><span>salva con nome</span></strong><span>. Entrambe si trovano nel menu </span><code>File</code><span> o, rispettivamente, </span><code>Ctrl+S</code><span> e </span><code>Ctrl+Shift+S</code><span>.</span></p><h4><a name="esportazione-di-un-documento" class="md-header-anchor"></a><span>Esportazione di un documento</span></h4><p><span>Abbiamo diverse opzioni per esportare un documento di Illustrator, in base all’uso che vogliamo farne. Per mantenere le proprietà vettoriali, dovremo usare uno dei formati disponibili in </span><strong><span>Salva con nome...</span></strong><span> (</span><code>PDF</code><span> è il più “universale”, </span><code>SVG</code><span> è utilizzabile sul web). Se invece abbiamo bisogno di esportare un’immagine </span><em><span>raster</span></em><span> di quello che abbiamo creato, dovremo anzitutto preoccuparci di posizionare il lavoro che ci interessa in una </span><em><span>tavola</span></em><span> (Illustrator ci permette di avere più tavole nello spazio di lavoro, possiamo editarle con lo strumento Tavola Disegno (</span><code>Shift+O</code><span>)). Quindi cliccheremo </span><code>File &gt; Esporta...</code><span> e nella finestra che si aprirà selezioneremo uno dei formati disponibili (tendenzialmente </span><code>JPG</code><span> o </span><code>PNG</code><span>) , quindi indicheremo quali tavole esportare (spunta su </span><code>usa tavole disegno</code><span>).</span></p><p><img src='https://i.ibb.co/mGz3Yh5/esporta.jpg' alt='' referrerPolicy='no-referrer' /></p><h4><a name="tavole-da-disegno,-spazio-di-lavoro-e-navigazione" class="md-header-anchor"></a><span>Tavole da disegno, spazio di lavoro e navigazione</span></h4><p><span>Come avrete capito, Illustrator ci permette di lavorare in </span><strong><em><span>TUTTO</span></em></strong><span> lo spazio a disposizione (che potremo riempire di bozze), per poi farci utilizzare le tavole da disegno per “riordinare” ed esportare il tutto.</span></p><p><span>Abbiamo bisogno di modi veloci per navigare in uno spazio tanto grande. </span></p><ul><li><code>Spazio + Drag&amp;Drop</code><span>: per spostarci nell’area</span></li><li><code>Alt + Rotellina</code><span>: zoom in/out. </span><strong><em><span>Windows a volte crea problemi: premete </span><code>esc</code><span> quando finite di zoomare</span></em></strong></li><li><code>Ctrl + +</code><span> e  </span><code>Ctrl + -</code><span>: zoom in/out</span></li><li><span>Strumento </span><code>Zoom</code><span>: seleziona l’area da ingrandire </span></li></ul><h3><a name="strumenti-principali" class="md-header-anchor"></a><span>Strumenti principali</span></h3><ul><li><strong><span>Strumento selezione (V)</span></strong><span> </span><em><span>AKA Freccia Nera</span></em><span>: permette di spostare forme e ridimensionarle;</span></li><li><strong><span>Selezione diretta (A)</span></strong><span> </span><em><span>AKA Freccia Bianca</span></em><span>: permette di selezionare i singoli punti sui quali le forme sono costruite;</span></li><li><strong><span>Penna (P)</span></strong><span> </span><em><span>AKA Il tuo migliore amico... forse</span></em><span>: è lo strumento </span><strong><em><span>fondamentale</span></em></strong><span> di Illustrator. Illustrator senza penna è come la Nutella senza pane;</span></li><li><strong><span>Testo (T)</span></strong><span>: permette di creare testi con varie modalità (una linea illimitata, all&#39;interno di forme, su tracciati);</span></li><li><strong><span>Linea</span></strong><span> e </span><strong><span>Rettangolo (M)</span></strong><span>: facendo click con il tasto destro, potrete scoprire che nascondono molte altre forme possibili;</span></li><li><strong><span>Rotazione (R)</span></strong><span> e </span><strong><span>Ridimensionamento (S)</span></strong><span>;</span></li><li><strong><span>Crea forme (Shift+M)</span></strong><span> </span><em><span>AKA That&#39;s Magic!</span></em><span>: permette di compiere operazioni booleane complesse tra forme;</span></li><li><strong><span>Contagocce (I)</span></strong><span>: permette di copiare lo stile di una forma sulla forma selezionata;</span></li><li><strong><span>Mano (Spazio + drag&amp;drop)</span></strong><span>: permette di navigare nell&#39;area di lavoro</span></li><li><strong><span>Zoom</span></strong></li></ul><p><span>Molti strumenti della toolbar di sinistra ne &quot;nascondono&quot; altri, reperibili cliccando con il tasto destro del mouse sugli strumenti che hanno una freccetta nell&#39;icona.</span></p><p><span>Nella toolbar di destra troviamo altre importanti funzioni. Le fondamentali riguardano l&#39;allineamento delle forme e le operazioni booleane sulle stesse, la modifica di testi e paragrafi e la gestione dei livelli.</span></p><h3><a name="lo-strumento-penna" class="md-header-anchor"></a><span>Lo strumento penna</span></h3><p><span>Prima di parlare delle sue caratteristiche è bene spiegare cosa è un’immagine vettoriale. Essa è composta da tracciati, che possono essere curvi o retti e sono caratterizzati da punti di ancoraggio e maniglie di ancoraggio che ci aiutano a modificare tale tracciato nella forma che noi preferiamo.</span></p><p><span>Lo strumento penna non fa altro che creare questi tracciati, infatti la sua principale caratteristica è data dalla presenza di punti e maniglie di ancoraggio.</span></p><p><span>Questi ci permetteranno di modificare una curva rendendola più o meno ampia, oppure, spostando un punto di ancoraggio, possiamo allungare o accorciare un segmento.</span></p><p><span>Per creare segmenti retti basta cliccare inizialmente nel punto di inizio e poi di seguito nei punti che vogliamo arrivino i segmenti.</span></p><p><span>Invece se vogliamo creare una curva è sufficiente cliccare nel punto di inizio e quando andiamo a cliccare nel secondo punto è importante tener premuto il tasto sinistro del mouse e trascinare. Più tiro queste maniglie e più avrò una curva più accentuata.</span></p><p><span>Per interrompere la curva basta cliccare due volte sull’ultimo punto creato (vicino al cursore a forma di penna apparirà una </span><code>v</code><span> rovesciata). Questa operazione può esserci utile quando passiamo da punti curvi a punti angolari.</span></p><blockquote><p><strong><em><span>L&#39;arte è... Matematica!</span></em></strong>
+<span>Le maniglie rappresentano dei segmenti </span><em><span>tangenti</span></em><span> alla curva che stiamo creando. </span></p><p><span>In generale, i tracciati sono costruiti con delle </span><em><span>Curve di Bezier</span></em><span>.</span>
+<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/B%C3%A9zier_2_big.svg/240px-B%C3%A9zier_2_big.svg.png' alt='Bezier' referrerPolicy='no-referrer' />
+<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/B%C3%A9zier_2_big.gif/240px-B%C3%A9zier_2_big.gif' alt='BezierGIF' referrerPolicy='no-referrer' /></p></blockquote><h3><a name="operazioni-booleane-su-forme-e-tracciati" class="md-header-anchor"></a><span>Operazioni booleane su forme e tracciati</span></h3><p><span>Il pannello </span><strong><span>Elaborazione Tracciati</span></strong><span> e lo </span><strong><span>strumento Crea Forme</span></strong><span> ci danno la possibilità di compiere operazioni </span><em><span>booleane</span></em><span> (unione, sottrazione, intersezione, divisione) per creare forme complesse a partire da forme semplici (ellissi, rettangoli, poligoni in generale). </span></p><p><span>In particolare, il </span><strong><span>Crea Forme</span></strong><span> ci permette di svolgere tutte le funzioni fornite da Elaborazione Tracciati con pochi click e lasciandoci molta più libertà.</span></p><p><span>Il funzionamento è semplice: selezioniamo tutte le forme che ci interessano, posizioniamo il cursore sulla prima area da unire e quindi, clicchiamo e trasciniamo (possiamo vedere un segmento che tocca tutte le aree che verranno unite) sulle aree che vogliamo vadano a comporre un’unica forma. Ripetiamo l’operazione fino al raggiungimento del risultato. Se si vogliono selezionare più aree vicine, possiamo tenere premuto </span><code>Shift</code><span> e al posto di un segmento avremo un “rettangolo di selezione”.</span></p><p><img src="https://i.ibb.co/r0kpw9Y/creaforme1.png" width="350"/><img src="https://i.ibb.co/1GgFm9n/creaforme2.png" width="350"/><img src="https://i.ibb.co/TPTJKH9/creaforme3.png" width="350"/></p><p><span>Di default lo strumento è in modalità </span><em><span>Combina</span></em><span>, quindi pronto a creare nuove forme per unione o intersezione. Tenendo premuto </span><code>Alt</code><span> (vicino al cursore ci sarà un segno </span><code>-</code><span>), al contrario, andremo ad eliminare le forme.</span></p><p><img src="https://i.ibb.co/c8HmnbH/creaforme4.png" width="350"/></p><h3><a name="elaborazione-testi" class="md-header-anchor"></a><span>Elaborazione testi</span></h3><p><span>Per creare una scritta selezioniamo lo strumento </span><strong><span>Testo</span></strong><span> (</span><code>T</code><span>). Ora possiamo procedere in 4 modi diversi:</span></p><ul><li><span>Clicchiamo su un’area vuota dello workspace: questo ci dà la possibilità di scrivere un’unica, lunghissima riga di testo e andare a capo quando lo vogliamo.</span></li><li><span>Click &amp; Drop per creare un’area di testo all’interno della quale si troverà la nostra scritta: Illustrator andrà a capo automaticamente.</span></li><li><span>Scriviamo su un tracciato aperto: avviciniamo il cursore a un tracciato (dovrebbe apparire un’ondina vicino alla T), quindi clicchiamo e iniziamo a digitare.</span></li><li><span>Scriviamo all’interno di un tracciato chiuso: come sopra, ma avremo un’are di testo “customizzata”.</span></li></ul><p><span>Dopo aver creato una scritta, possiamo usare i pannelli Carattere e Paragrafo per modificarne l’aspetto. </span></p><p><span>In </span><strong><span>Paragrafo</span></strong><span> possiamo scegliere l’allineamento e se abilitare o meno la sillabazione.</span></p><p><span>In </span><strong><span>Carattere</span></strong><span> possiamo cambiare le spaziature tra le singole lettere e righe.</span></p><p><span>Uscendo dalla modalità di digitazione </span><code>(esc)</code><span>, tenendo la scritta e lo strumento Testo selezionati, possiamo modificarne l’aspetto con </span><code>Crea involucro</code><span> (nella barra delle opzioni). Questa funzione ci permette di dare delle forme particolari al testo, ad esempio ad arco o ad onda.</span></p></div>
+</body>
+</html>
