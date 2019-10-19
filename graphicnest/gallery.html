@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" type="text/css">
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
+  <link rel="stylesheet" href="..\css\itshow.css" type="text/css">
+
+
+  
+</head>
+
+
+<body>
+
+    <div id="navibar" class="navibar">
+      <a class="active" href="../graphicnest.html"><i class="fab fa-jedi-order" style="font-size: 18pt;"><b> Home</b></i></a>
+      <div class="dropdown" id="portfolio">
+        <button class="dropbtn" id="dropbtn">Material 
+          <i class="fa fa-caret-right"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="./lectures.html">Lectures</a>
+          <a href="./tutorials.html">Tutorials</a>
+          <a href="./exercises.html">Exercises</a>
+        </div>
+      </div>
+      <a href="#">Students</a>
+      <a href="#">Gallery</a>
+    </div>
+
+        <script>
+          window.onscroll = function() {stickynavbar()};
+          
+          var navbar = document.getElementById("navibar");
+          var sticky = navbar.offsetTop;
+          
+          function stickynavbar() {
+            if (window.pageYOffset >= sticky+1) {
+              navbar.setAttribute("class", "");
+              navbar.setAttribute("class", "navibar sticky");
+            } else {
+              navbar.setAttribute("class", "navibar");
+            }
+          }
+        </script>
+
+
+  <div class="bgimggraphic" id="coursetitle">
+    <div class="container">
+      <div class="row" style="height: auto; max-height:100%">
+          <div class="p-5 col-lg-12 d-flex flex-column justify-content-center text-left">
+              <div class="row">
+                <div class="col-md-8">
+                  <h1 class="display-4 mt-3" style="color: white;"><b>Photo gallery</b></h1>
+                </div>
+              </div>
+            </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <br><br>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h4>First lecture - October 16th 2019</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-1" style="display:flex">
+      <img id="img0101" src="https://i.ibb.co/zJHnpjK/photo-2019-10-17-21-37-44.jpg" style="display:block;max-width:100%" onclick="showModalImg()" data-toggle="modal" data-target="#myModal"/>
+    </div>
+    <div class="col-sm-1" style="display:flex">
+        <img id="img0201" src="https://i.ibb.co/C10n7Zz/photo-2019-10-17-21-37-42.jpg" style="display:block;max-width:100%" onclick="showModalImg()" data-toggle="modal" data-target="#myModal"/>
+    </div>
+    <div class="col-sm-1" style="display:flex">
+        <img id="img0301" src="https://i.ibb.co/bWWYL1H/photo-2019-10-17-21-37-37.jpg" style="display:block;max-width:100%" onclick="showModalImg()" data-toggle="modal" data-target="#myModal"/>
+    </div>
+    <div class="col-sm-1" style="display:flex">
+        <img id="img0401" src="https://i.ibb.co/X8Ntfbf/photo-2019-10-17-21-37-33.jpg" style="display:block;max-width:100%" onclick="showModalImg()" data-toggle="modal" data-target="#myModal"/>
+    </div>
+    <div class="col-sm-1" style="display:flex">
+        <img id="img0501" src="https://i.ibb.co/NSNp188/photo-2019-10-17-21-37-35.jpg" style="display:block;max-width:100%" onclick="showModalImg()" data-toggle="modal" data-target="#myModal"/>
+    </div>
+    <div class="col-sm-1" style="display:flex">
+        <img id="img0601" src="https://i.ibb.co/rpQLbxH/photo-2019-10-17-21-37-23.jpg" style="display:block;max-width:100%" onclick="showModalImg()" data-toggle="modal" data-target="#myModal"/>
+    </div>
+    <div class="col-sm-1" style="display:flex">
+        <img id="img0701" src="https://i.ibb.co/mD9NS87/photo-2019-10-17-21-37-03.jpg" style="display:block;max-width:100%" onclick="showModalImg()" data-toggle="modal" data-target="#myModal"/>
+    </div>
+    <div class="col-sm-1" style="display:flex">
+        <img id="img0801" src="https://i.ibb.co/st6QXNm/photo-2019-10-17-21-38-29.jpg" style="display:block;max-width:100%" onclick="showModalImg()" data-toggle="modal" data-target="#myModal"/>
+    </div>
+    <div class="col-sm-1" style="display:flex">
+        <img id="img0901" src="https://i.ibb.co/gvpD8Cn/photo-2019-10-17-21-38-40.jpg" style="display:block;max-width:100%" onclick="showModalImg()" data-toggle="modal" data-target="#myModal"/>
+    </div>
+    <div class="col-sm-1" style="display:flex">
+        <img id="img1001" src="https://i.ibb.co/zxRBkD9/photo-2019-10-17-21-38-42.jpg" style="display:block;max-width:100%" onclick="showModalImg()" data-toggle="modal" data-target="#myModal"/>
+    </div>
+    <div class="col-sm-1" style="display:flex">
+        <img id="img1101" src="https://i.ibb.co/L57c2Jb/photo-2019-10-17-21-38-22.jpg" style="display:block;max-width:100%" onclick="showModalImg()" data-toggle="modal" data-target="#myModal"/>
+    </div>
+    <div class="col-sm-1" style="display:flex">
+        <img id="img1201" src="https://i.ibb.co/wgknxnZ/photo-2019-10-17-21-37-51.jpg" style="display:block;max-width:100%" onclick="showModalImg()" data-toggle="modal" data-target="#myModal"/>
+    </div>
+  </div>
+<br><br>
+</div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-body">
+            <img id="modalImg" src="" style="display:block;max-width:100%" onclick="showModalImg()" data-toggle="modal" data-target="#myModal">
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+    
+      <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        function showModalImg(){
+          var modalImg = document.getElementById("modalImg");
+          modal.style.display = "block";
+          modal.style.overflow = "auto";
+          modalImg.src = event.target.src;
+          captionText.innerHTML += event.target.dataset.description;
+          console.log(event.target.dataset.behance);
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("closemodal")[0];
+
+        // When the user clicks on <span> (x), close the modal
+          span.onclick = function() {
+          modal.style.display = "none";
+        } 
+      
+      </script>
+
+  <div class="py-5" style="background-color: #222;" id="contacts">
+        <div class="container">
+          <br><br>
+              <h3 style="color:#ddd"><b>Graphic@NEST</b></h3>
+              <p style="color:#ddd"> is a graphic design course for beginners presented by the club Tech@NEST at the students' residence NEST, in Trento (Italy).</p>
+              <br><br>
+        </div>
+      </div>
+    
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+          content.setAttribute("hidden","");
+          $(this).find(".fa").removeClass("fa fa-caret-down").addClass("fa fa-caret-right");
+        } else {
+          content.removeAttribute("hidden");
+          content.style.maxHeight = content.scrollHeight + "px";
+          $(this).find(".fa").removeClass("fa fa-caret-right").addClass("fa fa-caret-down");
+        } 
+      });
+    }
+    </script>
+
+      
+</body>
+
+</html>

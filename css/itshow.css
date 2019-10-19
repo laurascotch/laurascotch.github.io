@@ -2423,6 +2423,28 @@
 			padding: 10px 0px 9px;
 		}
 	}
+
+  .portfolio .thumbnail {
+    position: relative;
+    max-width: 20hw;
+}
+
+.portfolio .thumbnail:hover {
+    cursor: pointer;
+}
+
+.portfolio .caption {
+    bottom: 0;
+    position: absolute;
+}
+
+.portfolio .btn {
+    opacity: 0.75;
+}
+
+.img-responsive {
+  max-width: 20vw;
+}
   
   
   
