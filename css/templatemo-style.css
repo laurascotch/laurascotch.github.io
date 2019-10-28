@@ -256,7 +256,7 @@ transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
 }
 /* team section */
 #team {
-	background: #202020 url('https://i.ibb.co/82W6pTh/Whats-App-Image-2019-07-21-at-11-55-54.jpg') 50% 0 repeat-y fixed;
+	background: #202020 50% 0 repeat-y fixed;
 	color: #ffffff;
 	padding-top: 100px;
 	padding-bottom: 100px;
