@@ -1,0 +1,302 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>PSlez2</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+:root { --side-bar-bg-color: #fafafa; --control-text-color: #777; }
+html { font-size: 16px; }
+body { font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; color: rgb(51, 51, 51); line-height: 1.6; }
+#write { max-width: 860px; margin: 0px auto; padding: 30px 30px 100px; }
+#write > ul:first-child, #write > ol:first-child { margin-top: 30px; }
+a { color: rgb(65, 131, 196); }
+h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; }
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor { text-decoration: none; }
+h1 tt, h1 code { font-size: inherit; }
+h2 tt, h2 code { font-size: inherit; }
+h3 tt, h3 code { font-size: inherit; }
+h4 tt, h4 code { font-size: inherit; }
+h5 tt, h5 code { font-size: inherit; }
+h6 tt, h6 code { font-size: inherit; }
+h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+h3 { font-size: 1.5em; line-height: 1.43; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1em; }
+h6 { font-size: 1em; color: rgb(119, 119, 119); }
+p, blockquote, ul, ol, dl, table { margin: 0.8em 0px; }
+li > ol, li > ul { margin: 0px; }
+hr { height: 2px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; overflow: hidden; box-sizing: content-box; }
+li p.first { display: inline-block; }
+ul, ol { padding-left: 30px; }
+ul:first-child, ol:first-child { margin-top: 0px; }
+ul:last-child, ol:last-child { margin-bottom: 0px; }
+blockquote { border-left: 4px solid rgb(223, 226, 229); padding: 0px 15px; color: rgb(119, 119, 119); }
+blockquote blockquote { padding-right: 0px; }
+table { padding: 0px; word-break: initial; }
+table tr { border-top: 1px solid rgb(223, 226, 229); margin: 0px; padding: 0px; }
+table tr:nth-child(2n), thead { background-color: rgb(248, 248, 248); }
+table tr th { font-weight: bold; border-width: 1px 1px 0px; border-top-style: solid; border-right-style: solid; border-left-style: solid; border-top-color: rgb(223, 226, 229); border-right-color: rgb(223, 226, 229); border-left-color: rgb(223, 226, 229); border-image: initial; border-bottom-style: initial; border-bottom-color: initial; text-align: left; margin: 0px; padding: 6px 13px; }
+table tr td { border: 1px solid rgb(223, 226, 229); text-align: left; margin: 0px; padding: 6px 13px; }
+table tr th:first-child, table tr td:first-child { margin-top: 0px; }
+table tr th:last-child, table tr td:last-child { margin-bottom: 0px; }
+.CodeMirror-lines { padding-left: 4px; }
+.code-tooltip { box-shadow: rgba(0, 28, 36, 0.3) 0px 1px 1px 0px; border-top: 1px solid rgb(238, 242, 242); }
+.md-fences, code, tt { border: 1px solid rgb(231, 234, 237); background-color: rgb(248, 248, 248); border-radius: 3px; padding: 2px 4px 0px; font-size: 0.9em; }
+code { background-color: rgb(243, 244, 244); padding: 0px 2px; }
+.md-fences { margin-bottom: 15px; margin-top: 15px; padding-top: 8px; padding-bottom: 6px; }
+.md-task-list-item > input { margin-left: -1.3em; }
+@media print {
+  html { font-size: 13px; }
+  table, pre { break-inside: avoid; }
+  pre { overflow-wrap: break-word; }
+}
+.md-fences { background-color: rgb(248, 248, 248); }
+#write pre.md-meta-block { padding: 1rem; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border: 0px; border-radius: 3px; color: rgb(119, 119, 119); margin-top: 0px !important; }
+.mathjax-block > .code-tooltip { bottom: 0.375rem; }
+.md-mathjax-midline { background: rgb(250, 250, 250); }
+#write > h3.md-focus::before { left: -1.5625rem; top: 0.375rem; }
+#write > h4.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h5.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h6.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+.md-image > .md-meta { border-radius: 3px; padding: 2px 0px 0px 4px; font-size: 0.9em; color: inherit; }
+.md-tag { color: rgb(167, 167, 167); opacity: 1; }
+.md-toc { margin-top: 20px; padding-bottom: 20px; }
+.sidebar-tabs { border-bottom: none; }
+#typora-quick-open { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); }
+#typora-quick-open-item { background-color: rgb(250, 250, 250); border-color: rgb(254, 254, 254) rgb(229, 229, 229) rgb(229, 229, 229) rgb(238, 238, 238); border-style: solid; border-width: 1px; }
+.on-focus-mode blockquote { border-left-color: rgba(85, 85, 85, 0.12); }
+header, .context-menu, .megamenu-content, footer { font-family: "Segoe UI", Arial, sans-serif; }
+.file-node-content:hover .file-node-icon, .file-node-content:hover .file-node-open-state { visibility: visible; }
+.mac-seamless-mode #typora-sidebar { background-color: var(--side-bar-bg-color); }
+.md-lang { color: rgb(180, 101, 77); }
+.html-for-mac .context-menu { --item-hover-bg-color: #E6F0FE; }
+#md-notification .btn { border: 0px; }
+.dropdown-menu .divider { border-color: rgb(229, 229, 229); }
+
+
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><h1><a name="graphic@nest" class="md-header-anchor"></a><span>Graphic@NEST</span></h1><h2><a name="photo-editing-avanzato-in-photoshop" class="md-header-anchor"></a><span>Photo editing avanzato in Photoshop</span></h2><h2><a name="lo-strumento-fluidifica" class="md-header-anchor"></a><span>Lo strumento fluidifica</span></h2><p><em><code>Tratto dalla guida ufficiale Adobe</code></em></p><p><span>Il filtro  Fluidifica consente di applicare deformazioni, pressioni, trazioni,  rotazioni, riflessioni, flessioni e gonfiamenti a qualsiasi area di  un’immagine. Le distorsioni realizzabili possono essere di varia entità,  rendendo il comando Fluidifica un potente strumento di ritocco ed  effetti artistici. Il filtro Fluidifica può essere applicato a immagini a  8 o 16 bit per canale.</span></p><p><img src='https://helpx.adobe.com/content/dam/help/en/photoshop/using/liquify-filter/_jcr_content/main-pars/image_0/tr_13.png' alt='Distorsione di un’immagine con il filtro Fluidifica di Photoshop' referrerPolicy='no-referrer' /></p><p><span>Nella finestra di dialogo Fluidifica  sono disponibili gli strumenti, le opzioni e un’immagine di anteprima  per il filtro Fluidifica. Per visualizzare la finestra di dialogo,  scegliete </span><code>Filtro &gt; Fluidifica</code><span>. Selezionate Modalità avanzata per  accedere a opzioni aggiuntive.</span></p><p><strong><span>Ingrandire e ridurre l’anteprima</span></strong><span>                </span></p><p><span>Selezionate lo strumento zoom nella finestra di dialogo Fluidifica e  fate clic o trascinate nell’anteprima per ingrandire; premete Alt  (Windows) o Opzione (Mac OS) e fate clic o trascinate nell’anteprima per  ridurre l’ingrandimento In alternativa, specificate un livello di  ingrandimento nella casella Zoom in fondo alla finestra di dialogo.</span></p><p><strong><span>Spostarsi nell’anteprima</span></strong></p><p><span>Selezionate lo strumento mano  nella finestra di dialogo Fluidifica e trascinate nell’anteprima.  Oppure, tenete premuta la barra spaziatrice con qualsiasi strumento  selezionato e trascinate il cursore nell’anteprima.</span></p><h3><a name="fluidifica-in-base-al-volto" class="md-header-anchor"></a><span>Fluidifica in base al volto                 </span></h3><p><span>Il filtro Fluidifica dispone di una  funzionalità di riconoscimento del volto avanzata che identifica  automaticamente occhi, nasi, bocche e altri tratti del volto,  facilitandone la regolazione. Fluidifica in base al volto è la funzione  ideale per ritoccare ritratti, creare caricature e molto altro.</span></p><h4><a name="regolare-i-tratti-del-volto-con-le-maniglie-visualizzate-sullo-schermo" class="md-header-anchor"></a><span>Regolare i tratti del volto con le maniglie visualizzate sullo schermo                 </span></h4><ol start='' ><li><span>In Photoshop, aprite un’immagine contenente uno o più volti. </span></li><li><span>Scegliete </span><code>Filtro &gt; Fluidifica</code><span>. Photoshop apre la finestra di dialogo Fluidifica. </span></li><li><span>Nel pannello Strumenti, selezionate </span><img src='https://helpx.adobe.com/content/dam/help/en/photoshop/using/attachments/face-tool.jpg' alt='img' referrerPolicy='no-referrer' /><span> (strumento Volto; </span><em><span>scelta rapida da tastiera</span></em><span>: </span><code>A</code><span>). I volti presenti nella foto vengono automaticamente identificati.</span></li></ol><p><img src='https://helpx.adobe.com/content/dam/help/en/photoshop/using/liquify-filter/_jcr_content/main-pars/image/v2_handles-faces.png' alt='v2_handles-faces' referrerPolicy='no-referrer' /></p><ol start='' ><li><span>Quando posizionate il puntatore del mouse sui volti, Photoshop  visualizza dei controlli intuitivi su schermo. Regolate i controlli per  ritoccare i volti. Ad esempio, potete aumentare le dimensioni  dell’occhio o diminuire la larghezza del volto.</span></li><li><span>Quando siete soddisfatti del risultato, fate clic su OK.</span></li></ol><h4><a name="regolare-i-tratti-del-volto-con-i-controlli-di-scorrimento" class="md-header-anchor"></a><span>Regolare i tratti del volto con i controlli di scorrimento                 </span></h4><ol start='' ><li><p><span>In Photoshop, aprite un’immagine contenente uno o più volti. </span></p></li><li><p><span>Scegliete </span><code>Filtro &gt; Fluidifica</code><span>. Photoshop apre la finestra di dialogo Fluidifica.</span></p></li><li><p><span>Nel pannello Strumenti, selezionate </span><img src='https://helpx.adobe.com/content/dam/help/en/photoshop/using/attachments/face-tool.jpg' alt='img' referrerPolicy='no-referrer' /><span> (strumento Volto; </span><em><span>scelta rapida da tastiera</span></em><span>: A).</span></p><p>&nbsp;</p><p><span>I volti presenti nella foto vengono identificati automaticamente e uno  dei volti viene selezionato. I volti identificati vengono inoltre  elencati nel menu a comparsa Seleziona volto nell’area Fluidifica in base al volto del pannello Proprietà. Potete selezionare un volto diverso facendo clic sul quadro o selezionandolo dal menu a comparsa.</span></p></li></ol><p><img src='https://helpx.adobe.com/content/dam/help/en/photoshop/using/liquify-filter/_jcr_content/main-pars/image_190784476/Select_Face.png' alt='Select_Face' referrerPolicy='no-referrer' /></p><p><span>Regolate i cursori nell’area Fluidifica in base al volto per modificare i tratti del volto. Quando siete soddisfatti del risultato, fate clic su OK.</span></p><h4><a name="considerazioni-utili" class="md-header-anchor"></a><span>Considerazioni utili                 </span></h4><ul><li><span>La funzionalità Fluidifica in base al volto funziona meglio se il  soggetto rivolge il volto verso la fotocamera. </span></li><li><span>Le opzioni Ricostruzione e Ripristina tutto non si applicano alle modifiche di Fluidifica in base al volto. Utilizzate le opzioni Ripristina e Tutto dell’area Fluidifica in base al volto per ripristinare le modifiche applicate rispettivamente a un volto selezionato o a tutti i volti.</span></li></ul><h3><a name="strumenti-di-distorsione" class="md-header-anchor"></a><span>Strumenti di distorsione                 </span></h3><p><span>Diversi strumenti nella finestra  Fluidifica consentono di distorcere l’area sotto il pennello mentre  trascinate o tenete premuto il pulsante del mouse. La distorsione è più  evidente al centro dell’area del pennello e l’effetto risulta  intensificato se tenete premuto il pulsante del mouse o se trascinate  più volte sopra l’area.</span></p><p><strong><span>Strumento altera avanti</span></strong><span> </span><img src='https://helpx.adobe.com/content/dam/help/icons/P_Warp_Lg_N.png' alt='img' referrerPolicy='no-referrer' /><span> Spinge i pixel in avanti mentre trascinate.</span></p><pre spellcheck="false" class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 36px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 28px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><span><span>​</span>x</span></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -28px; width: 28px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -28px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 19px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Nota: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -28px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 19px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -28px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 19px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Tenete premuto Maiusc e fate clic con gli  strumenti altera, spingi a sinistra e riflessione per creare l’effetto  del trascinamento in linea retta a partire dal punto su cui avete fatto  clic in precedenza.</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 115px;"></div><div class="CodeMirror-gutters" style="height: 115px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 27px;"></div></div></div></div></pre><p><strong><span>Strumento ricostruisci</span></strong><span> </span><img src='https://helpx.adobe.com/content/dam/help/icons/P_Reconstruct_Lg_N.png' alt='img' referrerPolicy='no-referrer' /><span> Annulla la distorsione appena aggiunta mentre trascinate o tenete premuto il pulsante del mouse. </span></p><p><strong><span>Spirale senso orario, strumento</span></strong><span> </span><img src='https://helpx.adobe.com/content/dam/help/icons/P_TwirlCW_Lg_N.png' alt='img' referrerPolicy='no-referrer' /><span> Ruota  i pixel in senso orario mentre trascinate o tenete premuto il pulsante  del mouse. Per fare ruotare i pixel in senso antiorario, tenete premuto  il tasto Alt (Windows) o Opzione (Mac OS) mentre tenete premuto il  pulsante del mouse o trascinate.</span></p><p><strong><span>Strumento piega</span></strong><span> </span><img src='https://helpx.adobe.com/content/dam/help/icons/P_Pucker_Lg_N.png' alt='img' referrerPolicy='no-referrer' /><span> Sposta i pixel verso il centro dell’area del pennello mentre trascinate o tenete premuto il pulsante del mouse. </span></p><p><strong><span>Strumento gonfiamento</span></strong><span> </span><img src='https://helpx.adobe.com/content/dam/help/icons/P_Bloat_Lg_N.png' alt='img' referrerPolicy='no-referrer' /><span> Allontana i pixel dal centro dell’area del pennello mentre trascinate o tenete premuto il pulsante del mouse.</span></p><p><strong><span>Strumento spingi a sinistra</span></strong><span> </span><img src='https://helpx.adobe.com/content/dam/help/icons/P_ShiftPixels_Lg_N.png' alt='img' referrerPolicy='no-referrer' /><span> Sposta  i pixel a sinistra quando trascinate lo strumento verso l’alto; li  sposta a destra quando trascinate verso il basso. Potete inoltre  trascinare in senso orario intorno all’oggetto per aumentarne le  dimensioni o in senso antiorario per ridurle. Per spingere i pixel a  destra trascinando verso l’alto (o a sinistra trascinando verso il  basso), tenete premuto il tasto Alt (Windows) o Opzione (Mac OS) mentre  trascinate.</span></p><h3><a name="opzioni-degli-strumenti-di-distorsione" class="md-header-anchor"></a><span>Opzioni degli strumenti di distorsione                 </span></h3><p><span>In Opzioni strumento nella finestra di dialogo, impostate le seguenti opzioni:</span></p><ul><li><span>Dimensione pennello: Imposta la larghezza del pennello usato per distorcere l’immagine.</span></li><li><span>Densità pennello: Controlla  il comportamento di attenuazione lungo i bordi del pennello. Un effetto  è più marcato al centro del pennello e più lieve all’estremità.</span></li><li><span>Pressione pennello: Imposta  la velocità di distorsione quando trascinate uno strumento  nell’anteprima. Con una minore pressione del pennello l’esecuzione delle  modifiche risulta più lenta, ed è quindi più facile interrompere al  momento giusto.</span></li><li><span>Velocità pennello: Imposta  la velocità di distorsione quando tenete lo strumento selezionato (ad  esempio, lo strumento spirale) fermo su un oggetto nell’anteprima.  Maggiore è il valore, maggiore sarà la velocità di distorsione.</span></li><li><span>Pressione stilo: Rileva  la pressione esercitata su una tavoletta grafica (opzione disponibile  solo se usate una tavoletta grafica). Se l’opzione è selezionata, la  pressione del pennello per gli strumenti è calcolata moltiplicando la  pressione dello stilo per il valore di Pressione pennello.</span></li></ul><h3><a name="distorcere-un%27immagine" class="md-header-anchor"></a><span>Distorcere un’immagine                 </span></h3><pre spellcheck="false" class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 36px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 28px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>3</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -28px; width: 28px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -28px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 19px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Nota: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -28px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 19px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -28px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 19px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Se selezionate un livello di testo o  forma, prima di procedere occorre rasterizzare il livello per rendere il  testo o la forma modificabili. Per distorcere il testo senza  rasterizzare il livello, usate le opzioni Altera dello strumento testo.</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 115px;"></div><div class="CodeMirror-gutters" style="height: 115px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 27px;"></div></div></div></div></pre><p>&nbsp;</p><ul><li><span>Selezionate il livello da distorcere. Per agire solo su una parte del livello corrente, selezionate l’area desiderata.</span></li><li><span>Scegliete Filtro &gt; Fluidifica.</span></li><li><span>Fissate le aree dell’immagine che non volete alterare.</span></li><li><span>Scegliete uno qualsiasi degli strumenti fluidifica per distorcere l’anteprima. Trascinate nell’immagine per distorcerla.</span></li></ul><p><span>Dopo avere distorto l’immagine di anteprima, potete effettuare le seguenti operazioni:</span></p><ul><li><span>Usate lo strumento ricostruisci </span><img src='https://helpx.adobe.com/content/dam/help/icons/P_Reconstruct_Lg_N.png' alt='img' referrerPolicy='no-referrer' /><span> o Opzioni di ricostruzione per ripristinare totalmente o in parte le modifiche apportate.</span></li><li><span>Utilizzate gli altri strumenti per modificare l’immagine in altri modi.</span></li></ul><p><span>Effettuate una delle seguenti operazioni:</span></p><ul><li><span>Fate clic su OK per chiudere la finestra Fluidifica e applicare le modifiche al livello attivo.</span></li><li><span>Fate clic su Annulla per chiudere la finestra Fluidifica senza applicare le modifiche al livello.</span></li><li><span>Per  annullare tutte le distorsioni applicate nell’anteprima e ripristinare  tutte le impostazioni predefinite delle opzioni, tenete premuto Alt  (Windows) o Opzione (Mac OS) e fate clic su Ripristina.</span></li></ul><pre spellcheck="false" class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 36px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 28px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>2</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -28px; width: 28px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -28px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 19px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Nota: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -28px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 19px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Per creare ulteriori effetti, usate i comandi Modifica &gt; Dissolvi.</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 46px;"></div><div class="CodeMirror-gutters" style="height: 46px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 27px;"></div></div></div></div></pre><p>&nbsp;</p><h3><a name="fissare-e-rilasciare-aree" class="md-header-anchor"></a><span>Fissare e rilasciare aree                 </span></h3><p><span>Potete fissare le aree che non devono  essere modificate o rilasciare quelle precedentemente fissate per  renderle di nuovo modificabili. Potete inoltre invertire le aree fissate  e rilasciate.</span></p><p><strong><span>Fissare le aree</span></strong><span> Le aree fisse dell’anteprima sono  protette dalle modifiche. Queste aree vengono coperte da una maschera  che potete creare con lo strumento maschera area fissa </span><img src='https://helpx.adobe.com/content/dam/help/icons/P_Freeze_Lg_N.png' alt='img' referrerPolicy='no-referrer' /><span>.  Potete inoltre fissare le aree con una maschera, selezione o  trasparenza esistente. Per applicare più agevolmente le distorsioni,  potete visualizzare la maschera nell’anteprima.</span></p><p><strong><span>Utilizzo dello strumento maschera area fissa</span></strong><span> Selezionate lo strumento maschera area fissa </span><img src='https://helpx.adobe.com/content/dam/help/icons/P_Freeze_Lg_N.png' alt='img' referrerPolicy='no-referrer' /><span>  e trascinate sull’area da proteggere.  Fate clic tenendo premuto Maiusc  per fissare in linea retta tra il punto corrente e quello del  precedente clic. </span></p><p><strong><span>Utilizzo di una selezione, una maschera o un canale di trasparenza esistente</span></strong><span> Se applicate il filtro Fluidifica a un livello con una selezione, una  maschera di livello, una trasparenza o un canale alfa, scegliete  Selezione, Maschera di livello, Trasparenza o Maschera veloce dal menu a  comparsa di una delle cinque icone nell’area Opzioni maschera della  finestra di dialogo. Questo determina il modo in cui le aree  dell’immagine di anteprima vengono fissate o mascherate.</span></p><p><strong><span>Fissare tutte le aree rilasciate</span></strong><span> Fate clic su Maschera tutto nell’area Opzioni maschera della finestra di dialogo.</span></p><p><strong><span>Invertire le aree rilasciate e fisse</span></strong><span> Fate clic su Inverti tutto nell’area Opzioni maschera della finestra di dialogo. </span></p><p><strong><span>Mostrare o nascondere le aree fisse</span></strong><span> Selezionate o deselezionate Mostra maschera in Opzioni di visualizzazione nella finestra di dialogo.</span></p><p><strong><span>Cambiare il colore delle aree fisse</span></strong><span> Scegliete un colore dal menu a comparsa Colore maschera in Opzioni di visualizzazione nella finestra di dialogo.</span></p><h3><a name="opzioni-di-maschera-con-il-filtro-fluidifica" class="md-header-anchor"></a><span>Opzioni di maschera con il filtro Fluidifica                 </span></h3><p><span>In presenza di una selezione,  trasparenza o maschera in un’immagine, potete aprire la finestra di  dialogo Fluidifica senza perdere tali informazioni. Potete scegliere una  delle seguenti opzioni di maschera:</span></p><p><strong><span>Sostituisci selezione</span></strong><img src='https://helpx.adobe.com/content/dam/help/icons/P_LiquifyMaskCopy_29x20_N.png' alt='img' referrerPolicy='no-referrer' /><span> Mostra la selezione, maschera o trasparenza nell’immagine originale. </span></p><p><strong><span>Aggiungi alla selezione</span></strong><span> </span><img src='https://helpx.adobe.com/content/dam/help/icons/P_LiquifyMaskThaw_29x20_N.png' alt='img' referrerPolicy='no-referrer' /><span> Mostra  la maschera nell’immagine originale, in modo da poterle apportare delle  aggiunte usando lo strumento maschera area fissa. Aggiunge i pixel  selezionati nel canale all’area attualmente fissa.</span></p><p><strong><span>Sottrai dalla selezione</span></strong><span> </span><img src='https://helpx.adobe.com/content/dam/help/icons/P_LiquifyMaskFreeze_29x20_.png' alt='img' referrerPolicy='no-referrer' /><span> Sottrae i pixel del canale dall’area attualmente fissa.</span></p><p><strong><span>Interseca con la selezione</span></strong><span> </span><img src='https://helpx.adobe.com/content/dam/help/icons/P_LiquifyMaskCross_29x20_N.png' alt='img' referrerPolicy='no-referrer' /><span> Usa solo i pixel selezionati e attualmente fissi.</span></p><p><strong><span>Inverti la selezione</span></strong><span> </span><img src='https://helpx.adobe.com/content/dam/help/icons/P_LiquifyMaskInvert_29x20_.png' alt='img' referrerPolicy='no-referrer' /><span> Usa i pixel selezionati per invertire l’area attualmente fissa.</span></p><pre spellcheck="false" class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 36px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 28px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>2</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -28px; width: 28px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -28px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 19px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Nota: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -28px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 19px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Se avete già creato una selezione, il  filtro limita l’anteprima e l’elaborazione all’area rettangolare  contenente la selezione. Nel caso di selezioni rettangolari, l’area  selezionata e l’area di anteprima sono identiche; la scelta di Selezione  dai menu dell’opzione maschera non produce pertanto alcun effetto.</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 115px;"></div><div class="CodeMirror-gutters" style="height: 115px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 27px;"></div></div></div></div></pre><h3><a name="rilasciare-le-aree" class="md-header-anchor"></a><span>Rilasciare le aree                 </span></h3><p><span>Per rilasciare le aree fisse e renderle di nuovo modificabili, effettuate una delle seguenti operazioni:</span></p><ul><li><span>Selezionate lo strumento rilascia maschera </span><img src='https://helpx.adobe.com/content/dam/help/icons/P_Thaw_Lg_N.png' alt='img' referrerPolicy='no-referrer' /><span>  e trascinate sull’area. Fate clic tenendo premuto Maiusc per rilasciare  in linea retta tra il punto corrente e quello del precedente clic.</span></li><li><span>Per rilasciare le aree, nella sezione Opzioni maschera della finestra di dialogo, fate clic su Nessuna.</span></li><li><span>Per invertire le aree fisse e rilasciate, fate clic su Inverti tutto nell’area Opzioni maschera della finestra di dialogo. </span></li></ul><h3><a name="lavorare-con-gli-sfondi" class="md-header-anchor"></a><span>Lavorare con gli sfondi                 </span></h3><p><span>Nell’anteprima, potete scegliere di  visualizzare solo il livello attivo o visualizzare altri livelli come  sfondi. Grazie alle opzioni Metodo, potete posizionare lo sfondo sopra o  sotto il livello attivo; ciò consente di controllare le modifiche o di  allineare una distorsione applicata a un altro livello.</span></p><p><strong><span>Nota: Viene distorto solo il livello attivo, anche se sono visualizzati altri livelli.</span></strong></p><p><strong><span>Visualizzare lo sfondo</span></strong><span> Selezionate Mostra sfondo, quindi scegliete Sfondo dal menu Usa e un’opzione dal menu Metodo. </span></p><p><strong><span>Visualizzare le modifiche nel livello di destinazione senza mostrare lo sfondo</span></strong><span> Seleziona  Tutti i livelli dal menu Usa. Se impostate Opacità su 0, viene mostrato  solo il livello di destinazione con tutti gli effetti generati dal  filtro Fluidifica. Se impostate Opacità su un valore maggiore, sul  livello di destinazione viene mostrato l’effetto del filtro Fluidifica  in misura minore.</span></p><p><strong><span>Cambiare la fusione tra il livello di destinazione e lo sfondo</span></strong><span> Specificate un valore di opacità.</span></p><p><strong><span>Determinare come il livello di destinazione e lo sfondo vengono combinati nell’anteprima</span></strong><span> Scegliete un’opzione dal menu Metodo.</span></p><p><strong><span>Nascondere lo sfondo</span></strong><span> In Opzioni di visualizzazione, deselezionate Mostra sfondo.</span></p><p>&nbsp;</p><h3><a name="ricostruire-le-distorsioni" class="md-header-anchor"></a><span>Ricostruire le distorsioni                 </span></h3><p><span>Dopo aver distorto l’anteprima, potete  usare una vasta gamma di comandi e metodi di ricostruzione per annullare  le modifiche o ripristinarle in altri modi. Potete applicare le  ricostruzioni in due modi. Potete applicare una ricostruzione all’intera  immagine, arrotondando la distorsione nelle aree non fisse o applicarla  a specifiche aree con lo strumento ricostruisci. Per impedire la  ricostruzione delle aree distorte, usate lo strumento maschera area  fissa.</span></p><p><img src='https://helpx.adobe.com/content/dam/help/en/photoshop/using/liquify-filter/_jcr_content/main-pars/image_1/tr_15.png' alt='Ricostruzione basata sulle distorsioni nelle aree fisse in Photoshop' referrerPolicy='no-referrer' />
+<strong><span>A.</span></strong><span> Immagine originale </span><strong><span>B.</span></strong><span> Distorta con aree fisse </span><strong><span>C.</span></strong><span> Ricostruita con il metodo Rigido (pulsante) </span><strong><span>D.</span></strong><span> Rilasciata, con i bordi ricostruiti con il metodo Liscio (strumento)                  </span></p><h4><a name="ricostruire-un%27intera-immagine" class="md-header-anchor"></a><span>Ricostruire un’intera immagine</span></h4><p><span>Nella sezione Opzioni di ricostruzione  della finestra di dialogo, fate clic su Ricostruisci. Quindi, nella  finestra di dialogo Ripristina ricostruzione, specificate un valore e  fate clic su OK.</span></p><h4><a name="rimuovere-tutte-le-distorsioni" class="md-header-anchor"></a><span>Rimuovere tutte le distorsioni                 </span></h4><p><span>Nella sezione Opzioni di ricostruzione  della finestra di dialogo, fate clic su Ripristina tutto. Questo comando  rimuove anche le distorsioni nelle aree fisse.</span></p><h4><a name="ricostruire-parte-di-un%27immagine-distorta" class="md-header-anchor"></a><span>Ricostruire parte di un’immagine distorta                 </span></h4><ul><li><span>Fissate le aree che volete rimangano distorte.</span></li><li><span>Selezionate lo strumento ricostruisci </span><img src='https://helpx.adobe.com/content/dam/help/icons/P_Reconstruct_Lg_N.png' alt='img' referrerPolicy='no-referrer' /><span> e specificate le opzioni pennello nell’area Opzioni strumento della finestra di dialogo.</span></li><li><span>Trascinate sull’area da ricostruire. I  pixel si spostano più rapidamente al centro del pennello. Fate clic  tenendo premuto Maiusc per ricostruire in linea retta tra il punto  corrente e quello del precedente clic.</span></li></ul></div>
+</body>
+</html>

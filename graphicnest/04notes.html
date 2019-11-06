@@ -1,0 +1,303 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>PSlec2ENG</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+:root { --side-bar-bg-color: #fafafa; --control-text-color: #777; }
+html { font-size: 16px; }
+body { font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; color: rgb(51, 51, 51); line-height: 1.6; }
+#write { max-width: 860px; margin: 0px auto; padding: 30px 30px 100px; }
+#write > ul:first-child, #write > ol:first-child { margin-top: 30px; }
+a { color: rgb(65, 131, 196); }
+h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; }
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor { text-decoration: none; }
+h1 tt, h1 code { font-size: inherit; }
+h2 tt, h2 code { font-size: inherit; }
+h3 tt, h3 code { font-size: inherit; }
+h4 tt, h4 code { font-size: inherit; }
+h5 tt, h5 code { font-size: inherit; }
+h6 tt, h6 code { font-size: inherit; }
+h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+h3 { font-size: 1.5em; line-height: 1.43; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1em; }
+h6 { font-size: 1em; color: rgb(119, 119, 119); }
+p, blockquote, ul, ol, dl, table { margin: 0.8em 0px; }
+li > ol, li > ul { margin: 0px; }
+hr { height: 2px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; overflow: hidden; box-sizing: content-box; }
+li p.first { display: inline-block; }
+ul, ol { padding-left: 30px; }
+ul:first-child, ol:first-child { margin-top: 0px; }
+ul:last-child, ol:last-child { margin-bottom: 0px; }
+blockquote { border-left: 4px solid rgb(223, 226, 229); padding: 0px 15px; color: rgb(119, 119, 119); }
+blockquote blockquote { padding-right: 0px; }
+table { padding: 0px; word-break: initial; }
+table tr { border-top: 1px solid rgb(223, 226, 229); margin: 0px; padding: 0px; }
+table tr:nth-child(2n), thead { background-color: rgb(248, 248, 248); }
+table tr th { font-weight: bold; border-width: 1px 1px 0px; border-top-style: solid; border-right-style: solid; border-left-style: solid; border-top-color: rgb(223, 226, 229); border-right-color: rgb(223, 226, 229); border-left-color: rgb(223, 226, 229); border-image: initial; border-bottom-style: initial; border-bottom-color: initial; text-align: left; margin: 0px; padding: 6px 13px; }
+table tr td { border: 1px solid rgb(223, 226, 229); text-align: left; margin: 0px; padding: 6px 13px; }
+table tr th:first-child, table tr td:first-child { margin-top: 0px; }
+table tr th:last-child, table tr td:last-child { margin-bottom: 0px; }
+.CodeMirror-lines { padding-left: 4px; }
+.code-tooltip { box-shadow: rgba(0, 28, 36, 0.3) 0px 1px 1px 0px; border-top: 1px solid rgb(238, 242, 242); }
+.md-fences, code, tt { border: 1px solid rgb(231, 234, 237); background-color: rgb(248, 248, 248); border-radius: 3px; padding: 2px 4px 0px; font-size: 0.9em; }
+code { background-color: rgb(243, 244, 244); padding: 0px 2px; }
+.md-fences { margin-bottom: 15px; margin-top: 15px; padding-top: 8px; padding-bottom: 6px; }
+.md-task-list-item > input { margin-left: -1.3em; }
+@media print {
+  html { font-size: 13px; }
+  table, pre { break-inside: avoid; }
+  pre { overflow-wrap: break-word; }
+}
+.md-fences { background-color: rgb(248, 248, 248); }
+#write pre.md-meta-block { padding: 1rem; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border: 0px; border-radius: 3px; color: rgb(119, 119, 119); margin-top: 0px !important; }
+.mathjax-block > .code-tooltip { bottom: 0.375rem; }
+.md-mathjax-midline { background: rgb(250, 250, 250); }
+#write > h3.md-focus::before { left: -1.5625rem; top: 0.375rem; }
+#write > h4.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h5.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h6.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+.md-image > .md-meta { border-radius: 3px; padding: 2px 0px 0px 4px; font-size: 0.9em; color: inherit; }
+.md-tag { color: rgb(167, 167, 167); opacity: 1; }
+.md-toc { margin-top: 20px; padding-bottom: 20px; }
+.sidebar-tabs { border-bottom: none; }
+#typora-quick-open { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); }
+#typora-quick-open-item { background-color: rgb(250, 250, 250); border-color: rgb(254, 254, 254) rgb(229, 229, 229) rgb(229, 229, 229) rgb(238, 238, 238); border-style: solid; border-width: 1px; }
+.on-focus-mode blockquote { border-left-color: rgba(85, 85, 85, 0.12); }
+header, .context-menu, .megamenu-content, footer { font-family: "Segoe UI", Arial, sans-serif; }
+.file-node-content:hover .file-node-icon, .file-node-content:hover .file-node-open-state { visibility: visible; }
+.mac-seamless-mode #typora-sidebar { background-color: var(--side-bar-bg-color); }
+.md-lang { color: rgb(180, 101, 77); }
+.html-for-mac .context-menu { --item-hover-bg-color: #E6F0FE; }
+#md-notification .btn { border: 0px; }
+.dropdown-menu .divider { border-color: rgb(229, 229, 229); }
+
+
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><h1><a name="graphic@nest" class="md-header-anchor"></a><span>Graphic@NEST</span></h1><h2><a name="advanced-photo-editing-in-photoshop" class="md-header-anchor"></a><span>Advanced photo editing in Photoshop</span></h2><h2><a name="liquify-filter-overview" class="md-header-anchor"></a><span>Liquify filter overview</span></h2><p><em><code>From the official Adobe support guide</code></em></p><p><span>The Liquify filter lets you push, pull, rotate, reflect, pucker, and bloat any area of an image. The distortions you create can be subtle or drastic, which makes the Liquify command a powerful tool for retouching images as well as creating artistic effects. The Liquify filter can be applied to 8‑bits per-channel or 16‑bits per-channel images.</span></p><p><img src='https://helpx.adobe.com/content/dam/help/en/photoshop/using/liquify-filter/_jcr_content/main-pars/image_0/tr_13.png' alt='Distorsione di un’immagine con il filtro Fluidifica di Photoshop' referrerPolicy='no-referrer' /></p><p><span>Tools, options, and an image preview for the Liquify filter are available in the Liquify dialog box. To display the dialog box, choose </span><code>Filter &gt; Liquify</code><span>. Select </span><code>Advanced Mode</code><span> to access more options.</span></p><p><strong><span>Magnify or reduce the preview image</span></strong><span>                </span></p><p><span>Select the Zoom tool in the Liquify dialog box, and click or drag in the preview image to zoom in; hold down Alt (Windows) or Option (Mac OS), and click or drag in the preview image to zoom out. Alternatively, you can specify a magnification level in the Zoom text box at the bottom of the dialog box.</span></p><p><strong><span>Navigate in the preview image</span></strong></p><p><span>Select the Hand tool in the Liquify dialog box, and drag in the preview image. Alternatively, hold down the spacebar with any tool selected, and drag in the preview image.</span></p><h3><a name="face-aware-liquify" class="md-header-anchor"></a><span>Face-Aware Liquify                </span></h3><p><span>The Liquify filter features advanced face-aware functionality that automatically identifies eyes, noses, mouths, and other facial features, making it easy for you to adjust them. Face-Aware Liquify is great for retouching portrait photos, creating caricatures, and doing much more.</span></p><h4><a name="adjust-facial-features-using-on-screen-handles" class="md-header-anchor"></a><span>Adjust facial features using on-screen handles                  </span></h4><ul><li><span>In Photoshop, open an image with one or more faces.</span></li><li><span>Select Filter &gt; Liquify. Photoshop opens the Liquify filter dialog.</span></li><li><span>In the Tools panel, select </span><img src='https://helpx.adobe.com/content/dam/help/en/photoshop/using/attachments/face-tool.jpg' alt='img' referrerPolicy='no-referrer' /><span> (Face tool; keyboard shortcut: A). The faces in the photo are automatically identified.</span></li></ul><p><img src='https://helpx.adobe.com/content/dam/help/en/photoshop/using/liquify-filter/_jcr_content/main-pars/image/v2_handles-faces.png' alt='v2_handles-faces' referrerPolicy='no-referrer' /></p><ul><li><span>When you hover the pointer over the faces, Photoshop displays intuitive on-screen controls around them. Adjust the controls to make adjustments to the faces. For example, you can increase the eye size or decrease the face width.</span></li><li><span>When you&#39;re satisfied with the changes, click OK.</span></li></ul><h4><a name="adjust-facial-features-using-sliding-controls" class="md-header-anchor"></a><span>Adjust facial features using sliding controls            </span></h4><ol start='' ><li><p><span>In Photoshop, open an image with one or more faces.</span></p></li><li><p><span>Select Filter &gt; Liquify. Photoshop opens the Liquify filter dialog.</span></p></li><li><p><span>In the Tools panel, select </span><img src='https://helpx.adobe.com/content/dam/help/en/photoshop/using/attachments/face-tool.jpg' alt='img' referrerPolicy='no-referrer' /><span> (Face tool; keyboard shortcut: A).</span></p><p>&nbsp;</p><p><span>The faces in the photo are automatically identified and one of the faces selected. The identified faces are also listed in the Select Face pop-up menu in the Face-Aware Liquify area of the Properties panel. You can select a different face by clicking it on the canvas or selecting it from the pop-up menu.</span></p></li></ol><p><img src='https://helpx.adobe.com/content/dam/help/en/photoshop/using/liquify-filter/_jcr_content/main-pars/image_190784476/Select_Face.png' alt='Select_Face' referrerPolicy='no-referrer' /></p><p><span>Adjust the sliders in the Face-Aware Liquify area to make appropriate changes to the facial features. When you&#39;re satisfied with the changes, click OK.</span></p><h4><a name="useful-considerations" class="md-header-anchor"></a><span>Useful considerations  </span></h4><ul><li><span>Face-Aware Liquify functionality works best on facial features facing the camera. For best results, rotate any titled faces before applying the settings.</span></li><li><span>The Reconstruct and Restore All options don&#39;t apply to Face-Aware Liquify changes. Use Reset and All options in the Face-Aware Liquify area to reset the changes applied to a selected face and all faces, respectively.</span></li></ul><h3><a name="distortion-tools" class="md-header-anchor"></a><span>Distortion tools </span></h3><p><span>Several tools in the Liquify dialog box distort the brush area when you hold down the mouse button or drag. The distortion is concentrated at the center of the brush area, and the effect intensifies as you hold down the mouse button or repeatedly drag over an area.</span></p><p><strong><span>Forward Warp tool</span></strong><span> </span><img src='https://helpx.adobe.com/content/dam/help/icons/P_Warp_Lg_N.png' alt='img' referrerPolicy='no-referrer' /><span> Pushes pixels forward as you drag.</span></p><pre spellcheck="false" class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 36px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 28px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -28px; width: 28px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -28px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 19px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Note:</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -28px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 19px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Shift-click with the Warp tool, the Push Left tool, or the Mirror tool to create the effect of dragging in a straight line from the previous point you clicked.</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 92px;"></div><div class="CodeMirror-gutters" style="height: 92px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 27px;"></div></div></div></div></pre><p><strong><span>Reconstruct tool</span></strong><span> </span><img src='https://helpx.adobe.com/content/dam/help/icons/P_Reconstruct_Lg_N.png' alt='img' referrerPolicy='no-referrer' /><span> Reverses the distortion you’ve already added, as you hold down the mouse button and drag. </span></p><p><strong><span>Twirl Clockwise tool</span></strong><span> </span><img src='https://helpx.adobe.com/content/dam/help/icons/P_TwirlCW_Lg_N.png' alt='img' referrerPolicy='no-referrer' /><span> Rotates pixels clockwise as you hold down the mouse button or drag. To twirl pixels counterclockwise, hold down Alt (Windows) or Option (Mac OS) as you hold down the mouse button or drag.</span></p><p><strong><span>Pucker tool</span></strong><span>  </span><img src='https://helpx.adobe.com/content/dam/help/icons/P_Pucker_Lg_N.png' alt='img' referrerPolicy='no-referrer' /><span> Moves pixels toward the center of the brush area as you hold down the mouse button or drag. </span></p><p><strong><span>Bloat tool</span></strong><span> </span><img src='https://helpx.adobe.com/content/dam/help/icons/P_Bloat_Lg_N.png' alt='img' referrerPolicy='no-referrer' /><span> Moves pixels away from the center of the brush area as you hold down the mouse button or drag.</span></p><p><strong><span>Push Left tool</span></strong><span> </span><img src='https://helpx.adobe.com/content/dam/help/icons/P_ShiftPixels_Lg_N.png' alt='img' referrerPolicy='no-referrer' /><span> Moves pixels to the left when you drag the tool straight up (pixels move to the right if you drag down). You can also drag clockwise around an object to increase its size, or drag counterclockwise to decrease its size. To push pixels right when you drag straight up (or to move pixels left when you drag down), hold down Alt (Windows) or Option (Mac OS) as you drag.</span></p><h3><a name="distortion-tool-options" class="md-header-anchor"></a><span>Distortion tool options                  </span></h3><p><span>In the tool options area of the dialog box, set the following options:</span></p><ul><li><span>Brush size: Sets the width of the brush you’ll use to distort the image..</span></li><li><span>Brush density: Controls how a brush feathers at the edge. An effect is strongest in</span>
+<span>the center of the brush and lighter at the edge.</span></li><li><span>Brush pressure: Sets the speed at which distortions are made when you drag a tool in the preview image. Using a low brush pressure makes changes occur more slowly, so it’s easier to stop them at exactly the right moment.</span></li><li><span>Brush rate: Sets the speed at which distortions are applied when you keep a tool (such as the Twirl tool) stationary in the preview image. The higher the setting, the greater the speed at which distortions are applied.</span></li><li><span>Stylus pressure: Uses pressure readings from a stylus tablet. (This option is available only when you are working with a stylus tablet.) When selected, the brush pressure for the tools is the stylus pressure multiplied by the Brush Pressure value.</span></li></ul><h3><a name="distort-an-image" class="md-header-anchor"></a><span>Distort an image                </span></h3><pre spellcheck="false" class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 36px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 28px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>2</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -28px; width: 28px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -28px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 19px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Note: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -28px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 19px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">If a type layer or a shape layer is selected, you must rasterize the layer before proceeding, making the type or shape editable by the Liquify filter. To distort type without rasterizing the type layer, use the Warp options for the Type tool.</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 138px;"></div><div class="CodeMirror-gutters" style="height: 138px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 27px;"></div></div></div></div></pre><p>&nbsp;</p><ul><li><span>Select the layer you want to distort. To change only part of the current layer, select that area.</span></li><li><span>Choose Filter &gt; Liquify.</span></li><li><span>Freeze areas of the image that you don’t want to alter.</span></li><li><span>Choose any of the liquify tools to distort the preview image. Drag in the preview image to distort the image.</span></li></ul><p><span>After distorting the preview image, you can:</span></p><ul><li><span>Use the Reconstruct tool  </span><img src='https://helpx.adobe.com/content/dam/help/icons/P_Reconstruct_Lg_N.png' alt='img' referrerPolicy='no-referrer' /><span> or Reconstruct Options to fully or partially reverse the changes.</span></li><li><span>Use other tools to change the image in new ways.</span></li></ul><p><span>Do one of the following:</span></p><ul><li><span>Click OK to close the Liquify dialog box and apply the changes to the active layer.</span></li><li><span>Click Cancel to close the Liquify dialog box without applying changes to the layer.</span></li><li><span>Hold down Alt (Windows) or Option (Mac OS) and click Reset to revert all distortions to the preview image and reset all options to their defaults.</span></li></ul><pre spellcheck="false" class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 36px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 28px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>2</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -28px; width: 28px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -28px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 19px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Note: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -28px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 19px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">You can use the Edit &gt; Fade command to create additional effects.</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 69px;"></div><div class="CodeMirror-gutters" style="height: 69px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 27px;"></div></div></div></div></pre><p>&nbsp;</p><h3><a name="freeze-and-thaw-areas" class="md-header-anchor"></a><span>Freeze and thaw areas   </span></h3><p><span>You can freeze areas that you don’t want to modify or thaw frozen areas to make them editable again. You can also invert both frozen and thawed areas.</span></p><p><strong><span>Freeze areas</span></strong><span>  By freezing areas of the preview image, you protect those areas from changes. Frozen areas are covered by a mask that you paint using the Freeze Mask tool </span><img src='https://helpx.adobe.com/content/dam/help/icons/P_Freeze_Lg_N.png' alt='img' referrerPolicy='no-referrer' /><span>.  You can also use an existing mask, selection, or transparency to freeze areas. You can view the mask in the preview image to help you apply distortions.</span></p><p><strong><span>Using the Freeze Mask tool</span></strong><span> Select the Freeze Mask tool </span><img src='https://helpx.adobe.com/content/dam/help/icons/P_Freeze_Lg_N.png' alt='img' referrerPolicy='no-referrer' /><span>and drag over the area you want to protect. Shift-click to freeze in a straight line between the current point and the previously clicked point. </span></p><p><strong><span>Using an existing selection, mask, or transparency channel</span></strong><span> If you’re applying the Liquify filter to a layer with a selection, layer mask, transparency, or alpha channel, choose Selection, Layer Mask, Transparency, or Quick Mask from any of the five icons’ pop‑up menu in the Mask Options area of the dialog box. This determines how areas of the preview image are frozen or masked.</span></p><p><strong><span>Freezing all thawed areas</span></strong><span> Click Mask All in the Mask Options area of the dialog box.</span></p><p><strong><span>Inverting thawed and frozen areas</span></strong><span> Click Invert All in the Mask Options area of the dialog box. </span></p><p><strong><span>Showing or hiding frozen areas</span></strong><span> Select or deselect Show Mask in the View Options area of the dialog box.</span></p><p><strong><span>Changing the color of frozen areas</span></strong><span> hoose a color from the Mask Color pop‑up menu in the View Options area of the dialog box.</span></p><h3><a name="mask-options-with-the-liquify-filter" class="md-header-anchor"></a><span>Mask options with the Liquify filter               </span></h3><p><span>When you have an existing selection, transparency, or mask in an image, that information is retained when the Liquify dialog box opens. You can choose one of the following mask options:</span></p><p><strong><span>Replace selection</span></strong><img src='https://helpx.adobe.com/content/dam/help/icons/P_LiquifyMaskCopy_29x20_N.png' alt='img' referrerPolicy='no-referrer' /><span> Shows the selection, mask, or transparency in the original image. </span></p><p><strong><span>Add To Selection</span></strong><span> </span><img src='https://helpx.adobe.com/content/dam/help/icons/P_LiquifyMaskThaw_29x20_N.png' alt='img' referrerPolicy='no-referrer' /><span> Shows the mask in the original image, so that you can add to the selection using the Freeze Mask tool. Adds selected pixels in channel to the current frozen area.</span></p><p><strong><span>Subtract From Selection</span></strong><span> </span><img src='https://helpx.adobe.com/content/dam/help/icons/P_LiquifyMaskFreeze_29x20_.png' alt='img' referrerPolicy='no-referrer' /><span> Subtracts pixels in channel from the current frozen area.</span></p><p><strong><span>Intersect With Selection</span></strong><span>  </span><img src='https://helpx.adobe.com/content/dam/help/icons/P_LiquifyMaskCross_29x20_N.png' alt='img' referrerPolicy='no-referrer' /><span> Uses only pixels that are selected and currently frozen.</span></p><p><strong><span>Invert Selection</span></strong><span> </span><img src='https://helpx.adobe.com/content/dam/help/icons/P_LiquifyMaskInvert_29x20_.png' alt='img' referrerPolicy='no-referrer' /><span> Uses selected pixels to invert the current frozen area.</span></p><pre spellcheck="false" class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 36px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 28px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>2</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -28px; width: 28px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -28px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 19px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Note: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -28px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 19px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">If a selection exists, the filter limits the preview and processing to the rectangular area containing that selection. (For rectangular marquee selections, the selected area and preview are identical, so choosing Selection from the mask option menus above has no effect.)</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 138px;"></div><div class="CodeMirror-gutters" style="height: 138px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 27px;"></div></div></div></div></pre><h3><a name="thaw-areas" class="md-header-anchor"></a><span>Thaw areas       </span></h3><p><span>To thaw frozen areas so they’re editable, do any of the following:</span></p><ul><li><span>Select the Thaw Mask tool  </span><img src='https://helpx.adobe.com/content/dam/help/icons/P_Thaw_Lg_N.png' alt='img' referrerPolicy='no-referrer' /><span>  and drag over the area. Shift-click to thaw in a straight line between the current point and the previously clicked point.</span></li><li><span>To thaw all frozen areas, click the None button in the Mask Options area of the dialog box.</span></li><li><span>To invert frozen and thawed areas, click Invert All in the Mask Options area of the dialog box. </span></li></ul><h3><a name="work-with-backdrops" class="md-header-anchor"></a><span>Work with backdrops                 </span></h3><p><span>You can choose to show only the active layer in the preview image, or you can show additional layers in the preview image as a backdrop. Using the Mode options, you can position the backdrop in front of or behind the active layer to keep track of your changes, or to line up a distortion with another distortion made in a different layer.</span></p><p><strong><span>Note: Only the active layer is distorted, even if other layers are displayed.</span></strong></p><p><strong><span>Showing the backdrop</span></strong><span>: Select Show Backdrop, and then choose Background from the Use menu and an option from the Mode menu. </span></p><p><strong><span>Showing changes to the target layer without showing the backdrop</span></strong><span>: Select All Layers from the Use menu. Setting the Opacity to 0 shows only the target layer with the full effects of the Liquify filter. Setting the Opacity to a higher value shows less of the Liquify filter’s effect on the target layer.</span></p><p><strong><span>Changing the blending between the target layer and the backdrop</span></strong><span>: Specify a Opacity value.</span></p><p><strong><span>Determining how the target layer and the backdrop are combined in the image preview</span></strong><span>: Choose an option from the Mode menu.</span></p><p><strong><span>Hiding the backdrop</span></strong><span>: Deselect Show Backdrop in the View Options area of the dialog box.</span></p><p>&nbsp;</p><h3><a name="reconstruct-distortions" class="md-header-anchor"></a><span>Reconstruct distortions                </span></h3><p><span>After you distort the preview image, you can use a variety of controls and reconstruction modes to reverse changes or redo the changes in new ways. Reconstructions can be applied two ways. You can apply a reconstruction to the entire image, smoothing out the distortion in unfrozen areas, or you can use the reconstruction tool to reconstruct specific areas. If you want to prevent reconstruction of distorted areas, you can use the Freeze Mask tool.</span></p><p><img src='https://helpx.adobe.com/content/dam/help/en/photoshop/using/liquify-filter/_jcr_content/main-pars/image_1/tr_15.png' alt='Ricostruzione basata sulle distorsioni nelle aree fisse in Photoshop' referrerPolicy='no-referrer' />
+<strong><span>A.</span></strong><span> Original image </span><strong><span>B.</span></strong><span> Distorted with frozen areas </span><strong><span>C.</span></strong><span> Reconstructed in Rigid mode (using button) </span><strong><span>D.</span></strong><span> Thawed, edges reconstructed in Smooth mode (using tool)                   </span></p><p><strong><span>Reconstruct an entire image</span></strong><span>: Click Reconstruct in the Reconstruct Options area of the dialog box. Then, in the Revert Reconstruction dialog box, specify an amount and click OK.</span></p><p><strong><span>Remove all distortions</span></strong><span>: Click Restore All in the Reconstruct Option area of the dialog box. This removes distortions even in frozen areas.</span></p><h4><a name="reconstruct-part-of-a-distorted-image" class="md-header-anchor"></a><span>Reconstruct part of a distorted image </span></h4><ul><li><span>Freeze areas you want to keep distorted.</span></li><li><span>Select the Reconstruct tool </span><img src='https://helpx.adobe.com/content/dam/help/icons/P_Reconstruct_Lg_N.png' alt='img' referrerPolicy='no-referrer' /><span>and specify brush options in the Tool Options area of the dialog box.</span></li><li><span>Drag over the area you want to reconstruct. Pixels move more quickly at the brush center. Shift-click to reconstruct in a straight line between the current point and the previously clicked point.</span></li></ul></div>
+</body>
+</html>
