@@ -429,5 +429,32 @@ body {
 }
 
 
+.navibar {
+  display: block;
+  overflow: hidden;
+  background-color: #222;
+  z-index: 100;
+  padding: 0;
+}
 
+.navibar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navibar a:hover, .dropdown:hover .dropbtn {
+  background-color: #e84855;
+  color: white;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 
