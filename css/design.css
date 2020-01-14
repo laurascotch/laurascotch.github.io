@@ -432,7 +432,7 @@ body {
 .navibar {
   display: block;
   overflow: hidden;
-  background-color: #222;
+  background-color: #ddd;
   z-index: 100;
   padding: 0;
 }
