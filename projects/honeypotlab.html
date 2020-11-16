@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Honeypot Lab</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="../css/theme.css" type="text/css">
+
+
+  <style>
+  
+    .card-img-top {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+  </style>
+
+
+</head>
+
+<body>
+
+
+    <div id="navbar" class="navbar">
+      <a class="active" href="../ITportfolio.html"><span class="fa fa-caret-left">  Back to portfolio</span></a>
+      <a href="../index.html" style="float:right">Home</a>
+    </div>
+          
+    <script>
+        window.onscroll = function() {stickynavbar()};
+                    
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+                    
+        function stickynavbar() {
+          if (window.pageYOffset >= sticky+1) {
+            navbar.setAttribute("class", "");
+            navbar.setAttribute("class", "navbar sticky");
+          } else {
+            navbar.setAttribute("class", "navbar");
+          }
+        }
+    </script>
+
+
+  <div class="py-5" >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="display-4">Discovering honeypots</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="lead">Lab lacture presented as final group project of the course Network Security (MSc in Computer Science, UniTN, 2019/'20)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="">Abstract</h3>
+          <p class="">This laboratory lecture was designed to present the main characteristics of honeypots and describe some of their different existing implementation. After a first introductory part to the topic, we (my teammates and me) showed some possible practical applications of two open source honeypots, namely Cowrie and Dionaea. The proposed exercises on their relevant aspects were later followed by a final discussion, regarding further and more realistic usage of honeypots with a curious one sometimes employed by law enforcement.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="">Technical aspects</h3>
+          <p class="">What is interesting to note is that, before the COVID-19 pandemic struck, the lab lectures (all of them presented by the students) were held in a Lab at University of Trento with a fully set up subnet in order to recreate ad hoc scenarios.</p>
+          <p class="">Since the pandemic, the lectures were held remotely and we couldn't access the Lab. For this reason, we had to work with various virtual machines, in particular using iptables in order to set up the network scenario we needed to run the lecture.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="">Full report</h3>
+          <p class=""><embed src= "Report_NetSec2020.pdf" style="width: 50vw; height: 80vh"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
