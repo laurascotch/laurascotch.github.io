@@ -17,12 +17,35 @@
         object-fit: cover;
     }
 
+    [class='project_title is-visible'] {
+      margin-bottom: 0.75rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 3.5rem;
+      font-weight: 200;
+      line-height: 1.2;
+    }
+
+    [class='project_title_fix'] {
+      margin-bottom: 0.75rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 2rem;
+      font-weight: 200;
+      line-height: 1.2;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      margin-top: -50px;
+      margin-left: -100px;
+    }
+
   </style>
 
 
 </head>
 
 <body>
+
+  
 
 
     <div id="navbar" class="navbar">
@@ -47,13 +70,13 @@
     </script>
 
 
-<div class="bgimgdegree" id="creativepf">
+  <div class="bgimgdegree" id="creativepf">
     <div class="container">
       <div class="row" style="height: auto; max-height:100%">
           <div class="p-5 col-lg-12 d-flex flex-column justify-content-center text-left">
               <div class="row">
                 <div class="col-md-8">
-                  <h1 class="display-4 mt-3" style="color: white;"><br><br>My Bachelor's Degree Thesis</h1>
+                  <h1 class="project_title" style="color: white;">My Bachelor's Degree Thesis</h1>
                   <h5 style="color: white;"><b>Studio e sviluppo di un protocollo di comunicazione per servizi non verbali per dispositivi "wearable"</b><br>
                     <i>Development of a communication protocol for wearable devices for non verbal communication</i><br><br></h5>
                 </div>
@@ -116,6 +139,58 @@
       </div>
     </div>
   </div>
+
+
+  <script>
+    // Detect request animation frame
+    var scroll = window.requestAnimationFrame ||
+                 // IE Fallback
+                 function(callback){ window.setTimeout(callback, 1000/60)};
+    var elementsToShow = document.querySelectorAll('.project_title');
+    console.log(elementsToShow);
+    
+    function loop() {
+    
+        Array.prototype.forEach.call(elementsToShow, function(element){
+          if (isElementInViewport(element)) {
+            element.classList.add('project_title');
+            element.classList.add('is-visible');
+            element.classList.remove('project_title_fix');
+          } else {
+            element.classList.add('project_title_fix');
+            element.classList.remove('project_title');
+            element.classList.remove('is-visible');
+          }
+        });
+    
+        scroll(loop);
+    }
+    
+    // Call the loop for the first time
+    loop();
+    
+    // Helper function from: http://stackoverflow.com/a/7557433/274826
+    function isElementInViewport(el) {
+      // special bonus for those using jQuery
+      if (typeof jQuery === "function" && el instanceof jQuery) {
+        el = el[0];
+      }
+      var rect = el.getBoundingClientRect();
+      return (
+        (rect.top <= 0
+          && rect.bottom >= 0)
+        ||
+        (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+        ||
+        (rect.top >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+      );
+    }
+      </script>
+
+
+
 </body>
 
 </html>
