@@ -2158,13 +2158,13 @@
   
   @media screen and (max-width: 750px) {
     .bgimg {
-      background-image: linear-gradient(to right,rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.00)), url("https://i.ibb.co/vjYY8Js/IMG-20190703-162043.jpg");
+      background-image: linear-gradient(to right,rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.00)), url("../images/keyboard.jpg");
     }
   }
   
   @media screen and (min-width: 751px) {
     .bgimg {
-      background-image: linear-gradient(to right,rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.00)), url("https://i.ibb.co/bJdnCMc/keyboard.jpg");
+      background-image: linear-gradient(to right,rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.00)), url("../images/keyboard.jpg");
     }
   }
         
