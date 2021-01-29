@@ -1,13 +1,13 @@
 
 @media screen and (max-width: 750px) {
   .bgimg {
-    background: linear-gradient(to right,rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.5)),url('https://i.ibb.co/9HhVFyf/creative-PF-mobile.jpg') 50% 0 repeat-y fixed;
+    background: linear-gradient(to right,rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.5)),url('../images/creative-PF-mobile.jpg') 50% 0 repeat-y fixed;
   }
 }
 
 @media screen and (min-width: 751px) {
   .bgimg {
-    background: linear-gradient(to right,rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.5)),url('https://i.ibb.co/1QPYfF8/creative-PF.jpg') 50% 0 repeat-y fixed;
+    background: linear-gradient(to right,rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.5)),url('../images/creative-PF.jpg') 50% 0 repeat-y fixed;
   }
 }
       
@@ -25,7 +25,7 @@
 
 /* contactdes section */
 #contactdes {
-	background: linear-gradient(to right,rgba(10, 10, 10, 0.65), rgba(10, 10, 10, 0.65), rgba(10, 10, 10, 0.65)),url('https://i.ibb.co/1QPYfF8/creative-PF.jpg') 50% 0 repeat-y fixed;
+	background: linear-gradient(to right,rgba(10, 10, 10, 0.65), rgba(10, 10, 10, 0.65), rgba(10, 10, 10, 0.65)),url('../images/creative-PF.jpg') 50% 0 repeat-y fixed;
 	background-size: cover;
 	color: #ffffff;
 	padding-top: 100px;
