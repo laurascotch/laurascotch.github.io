@@ -2153,13 +2153,13 @@ input[type="button"].btn-block {
 
 @media screen and (max-width: 750px) {
   .bgimgdegree {
-    background-image: linear-gradient(to right,rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.00)), url("../images/DSC_0088_rid.jpg");
+    background-image: linear-gradient(to right,rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.00)), url("../images/bscthesis.jpg");
   }
 }
 
 @media screen and (min-width: 751px) {
   .bgimgdegree {
-    background-image: linear-gradient(to right,rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.00)), url("../images/DSC_0088_rid.jpg");
+    background-image: linear-gradient(to right,rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.00)), url("../images/bscthesis.jpg");
   }
 }
       

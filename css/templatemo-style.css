@@ -130,7 +130,7 @@ transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
   
   @media screen and (min-width: 551px) {
 	#home {
-		background: linear-gradient(to right,rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.5)),url('../images/laura-head-mobile.jpg') 50% 0 repeat-y fixed;
+		background: linear-gradient(to right,rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.5)),url('../images/laura_head_mobile.jpg') 50% 0 repeat-y fixed;
 	}
   }
 
