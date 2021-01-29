@@ -47,27 +47,11 @@
 
   
 
-
+  <div class="projectheader" id="projectheader">
     <div id="navbar" class="navbar">
       <a class="active" href="../ITportfolio.html"><span class="fa fa-caret-left">  Back to portfolio</span></a>
       <a href="../index.html" style="float:right">Home</a>
     </div>
-          
-    <script>
-        window.onscroll = function() {stickynavbar()};
-                    
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
-                    
-        function stickynavbar() {
-          if (window.pageYOffset >= sticky+1) {
-            navbar.setAttribute("class", "");
-            navbar.setAttribute("class", "navbar sticky");
-          } else {
-            navbar.setAttribute("class", "navbar");
-          }
-        }
-    </script>
 
 
   <div class="bgimgdegree" id="creativepf">
@@ -85,15 +69,37 @@
       </div>
     </div>
   </div>
+  </div>
 
 
   <br><br>
   
-  <div class="py-5">
+  <div class="py-5" style="padding-top: 10px;" id="content_page">
+
+
+    <script>
+      window.onscroll = function() {stickynavbar()};
+                  
+      var navbar = document.getElementById("projectheader");
+      var sticky = navbar.offsetTop;
+      var spacer = document.getElementById("content_page");
+                  
+      function stickynavbar() {
+        if (window.pageYOffset >= sticky+(navbar.offsetHeight)) {
+          navbar.setAttribute("class", "");
+          navbar.setAttribute("class", "projectheader sticky");
+          spacer.setAttribute("style","padding-top: "+2*(navbar.offsetHeight)+10+"px");
+        } else {
+          navbar.setAttribute("class", "projectheader");
+          spacer.setAttribute("style","padding-top: 10px;");
+        }
+      }
+  </script>
+
     <div class="container">
       <div class="row">
         <div class="col-md-4">
-          <div class="card text-center"> <img class="card-img-top" src="https://i.ibb.co/FW02MZ1/componenti-s.jpg" alt="Card image cap">
+          <div class="card text-center"> <img class="card-img-top" src="https://i.ibb.co/FW02MZ1/componenti-s.jpg" alt="">
             <div class="card-body">
               <p class="card-text"></p>
             </div>
@@ -140,54 +146,6 @@
     </div>
   </div>
 
-
-  <script>
-    // Detect request animation frame
-    var scroll = window.requestAnimationFrame ||
-                 // IE Fallback
-                 function(callback){ window.setTimeout(callback, 1000/60)};
-    var elementsToShow = document.querySelectorAll('.project_title');
-    console.log(elementsToShow);
-    
-    function loop() {
-    
-        Array.prototype.forEach.call(elementsToShow, function(element){
-          if (isElementInViewport(element)) {
-            element.classList.add('project_title');
-            element.classList.add('is-visible');
-            element.classList.remove('project_title_fix');
-          } else {
-            element.classList.add('project_title_fix');
-            element.classList.remove('project_title');
-            element.classList.remove('is-visible');
-          }
-        });
-    
-        scroll(loop);
-    }
-    
-    // Call the loop for the first time
-    loop();
-    
-    // Helper function from: http://stackoverflow.com/a/7557433/274826
-    function isElementInViewport(el) {
-      // special bonus for those using jQuery
-      if (typeof jQuery === "function" && el instanceof jQuery) {
-        el = el[0];
-      }
-      var rect = el.getBoundingClientRect();
-      return (
-        (rect.top <= 0
-          && rect.bottom >= 0)
-        ||
-        (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
-          rect.top <= (window.innerHeight || document.documentElement.clientHeight))
-        ||
-        (rect.top >= 0 &&
-          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
-      );
-    }
-      </script>
 
 
 
