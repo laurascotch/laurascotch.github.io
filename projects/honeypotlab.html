@@ -3,89 +3,573 @@
 
 <head>
   <title>Honeypot Lab</title>
+  <!-- Basic -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="../css/theme.css" type="text/css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- Site Metas -->
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Site Icons -->
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" type="text/css">
+  <link rel="stylesheet" href="fonts/font-mfizz.css">
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="../style.css">
+  <!-- Responsive CSS -->
+  <link rel="stylesheet" href="../css/responsive.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/custom.css">
+  <script src="../js/modernizr.js"></script> <!-- Modernizr -->
+
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
 
 
   <style>
-  
     .card-img-top {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
+    * {
+      box-sizing: border-box
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+      background-color: #717171;
+    }
   </style>
 
 
 </head>
 
+
 <body>
 
-
-    <div id="navbar" class="navbar">
-      <a class="active" href="../ITportfolio.html"><span class="fa fa-caret-left">  Back to portfolio</span></a>
-      <a href="../index.html" style="float:right">Home</a>
-    </div>
-          
-    <script>
-        window.onscroll = function() {stickynavbar()};
-                    
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
-                    
-        function stickynavbar() {
-          if (window.pageYOffset >= sticky+1) {
-            navbar.setAttribute("class", "");
-            navbar.setAttribute("class", "navbar sticky");
-          } else {
-            navbar.setAttribute("class", "navbar");
-          }
-        }
-    </script>
-
-
-  <div class="py-5" >
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="portNav">
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class="display-4">Discovering honeypots</h1>
-        </div>
+      <a class="navbar-brand js-scroll-trigger" href="../index.html">
+        <img class="img-fluid" src="../images/min_light.png" style="max-height:3em;" alt="" />
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fa fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger active" href="../ITportfolio.html">Back to projects</a>
+          </li>
+        </ul>
       </div>
-      <div class="row">
-        <div class="col-md-12">
-          <p class="lead">Lab lacture presented as final group project of the course Network Security (MSc in Computer Science, UniTN, 2019/'20)</p>
+    </div>
+  </nav>
+
+
+  <div id="blog" class="section db">
+    <div class="container">
+      <div class="section-title text-left">
+        <h3><br>Discovering honeypots</h3>
+        <p>Lab lacture presented as final group project of the course Network Security (MSc in Computer Science, UniTN,
+          2019/'20)
+        </p>
+      </div><!-- end title -->
+
+      <div class="message-box" style="color:#afafaf; text-align: justify;">
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="">Abstract</h3>
+            <p class="">This laboratory lecture was designed to present the main characteristics of honeypots and
+              describe some of their different existing implementation. After a first introductory part to the topic, we
+              (my teammates and me) showed some possible practical applications of two open source honeypots, namely
+              Cowrie and Dionaea. The proposed exercises on their relevant aspects were later followed by a final
+              discussion, regarding further and more realistic usage of honeypots with a curious one sometimes employed
+              by law enforcement.</p>
+            <h3 class="">Technical aspects</h3>
+            <p class="">What is interesting to note is that, before the COVID-19 pandemic struck, the lab lectures (all of them presented by the students) were held in a Lab at University of Trento with a fully set up subnet in order to recreate ad hoc scenarios.
+            </p>
+            <p class="">Since the pandemic, the lectures were held remotely and we couldn't access the Lab. For this reason, we had to work with various virtual machines, in particular using iptables in order to set up the network scenario we needed to run the lecture.</p>
+          </div>
         </div>
-      </div>
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="">Lab Presentation</h3>
+
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+              <!-- Full-width images with number and caption text -->
+              <div class="mySlides">
+                <div class="numbertext">1 / 53</div>
+                <img src="../images/honey/hp (1).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">2 / 53</div>
+                <img src="../images/honey/hp (2).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">3 / 53</div>
+                <img src="../images/honey/hp (3).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">4 / 53</div>
+                <img src="../images/honey/hp (4).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">5 / 53</div>
+                <img src="../images/honey/hp (5).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">6 / 53</div>
+                <img src="../images/honey/hp (6).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">7 / 53</div>
+                <img src="../images/honey/hp (7).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">8 / 53</div>
+                <img src="../images/honey/hp (8).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">9 / 53</div>
+                <img src="../images/honey/hp (9).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">10 / 53</div>
+                <img src="../images/honey/hp (10).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">11 / 53</div>
+                <img src="../images/honey/hp (11).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">12 / 53</div>
+                <img src="../images/honey/hp (12).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">13 / 53</div>
+                <img src="../images/honey/hp (13).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">14 / 53</div>
+                <img src="../images/honey/hp (14).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">15 / 53</div>
+                <img src="../images/honey/hp (15).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">16 / 53</div>
+                <img src="../images/honey/hp (16).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">17 / 53</div>
+                <img src="../images/honey/hp (17).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">18 / 53</div>
+                <img src="../images/honey/hp (18).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">19 / 53</div>
+                <img src="../images/honey/hp (19).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">20 / 53</div>
+                <img src="../images/honey/hp (20).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">21 / 53</div>
+                <img src="../images/honey/hp (21).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">22 / 53</div>
+                <img src="../images/honey/hp (22).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">23 / 53</div>
+                <img src="../images/honey/hp (23).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">24 / 53</div>
+                <img src="../images/honey/hp (24).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">25 / 53</div>
+                <img src="../images/honey/hp (25).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">26 / 53</div>
+                <img src="../images/honey/hp (26).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">27 / 53</div>
+                <img src="../images/honey/hp (27).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">28 / 53</div>
+                <img src="../images/honey/hp (28).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">29 / 53</div>
+                <img src="../images/honey/hp (29).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">30 / 53</div>
+                <img src="../images/honey/hp (30).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">31 / 53</div>
+                <img src="../images/honey/hp (31).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">32 / 53</div>
+                <img src="../images/honey/hp (32).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">33 / 53</div>
+                <img src="../images/honey/hp (33).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">34 / 53</div>
+                <img src="../images/honey/hp (34).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">35 / 53</div>
+                <img src="../images/honey/hp (35).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">36 / 53</div>
+                <img src="../images/honey/hp (36).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">37 / 53</div>
+                <img src="../images/honey/hp (37).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">38 / 53</div>
+                <img src="../images/honey/hp (38).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">39 / 53</div>
+                <img src="../images/honey/hp (39).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">40 / 53</div>
+                <img src="../images/honey/hp (40).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">41 / 53</div>
+                <img src="../images/honey/hp (41).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">42 / 53</div>
+                <img src="../images/honey/hp (42).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">43 / 53</div>
+                <img src="../images/honey/hp (43).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">44 / 53</div>
+                <img src="../images/honey/hp (44).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">45 / 53</div>
+                <img src="../images/honey/hp (45).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">46 / 53</div>
+                <img src="../images/honey/hp (46).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">47 / 53</div>
+                <img src="../images/honey/hp (47).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">48 / 53</div>
+                <img src="../images/honey/hp (48).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">49 / 53</div>
+                <img src="../images/honey/hp (49).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">50 / 53</div>
+                <img src="../images/honey/hp (50).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">51 / 53</div>
+                <img src="../images/honey/hp (51).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">52 / 53</div>
+                <img src="../images/honey/hp (52).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+        <div class="mySlides">
+                <div class="numbertext">53 / 53</div>
+                <img src="../images/honey/hp (53).jpg" style="width:100%">
+                <div class="text"></div>
+        </div>
+
+              <!-- Next and previous buttons -->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <script>
+              var slideIndex = 1;
+              showSlides(slideIndex);
+
+              // Next/previous controls
+              function plusSlides(n) {
+                showSlides(slideIndex += n);
+              }
+
+              // Thumbnail image controls
+              function currentSlide(n) {
+                showSlides(slideIndex = n);
+              }
+
+              function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";
+                }
+                slides[slideIndex - 1].style.display = "block";
+              }
+            </script>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="">Full report</h3>
+            <p class="">
+            <p>Click <a href="https://drive.google.com/file/d/1cpLBdKQMdRbNlu1CxRxDazxeT4aUurO9/view?usp=sharing"
+                target="_blank">here</a> if it doesn't load.</p>
+            <embed src="Report_NetSec2020.pdf" type="application/pdf" style="width:100%; min-height: 600px;"></p>
+          </div>
+        </div>
+      </div><!-- end messagebox -->
+
     </div>
   </div>
-  
-  <div class="py-5">
+
+
+
+
+  <div class="py-5" style="background-color: #222;" id="contacts">
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h3 class="">Abstract</h3>
-          <p class="">This laboratory lecture was designed to present the main characteristics of honeypots and describe some of their different existing implementation. After a first introductory part to the topic, we (my teammates and me) showed some possible practical applications of two open source honeypots, namely Cowrie and Dionaea. The proposed exercises on their relevant aspects were later followed by a final discussion, regarding further and more realistic usage of honeypots with a curious one sometimes employed by law enforcement.</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <h3 class="">Technical aspects</h3>
-          <p class="">What is interesting to note is that, before the COVID-19 pandemic struck, the lab lectures (all of them presented by the students) were held in a Lab at University of Trento with a fully set up subnet in order to recreate ad hoc scenarios.</p>
-          <p class="">Since the pandemic, the lectures were held remotely and we couldn't access the Lab. For this reason, we had to work with various virtual machines, in particular using iptables in order to set up the network scenario we needed to run the lecture.</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <h3 class="">Full report</h3>
-          <p class=""><p>Click <a href="https://drive.google.com/file/d/1cpLBdKQMdRbNlu1CxRxDazxeT4aUurO9/view?usp=sharing" target="_blank">here</a> if it doesn't load.</p>
-          <embed src="Report_NetSec2020.pdf" type="application/pdf" style="width:100%; min-height: 600px;"></p>
-        </div>
-      </div>
+      <br><br>
+      <h1 class="display-4" style="color:#ddd">Contacts</h1>
+      <p style="color:white;"><span class="fas fa-map-marker-alt text-light fa-lg mx-2"></span> Currently based in:
+        Trento, Italy<br>
+        <a href="mailto:laura.scoccianti@gmail.com" style="color:#e84855;"><span
+            class="fa fa-envelope text-light fa-lg mx-2"></span> laura.scoccianti@gmail.com</a><br>
+        <a href="https://t.me/laurascotch" style="color:#e84855;"><span
+            class="fa fa-paper-plane text-light fa-lg mx-2"></span> Telegram: @laurascotch</a>
+        <br>
+        <a href="https://github.com/laurascotch" style="color:#e84855;">
+          <span class="fa fa-github text-light fa-lg mx-2"></span> /laurascotch
+        </a> <br>
+      </p>
+      <br><br>
     </div>
   </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
+
 </body>
+
 
 </html>

@@ -3,375 +3,302 @@
 
 <head>
   <title>LauS' Portfolio</title>
+  <!-- Basic -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  
-  <!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
--->
-  <link rel="stylesheet" href=".\css\design.css" type="text/css">
-  <!-- STYLESHEET CSS FILES -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" type="text/css">
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<link rel="stylesheet" href="css\bootstrap.min.css">
-<link rel="stylesheet" href="css\animate.min.css">
-<link rel="stylesheet" href="css\nivo-lightbox.css">
-<link rel="stylesheet" href="css\nivo_themes/default/default.css">
-<link rel="stylesheet" href="css\templatemo-style.css">
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- Site Metas -->
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Site Icons -->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" type="text/css">
+  <link rel="stylesheet" href="fonts/font-mfizz.css">
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Responsive CSS -->
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+  <script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <style>
+    .card-with-image {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-y: center;
+      background-position-x: center;
+      min-height: 20em;
+    }
+
+    .card-overlay {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      background: rgba(0, 0, 0, 0.8);
+      color: #ffffff;
+      opacity: 0;
+      -webkit-transition: all .5s;
+      transition: all .5s;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .card-with-image:hover .card-overlay {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+
+    .card-columns {
+      @media only screen and (orientation: landscape) {
+        column-count: 3;
+      }
+    }
+  </style>
+
 </head>
 
+<body>
 
-<body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
-
- 
-        <!-- navigation section -->
-        
-
-          
-
-          <div id="navibar" class="navibar">
-            <a href="#contactdes" class="smoothScroll" style="float:right">Contacts</a>
-            <a class="active smoothScroll" href="index.html" style="float:right">Home</a>
-          </div>
-
-          <script>
-            window.onscroll = function() {stickynavbar()};
-            
-            var navbar = document.getElementById("navibar");
-            var sticky = navbar.offsetTop;
-            
-            function stickynavbar() {
-              if (window.pageYOffset >= sticky+1) {
-                navbar.setAttribute("class", "");
-                navbar.setAttribute("class", "navibar sticky");
-              } else {
-                navbar.setAttribute("class", "navibar");
-              }
-            }
-          </script>
-
-          
-
-  <div class="bgimg" id="creativepf">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="portNav">
     <div class="container">
-      <div class="row" style="height: auto; max-height:100%">
-          <div class="p-5 col-lg-12 d-flex flex-column justify-content-center text-left">
-              <div class="row">
-                <div class="col-md-4"><img style="max-height: 50vh;" vspace="20" src="./images/full-light.png"></div>
-                <div class="col-md-8">
-                  <h1 class="display-4 mt-3" style="color: white;"><br><br>Creative Portfolio</h1>
-                  <h5 style="color: white;"> A selection of my finest works.<br><br></h5><br><br>
-                </div>
-              </div>
-            </div>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <img class="img-fluid" src="images/min_light.png" style="max-height:3em;" alt="" />
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fa fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger active" href="index.html">Home</a>
+          </li>
+        </ul>
       </div>
+    </div>
+  </nav>
+
+  <div id="portfolio" class="section db">
+    <div class="container">
+      <div class="section-title text-left">
+        <h3>Creative portfolio</h3>
+        <p>A selection of my finest works
+        </p>
+      </div><!-- end title -->
+
+      <div class="card-columns text-white">
+        <div class="card p-2 mt-2 mb-2 card-with-image"
+          style="background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/3df69f83903067.5d4ac86761557.jpg);">
+          <div class="card-body card-overlay">
+            <h5 class="card-title"></h5>
+            <p>Trento FSAE car livery
+            </p><br>
+            <a href="https://www.behance.net/gallery/83903067/Formula-SAE-E-Agle-TRT-Livery" target="_new"
+              class="btn btn-primary btn-sm" style="background: #e84855;"><i class="fab fa-behance"></i> See this
+              project on Behance</a>
+          </div>
+        </div>
+        <div class="card p-2 mt-2 mb-2 card-with-image"
+          style="background-image: url(https://mir-s3-cdn-cf.behance.net/projects/404/cb1c8583352287.Y3JvcCwxMTkzLDkzMywxODYsMTA2OQ.jpg);">
+          <div class="card-body card-overlay">
+            <h5 class="card-title"></h5>
+            <p>FSAE Team Event Illustrations
+            </p><br>
+            <a href="https://www.behance.net/gallery/83352287/E-Agle-TRT-Cover-Arts" target="_new"
+              class="btn btn-primary btn-sm" style="background: #e84855;"><i class="fab fa-behance"></i> See this
+              project on Behance</a>
+          </div>
+        </div>
+        <!--<div class="card p-2 mt-2 mb-2 card-with-image"
+          style="background-image: url(https://mir-s3-cdn-cf.behance.net/projects/404/5a749f86472007.Y3JvcCwxMzQyLDEwNTAsNTMsMA.jpg);">
+          <div class="card-body card-overlay">
+            <h5 class="card-title"></h5>
+            <p>Trento FSAE Team brochure
+            </p><br>
+            <a href="https://www.behance.net/gallery/86472007/E-AgleTRT-Brochure-201819" target="_new"
+              class="btn btn-primary btn-sm" style="background: #e84855;"><i class="fab fa-behance"></i> See this
+              project on Behance</a>
+          </div>
+        </div>-->
+        <div class="card p-2 mt-2 mb-2 card-with-image"
+          style="background-image: url(https://mir-s3-cdn-cf.behance.net/projects/404/eddaed86474455.Y3JvcCw0Nzk0LDM3NTAsMTA2LDA.jpg);">
+          <div class="card-body card-overlay">
+            <h5 class="card-title"></h5>
+            <p>Trento FSAE Team Spec Sheet
+            </p><br>
+            <a href="https://www.behance.net/gallery/86474455/E-Agle-TRT-One-Page-Brochure" target="_new"
+              class="btn btn-primary btn-sm" style="background: #e84855;"><i class="fab fa-behance"></i> See this
+              project on Behance</a>
+          </div>
+        </div>
+        <div class="card p-2 mt-2 mb-2 card-with-image"
+          style="background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/baa0ad83352287.5d3986a1b5fd3.jpg);">
+          <div class="card-body card-overlay">
+            <h5 class="card-title"></h5>
+            <p>Trento FSAE Team concept art
+            </p><br>
+            <a href="https://www.behance.net/gallery/83352287/E-Agle-TRT-Cover-Arts" target="_new"
+              class="btn btn-primary btn-sm" style="background: #e84855;"><i class="fab fa-behance"></i> See this
+              project on Behance</a>
+          </div>
+        </div>
+        <div class="card p-2 mt-2 mb-2 card-with-image"
+          style="background-image: url(https://mir-s3-cdn-cf.behance.net/projects/404/c3f37f89510053.Y3JvcCw2NzEsNTI1LDM1OSw5Mw.jpg);">
+          <div class="card-body card-overlay">
+            <h5 class="card-title"></h5>
+            <p>College Tech Club Logo
+            </p><br>
+            <a href="https://www.behance.net/gallery/89510053/Students-Tech-Club" target="_new"
+              class="btn btn-primary btn-sm" style="background: #e84855;"><i class="fab fa-behance"></i> See this
+              project on Behance</a>
+          </div>
+        </div>
+        <div class="card p-2 mt-2 mb-2 card-with-image"
+          style="background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/10d3c993237087.5e5f9e29588a7.jpg);">
+          <div class="card-body card-overlay">
+            <h5 class="card-title"></h5>
+            <p>Ctrl+Z illustration
+            </p><br>
+            <a href="https://www.behance.net/gallery/93237087/Celebrating-CtrlZ" target="_new"
+              class="btn btn-primary btn-sm" style="background: #e84855;"><i class="fab fa-behance"></i> See this
+              project on Behance</a>
+          </div>
+        </div>
+        <div class="card p-2 mt-2 mb-2 card-with-image"
+          style="background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/afeb8f93657227.5e6a2d7607f9d.jpg);">
+          <div class="card-body card-overlay">
+            <h5 class="card-title"></h5>
+            <p>E-Sports Team Logo
+            </p><br>
+            <a href="https://www.behance.net/gallery/93657227/eSports-Team-Logo-design" target="_new"
+              class="btn btn-primary btn-sm" style="background: #e84855;"><i class="fab fa-behance"></i> See this
+              project on Behance</a>
+          </div>
+        </div>
+        <div class="card p-2 mt-2 mb-2 card-with-image"
+          style="background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/714f8f91496333.5e3310399aab7.jpg);">
+          <div class="card-body card-overlay">
+            <h5 class="card-title"></h5>
+            <p>My own logo
+            </p><br>
+            <a href="https://www.behance.net/gallery/91496333/Personal-Logo" target="_new"
+              class="btn btn-primary btn-sm" style="background: #e84855;"><i class="fab fa-behance"></i> See this
+              project on Behance</a>
+          </div>
+        </div>
+
+
+
+      </div>
+
+
+
+
     </div>
   </div>
 
-  
-
-
-      <div class="py-5">
-        <div class="container">
-
-
-          <br><br><br>
-
-
-
-          
-
-
-          <div class="row">
-
-            <div class="col-12 col-md-4 col-lg-4">
-              <div class="portfolio-content">
-                  <figure>
-                      <img src="https://mir-s3-cdn-cf.behance.net/projects/404/cb1c8583352287.Y3JvcCwxMTkzLDkzMywxODYsMTA2OQ.jpg" style="display:block;" alt="">
-                  </figure>
-
-                  <div class="entry-content flex flex-column align-items-center justify-content-center">
-                      <h3><a href="#">FSAE Team Event Illustration</a></h3>
-
-                      <ul class="flex flex-wrap justify-content-center">
-                          <li><br><a href="https://www.behance.net/gallery/83352287/E-Agle-TRT-Cover-Arts" target="_new" id="fullproj" class="btn btn-primary btn-lg" style="background: #e84855;" role="button"><span class="fab fa-behance"> See this project on Behance</span></a></li>
-                          <li><a href="#">+</a></li>
-                      </ul>
-                  </div><!-- .entry-content -->
-              </div><!-- .portfolio-content -->
-            </div><!-- .col -->
-
-            <div class="col-12 col-md-4 col-lg-4">
-              <div class="portfolio-content">
-                  <figure>
-                      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/afeb8f93657227.5e6a2d7607f9d.jpg" style="display:block;" alt="">
-                  </figure>
-
-                  <div class="entry-content flex flex-column align-items-center justify-content-center">
-                      <h3><a href="#">E-Sports Team Logo design</a></h3>
-
-                      <ul class="flex flex-wrap justify-content-center">
-                          <li><br><a href="https://www.behance.net/gallery/93657227/eSports-Team-Logo-design" target="_new" id="fullproj" class="btn btn-primary btn-lg" style="background: #e84855;" role="button"><span class="fab fa-behance"> See this project on Behance</span></a></li>
-                          <li><a href="#">+</a></li>
-                      </ul>
-                  </div><!-- .entry-content -->
-              </div><!-- .portfolio-content -->
-            </div><!-- .col -->
-
-            <div class="col-12 col-md-4 col-lg-4">
-              <div class="portfolio-content">
-                  <figure>
-                      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/10d3c993237087.5e5f9e29588a7.jpg" style="display:block;" alt="">
-                  </figure>
-
-                  <div class="entry-content flex flex-column align-items-center justify-content-center">
-                      <h3><a href="#">We can <i>undo</i> it!</a></h3>
-
-                      <ul class="flex flex-wrap justify-content-center">
-                          <li><br><a href="https://www.behance.net/gallery/93237087/Celebrating-CtrlZ" target="_new" id="fullproj" class="btn btn-primary btn-lg" style="background: #e84855;" role="button"><span class="fab fa-behance"> See this project on Behance</span></a></li>
-                          <li><a href="#">+</a></li>
-                      </ul>
-                  </div><!-- .entry-content -->
-              </div><!-- .portfolio-content -->
-            </div><!-- .col -->
-
-            <div class="col-12 col-md-4 col-lg-4">
-              <div class="portfolio-content">
-                  <figure>
-                      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/714f8f91496333.5e3310399aab7.jpg" style="display:block;" alt="">
-                  </figure>
-
-                  <div class="entry-content flex flex-column align-items-center justify-content-center">
-                      <h3><a href="#">My own logo</a></h3>
-
-                      <ul class="flex flex-wrap justify-content-center">
-                          <li><br><a href="https://www.behance.net/gallery/91496333/Personal-Logo" target="_new" id="fullproj" class="btn btn-primary btn-lg" style="background: #e84855;" role="button"><span class="fab fa-behance"> See this project on Behance</span></a></li>
-                          <li><a href="#">+</a></li>
-                      </ul>
-                  </div><!-- .entry-content -->
-              </div><!-- .portfolio-content -->
-            </div><!-- .col -->
-
-            <div class="col-12 col-md-4 col-lg-4">
-              <div class="portfolio-content">
-                  <figure>
-                      <img src="https://mir-s3-cdn-cf.behance.net/projects/404/c3f37f89510053.Y3JvcCw2NzEsNTI1LDM1OSw5Mw.jpg" style="display:block;" alt="">
-                  </figure>
-
-                  <div class="entry-content flex flex-column align-items-center justify-content-center">
-                      <h3><a href="#">Students' Tech Club Logo design</a></h3>
-
-                      <ul class="flex flex-wrap justify-content-center">
-                          <li><br><a href="https://www.behance.net/gallery/89510053/Students-Tech-Club" target="_new" id="fullproj" class="btn btn-primary btn-lg" style="background: #e84855;" role="button"><span class="fab fa-behance"> See this project on Behance</span></a></li>
-                          <li><a href="#">+</a></li>
-                      </ul>
-                  </div><!-- .entry-content -->
-              </div><!-- .portfolio-content -->
-            </div><!-- .col -->
-
-            <div class="col-12 col-md-4 col-lg-4">
-              <div class="portfolio-content">
-                  <figure>
-                      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/fa996c99056055.5eea30d1780ca.png" style="display:block;" alt="">
-                  </figure>
-
-                  <div class="entry-content flex flex-column align-items-center justify-content-center">
-                      <h3><a href="#">F1 Concept Illustration</a></h3>
-
-                      <ul class="flex flex-wrap justify-content-center">
-                          <li><br><a href="https://www.behance.net/gallery/99056055/F1-2018-Concept-illustrations" target="_new" id="fullproj" class="btn btn-primary btn-lg" style="background: #e84855;" role="button"><span class="fab fa-behance"> See this project on Behance</span></a></li>
-                          <li><a href="#">+</a></li>
-                      </ul>
-                  </div><!-- .entry-content -->
-              </div><!-- .portfolio-content -->
-            </div><!-- .col -->
-
-            <div class="col-12 col-md-4 col-lg-4">
-              <div class="portfolio-content">
-                  <figure>
-                      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/0109c186474455.5d9b0acadeb6b.jpg" style="display:block;" alt="">
-                  </figure>
-
-                  <div class="entry-content flex flex-column align-items-center justify-content-center">
-                      <h3><a href="#">FSAE Team Car spec sheet</a></h3>
-
-                      <ul class="flex flex-wrap justify-content-center">
-                          <li><br><a href="https://www.behance.net/gallery/86474455/E-Agle-TRT-One-Page-Brochure" target="_new" id="fullproj" class="btn btn-primary btn-lg" style="background: #e84855;" role="button"><span class="fab fa-behance"> See this project on Behance</span></a></li>
-                          <li><a href="#">+</a></li>
-                      </ul>
-                  </div><!-- .entry-content -->
-              </div><!-- .portfolio-content -->
-            </div><!-- .col -->
-
-            <div class="col-12 col-md-4 col-lg-4">
-              <div class="portfolio-content">
-                  <figure>
-                      <img src="https://mir-s3-cdn-cf.behance.net/projects/404/eddaed86474455.Y3JvcCw0Nzk0LDM3NTAsMTA2LDA.jpg" style="display:block;" alt="">
-                  </figure>
-
-                  <div class="entry-content flex flex-column align-items-center justify-content-center">
-                      <h3><a href="#">FSAE Team one-page Brochure</a></h3>
-
-                      <ul class="flex flex-wrap justify-content-center">
-                          <li><br><a href="https://www.behance.net/gallery/86474455/E-Agle-TRT-One-Page-Brochure" target="_new" id="fullproj" class="btn btn-primary btn-lg" style="background: #e84855;" role="button"><span class="fab fa-behance"> See this project on Behance</span></a></li>
-                          <li><a href="#">+</a></li>
-                      </ul>
-                  </div><!-- .entry-content -->
-              </div><!-- .portfolio-content -->
-            </div><!-- .col -->
-
-            <div class="col-12 col-md-4 col-lg-4">
-              <div class="portfolio-content">
-                  <figure>
-                      <img src="https://mir-s3-cdn-cf.behance.net/projects/404/5a749f86472007.Y3JvcCwxMzQyLDEwNTAsNTMsMA.jpg" style="display:block;" alt="">
-                  </figure>
-
-                  <div class="entry-content flex flex-column align-items-center justify-content-center">
-                      <h3><a href="#">FSAE Team Brochure</a></h3>
-
-                      <ul class="flex flex-wrap justify-content-center">
-                          <li><br><a href="https://www.behance.net/gallery/86472007/E-AgleTRT-Brochure-201819" target="_new" id="fullproj" class="btn btn-primary btn-lg" style="background: #e84855;" role="button"><span class="fab fa-behance"> See this project on Behance</span></a></li>
-                          <li><a href="#">+</a></li>
-                      </ul>
-                  </div><!-- .entry-content -->
-              </div><!-- .portfolio-content -->
-            </div><!-- .col -->
-
-            <div class="col-12 col-md-4 col-lg-4">
-              <div class="portfolio-content">
-                  <figure>
-                      <img src="https://mir-s3-cdn-cf.behance.net/projects/404/43881c86474701.Y3JvcCwyODEyLDIyMDAsNzYsMA.jpg" style="display:block;" alt="">
-                  </figure>
-
-                  <div class="entry-content flex flex-column align-items-center justify-content-center">
-                      <h3><a href="#">Various flyers</a></h3>
-
-                      <ul class="flex flex-wrap justify-content-center">
-                          <li><br><a href="https://www.behance.net/gallery/86474701/Various-Flyers-2019" target="_new" id="fullproj" class="btn btn-primary btn-lg" style="background: #e84855;" role="button"><span class="fab fa-behance"> See this project on Behance</span></a></li>
-                          <li><a href="#">+</a></li>
-                      </ul>
-                  </div><!-- .entry-content -->
-              </div><!-- .portfolio-content -->
-            </div><!-- .col -->
-
-            <div class="col-12 col-md-4 col-lg-4">
-              <div class="portfolio-content">
-                  <figure>
-                      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/baa0ad83352287.5d3986a1b5fd3.jpg" style="display:block;" alt="">
-                  </figure>
-
-                  <div class="entry-content flex flex-column align-items-center justify-content-center">
-                      <h3><a href="#">Illustrations for FSAE Team</a></h3>
-
-                      <ul class="flex flex-wrap justify-content-center">
-                          <li><br><a href="https://www.behance.net/gallery/83352287/E-Agle-TRT-Cover-Arts" target="_new" id="fullproj" class="btn btn-primary btn-lg" style="background: #e84855;" role="button"><span class="fab fa-behance"> See this project on Behance</span></a></li>
-                          <li><a href="#">+</a></li>
-                      </ul>
-                  </div><!-- .entry-content -->
-              </div><!-- .portfolio-content -->
-            </div><!-- .col -->
-
-            <div class="col-12 col-md-4 col-lg-4">
-              <div class="portfolio-content">
-                  <figure>
-                      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/3df69f83903067.5d4ac86761557.jpg" style="display:block;" alt="">
-                  </figure>
-
-                  <div class="entry-content flex flex-column align-items-center justify-content-center">
-                      <h3><a href="#">FSAE Team Car Livery</a></h3>
-
-                      <ul class="flex flex-wrap justify-content-center">
-                          <li><br><a href="https://www.behance.net/gallery/83903067/Formula-SAE-E-Agle-TRT-Livery" target="_new" id="fullproj" class="btn btn-primary btn-lg" style="background: #e84855;" role="button"><span class="fab fa-behance"> See this project on Behance</span></a></li>
-                          <li><a href="#">+</a></li>
-                      </ul>
-                  </div><!-- .entry-content -->
-              </div><!-- .portfolio-content -->
-            </div><!-- .col -->
-
-            
-
-        </div><!-- .row -->
-
-
-
-        </div>
-      </div>
-
-
-      
-
-      <br><br><br>
-
-        <footer id="contactdes">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12 col-sm-12">
-                <h2 class="wow fadeIn" data-wow-delay="0.4s" id="contactdesign">Contacts</h2>
-        
-                <p><i class="fa fa-map-marker-alt"> Currently based in: Trento, Italy</i><br><a href="mailto:laura.scoccianti@gmail.com" style="color: white;"><i class="d-block fa fa-envelope text-light fa-lg mx-2"> laura.scoccianti@gmail.com</i></a></p>
+  <div class="py-5" style="background-color: #222;" id="contacts">
+    <div class="container">
+      <br><br>
+      <h1 class="display-4" style="color:#ddd">Contacts</h1>
+      <p style="color:white;"><span class="fas fa-map-marker-alt text-light fa-lg mx-2"></span> Currently based in:
+        Trento, Italy<br>
+        <a href="mailto:laura.scoccianti@gmail.com" style="color:#e84855;"><span
+            class="fa fa-envelope text-light fa-lg mx-2"></span> laura.scoccianti@gmail.com</a><br>
+        <a href="https://t.me/laurascotch" style="color:#e84855;"><span
+            class="fa fa-paper-plane text-light fa-lg mx-2"></span> Telegram: @laurascotch</a>
         <br>
-                <ul class="social-icon">
-                  <li><a href="https://t.me/laurascotch" class="fa fa-paper-plane wow bounceIn" data-wow-delay="0.5s"></a></li>
-                  <li><a href="https://github.com/laurascotch" class="fab fa-github wow bounceIn" data-wow-delay="0.6s"></a></li>
-                  <li><a href="https://www.instagram.com/laurascotch/" class="fab fa-instagram wow bounceIn" data-wow-delay="0.7s"></a></li>
-                  <li><a href="https://www.behance.net/laurascotch" class="fab fa-behance wow bounceIn" data-wow-delay="0.8s"></a></li>
-                </ul>
-              </div>
-              <div class="col-md-12 col-sm-12 copyright">
-                <h6>Copyright © 2019 Laura Scoccianti 
-                
-                | Template by <a target="_blank" rel="nofollow" href="http://www.templatemo.com/tm-469-impulse">Impulse Design</a></h6>
-              </div>
-            </div>
-          </div>
-        </footer>
-    
+        <a href="https://github.com/laurascotch" style="color:#e84855;">
+          <span class="fa fa-github text-light fa-lg mx-2"></span> /laurascotch
+        </a> <br>
+      </p>
+      <br><br>
+    </div>
+  </div>
 
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-      
-  <script>
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
-    
-    for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.maxHeight){
-          content.style.maxHeight = null;
-          content.setAttribute("hidden","");
-          $(this).find(".fa").removeClass("fa fa-caret-down").addClass("fa fa-caret-right");
-        } else {
-          content.removeAttribute("hidden");
-          content.style.maxHeight = content.scrollHeight + "px";
-          $(this).find(".fa").removeClass("fa fa-caret-right").addClass("fa fa-caret-down");
-        } 
-      });
-    }
-    </script>
 
-      
-<!-- JAVASCRIPT JS FILES --> 
-<script src="js/jquery.js"></script> 
-<script src="js/bootstrap.min.js"></script> 
-<script src="js/nivo-lightbox.min.js"></script>
-<script src="js/smoothscroll.js"></script> 
-<script src="js/jquery.sticky.js"></script> 
-<script src="js/jquery.parallax.js"></script> 
-<script src="js/wow.min.js"></script> 
-<script src="js/custom.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 
+
+  <div class="py-5" style="background-color: #222;" id="contacts">
+    <div class="container">
+      <br><br>
+      <h1 class="display-4" style="color:#ddd">Contacts</h1>
+      <p style="color:white;"><span class="fas fa-map-marker-alt text-light fa-lg mx-2"></span> Currently based in:
+        Trento, Italy<br>
+        <a href="mailto:laura.scoccianti@gmail.com" style="color:#e84855;"><span
+            class="fa fa-envelope text-light fa-lg mx-2"></span> laura.scoccianti@gmail.com</a><br>
+        <a href="https://t.me/laurascotch" style="color:#e84855;"><span
+            class="fa fa-paper-plane text-light fa-lg mx-2"></span> Telegram: @laurascotch</a>
+        <br>
+        <a href="https://github.com/laurascotch" style="color:#e84855;">
+          <span class="fa fa-github text-light fa-lg mx-2"></span> /laurascotch
+        </a> <br>
+      </p>
+      <br><br>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+
+  <!-- ALL JS FILES -->
+  <script src="js/all.js"></script>
+  <!-- Camera Slider -->
+  <script src="js/jquery.mobile.customized.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/parallaxie.js"></script>
+  <script src="js/headline.js"></script>
+  <!-- Contact form JavaScript -->
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
+  <!-- ALL PLUGINS -->
+  <script src="js/custom.js"></script>
+  <script src="js/jquery.vide.js"></script>
 
 
 </body>
+
+
+
 
 </html>

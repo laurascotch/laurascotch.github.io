@@ -1,0 +1,98 @@
+
+/** ADD YOUR AWESOME CODES HERE **/
+
+.skill-icon{
+    margin-top: 10%;
+    font-size: 40pt;
+    color: #777;
+    text-align: center;
+    line-height: 20% !important;
+}
+
+.skill-icon > i.main-text {
+    text-transform: uppercase;
+    font-weight:600;
+    letter-spacing: 0.5px;
+    font-size: 15px;
+    color:#ddd;
+    font-style: normal;
+    line-height: 20% !important;
+}
+
+.skill-icon > h6 {
+    color:#777;
+}
+
+
+.trip-icon{
+    font-size:xx-large;
+}
+
+.trip-box .date{
+	display: inline-block;
+	position: absolute;
+	top: 40px;
+	right: 15px;
+	background: #e84855;
+	color: #fff;
+	padding: 0px 5px 0px 5px;
+	text-align: center;
+}
+
+.trip-thumb{
+	position: relative;
+}
+
+.trip-box{
+	background: #555;
+}
+
+.trip-box:hover .trip-thumb::before{
+	opacity: .6;
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+}
+
+
+.trip-box .trip-thumb::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(51, 51, 51, 0.80);
+	opacity: 0;
+	-webkit-transition: all .5s;
+	transition: all .5s;
+	-webkit-transform: translateY(10px);
+	transform: translateY(10px);
+}
+
+.trip-info{
+	padding: 15px;
+	background: #555;
+	text-align: left;
+	margin-top: 40px;
+}
+
+.trip-info p{
+    color: #ddd;
+	margin: 0px;
+}
+
+.trip-info h4{
+    color: #ddd;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.trip-info ul{
+	display: block;
+	text-align: center;
+	margin-bottom: 15px;
+}
+.trip-info ul li{
+	display: inline-block;
+	text-align: center;
+}

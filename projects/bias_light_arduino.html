@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Arduino - Bias Lighting</title>
+  <!-- Basic -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- Site Metas -->
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Site Icons -->
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" type="text/css">
+  <link rel="stylesheet" href="fonts/font-mfizz.css">
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="../style.css">
+  <!-- Responsive CSS -->
+  <link rel="stylesheet" href="../css/responsive.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/custom.css">
+  <script src="../js/modernizr.js"></script> <!-- Modernizr -->
+
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <style>
+    .card-img-top {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    [class='project_title is-visible'] {
+      margin-bottom: 0.75rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 3.5rem;
+      font-weight: 200;
+      line-height: 1.2;
+    }
+
+    [class='project_title_fix'] {
+      margin-bottom: 0.75rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 2rem;
+      font-weight: 200;
+      line-height: 1.2;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      margin-top: -50px;
+      margin-left: -100px;
+    }
+
+    ul.proj,
+    li.proj,
+    ol.proj {
+      margin: 20px;
+      list-style: circle;
+      padding: 0px;
+    }
+
+    mark {
+      background-color: #999;
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="portNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="../index.html">
+        <img class="img-fluid" src="../images/min_light.png" style="max-height:3em;" alt="" />
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fa fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger active" href="../ITportfolio.html">Back to projects</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div id="blog" class="section db">
+    <div class="container">
+      <div class="section-title text-left">
+        <h3><br>Adaptive monitor bias lighting with Arduino</h3>
+        <p>"Smart" LED light to prevent eye strain after hours spent in front of a monitor.
+        </p>
+      </div><!-- end title -->
+
+      <div class="message-box" style="color:#afafaf; text-align: justify;">
+        <div class="row">
+          <div class="col-md-12">
+            <!--<a class="btn btn-link" href="https://github.com/laurascotch/rock-em-sock-em"><i class="fa fa-github fa-fw fa-1x py-1"></i> Find this project on GitHub!</a>-->
+            <h3 class="">Abstract</h3>
+            <p class=""> Bias lightning for PCs is something extremely important in order to care for our eyes as much
+              as possible. Many people use their computer in complete darkness for large time periods, and the
+              difference in luminance between the monitor and the surrounding dark environment creates a contrast that
+              is difficult for eyes to cope with.
+            </p>
+            <p class="">This simple project describes my personal solution to this problem: an Arduino controls a LED
+              strip attached behind a monitor and sets its brightness and color based on the light condition of the
+              surrounding environment.<br>
+              <a href="./Adaptive_lighting_bias_for_PC_monitor_using_Arduino.pdf" target="_blank" class="sim-btn btn-hover-new" data-text="Download PDF with full project specification"><span>Download PDF with full project specification</span></a></p>
+
+            <h3>Introduction</h3>
+            <p>What is bias lighting for PCs? Simply put, it's a light (usually a LED strip) placed on the rear of a
+              monitor that creates a sort of halo effect behind it. This is not a merely aesthetic solution: in fact it
+              has been studied for reducing eye strain and fatigue when staying in front of a monitor for a large amount
+              of time in low light condition.
+            </p>
+            <p>
+              What is really harmful to the eyes when working in front of a PC in low light condition is the sharp
+              contrast between the monitor luminance and the surrounding darkness. This problem could be mitigated by
+              using a desk lamp, but this solution is often not optimal: usually such lamps are either "of" or "off" and
+              they may provide too much light, not to talk about maybe having a color that may not be relaxing for the
+              eye (e.g. blue-ish neon lights).
+            </p>
+            <p>
+              To add on this, it often happens that we start working on our PCs in good light conditions, but then as
+              hours go by, we find ourselves in darkness, maybe being too focused on our job to take the time to have a
+              break and switch up some light. This in particular is what gave me the idea to develop this project.
+            </p>
+            <p>
+              The final product is a fully functional prototype of an adaptive monitor bias lighting: the brightness and
+              color of the LEDs is set based on the room's light condition, that is gathered via a photoresistor.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8">
+            <h3 class="">Environment</h3>
+            <p class="">I developed this project in my room. The desk is placed in front of a white wall, that therefore
+              faces the back of the monitor where I attached the LED strip. On the same wall, there's a big window. On
+              the right, approximately 80cm above the table there's a light that is a bit too powerful and in fact often
+              causes me headaches after hours of work.
+            </p>
+            <p>
+              The window is south facing and sun shines through it from early in the morning until 12:00 in winter and
+              13:30 in summer, when it gets covered by a building. During the afternoon, natural lighting gradually
+              decreases and it's already insufficient at 15:30 - 16:00.</p>
+          </div>
+          <div class="col-md-4"><img class="card-img-top" src="../images/ardubias/setting.png"
+              style="object-fit: cover; background-color: white;" alt="Card image cap">
+            <div class="card-body text-center">
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h3>Data Gathering</h3>
+            <p>
+              The basic idea for the project is that we want the LEDs to emit a certain light given the condition of the
+              room. In order to understand the luminosity values to use as threshold, I kept track of the luminosity of
+              the room on a quite sunny day from 10:45 to 18:00. In order to do this I placed the photoresistor in the
+              exact same place where it will be placed when the full project will be finished, that is just under the
+              monitor, facing me and the rest of the room; this way, when there will be LEDs behind the monitor, they
+              shouldn't influence too much the gathered luminosity values.
+            </p>
+            <p>
+              The graph below shows how natural light inside the room changes during the day, based on the gathered
+              data.
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <img class="card-img-top" src="../images/ardubias/light_afternoon_colors.png"
+              style="object-fit: cover; background-color: white;" alt="Card image cap">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <br>
+            <h3>Lighting bias</h3>
+            <p>
+              Lighting bias is the phenomenon for which our perception of what's on screen is influenced by the
+              background light, so it literally bias the brain's interpretation. To give a concrete example, shining an
+              orange light behind the monitor will make us perceive everything on-screen as slightly more orange. This
+              works with every other color.
+            </p>
+            <p>
+              Because of this, it is useful to have the color of the LEDs adapt to the time of the day, rather than
+              (just) the brightness: I will make it shift gradually from a reassuring and calming light blue towards
+              warmer colors. I opted for this solution because using warmer lights at the end of the day is more resting
+              for the eyes. Moreover, there are studies that states that the violet/blue light emitted from digital
+              devices delays sleep.
+            </p>
+            <p>
+              The colours I choose to show are depicted in the previous graph.
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <br>
+            <h3>The hardware</h3>
+            <p>
+              The hardware for this project is:
+            <ul class="proj">
+              <li class="proj">Arduino UNO (or Leonardo, Nano, Micro, no real difference - to be fair I
+                used a Leonardo because my UNO is already busy)</li>
+              <li class="proj">1x photoresistor - This can be found in the Arduino base kit</li>
+              <li class="proj">1x 220 Ohm resistor</li>
+              <li class="proj">NeoPixel LED Strip (WS2812 chip) - <a
+                  href="https://www.amazon.it/gp/product/B08GLY7ZV4/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1"
+                  target="_blank">I used this</a></li>
+            </ul>
+            </p>
+          </div>
+          <div class="col-md-6">
+            <img class="card-img-top" src="../images/ardubias/schematics_bb.jpg" style="object-fit: contain;"
+              alt="Card image cap">
+          </div>
+          <div class="col-md-12">
+            The resistor is connected to analog pin <mark>A0</mark>, while the LED strip is connected to pin
+            <mark>8</mark>. The Arduino is powered via USB.
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <br>
+            <h3>The software</h3>
+            <p>
+              The code is based on three variables: <mark>lightVal</mark>, <mark>lightAvg</mark> and
+              <mark>lightSet</mark>.
+            <ul class="proj">
+              <li class="proj"><mark>lightVal</mark> is the variable where the raw luminosity data is read and stored. This value is
+                gathered
+                every 2 seconds and is added to a queue of 8 items.</li>
+              <li class="proj"><mark>lightAvg</mark> stores the average value of the last 8 measurements, which are stored in the
+                already said
+                queue.</li>
+              <li class="proj"><mark>lightSet</mark> is the luminosity value used to set the LEDs. It is calculated every 7 cycles,
+                with the
+                following formula:<br>$$ {lightSet = 0.0107\cdot lightAvg^2 + 0.3532\cdot lightAvg + 0.4365} $$</li>
+            </ul>
+            </p>
+            <p>
+              Why can't we just use the "raw" average? Because the LEDs being switched on slightly influence the
+              luminosity measurement and the "raw" value would cause them to repeatedly switch on/off or between
+              different colours. After some observations, I was able to model the difference between the measured
+              luminosity and the actual one using that formula, obtained with the <mark>polyfit</mark> function in
+              Python.
+            </p>
+            <p>
+              The size of the queue (8) and the number of cycles (7) before updating the LED strip are chosen so that:
+            <ul class="proj">
+              <li class="proj">There's always some older value in the queue that influences the average between two possible updates;
+              </li>
+              <li class="proj">7 cycles are enough to have a stable estimate of the light needed in "natural" conditions, but are
+                also reactive enough in the case that a light in the room is switched on (or off).</li>
+            </ul>
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h3>Photos of the prototype</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card-body text-center">
+              <p class="card-text">The photoresistor is fixed below the monitor, facing the room</p>
+            </div>
+            <img src="../images/ardubias/photoresistor.jpg" style="object-fit: contain; width: inherit;"
+              alt="Card image cap">
+
+          </div>
+          <div class="col-md-4">
+            <div class="card-body text-center">
+              <p class="card-text">The LEDs are placed behind the monitor</p>
+            </div>
+            <img src="../images/ardubias/leds.jpg" style="object-fit: contain; width: inherit;" alt="Card image cap">
+
+          </div>
+
+          <div class="col-md-4">
+            <div class="card-body text-center">
+              <p class="card-text">The "brain": Arduino and the breadboard</p>
+            </div>
+            <img src="../images/ardubias/brain.jpg" style="object-fit: contain; width: inherit;" alt="Card image cap">
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h3>References</h3>
+            <p>Here I leave the links to some interesting articles regarding the problem faced in this little project.
+            </p>
+            <ul class="proj">
+              <li class="proj">Power Practical, <a href="https://powerpractical.com/pages/what-is-tv-bias-lighting"><i>What is TV and
+                    Monitor Bias Lighting?</i></a></li>
+              <li class="proj">Windows Central, <a href="https://www.windowscentral.com/bias-lighting-your-pc-monitor"><i>Bias
+                    lighting is an easy and affordable upgrade every PC user should make</i></a></li>
+              <li class="proj">
+                University of Oxford, <a
+                  href="https://www.ox.ac.uk/news/2016-06-09-lighting-colour-affects-sleep-and-wakefulness"><i>Lighting
+                    colour affects sleep and awakefulness</i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div><!-- end messagebox -->
+
+    </div>
+  </div>
+
+
+
+
+  <div class="py-5" style="background-color: #222;" id="contacts">
+    <div class="container">
+      <br><br>
+      <h1 class="display-4" style="color:#ddd">Contacts</h1>
+      <p style="color:white;"><span class="fas fa-map-marker-alt text-light fa-lg mx-2"></span> Currently based in:
+        Trento, Italy<br>
+        <a href="mailto:laura.scoccianti@gmail.com" style="color:#e84855;"><span
+            class="fa fa-envelope text-light fa-lg mx-2"></span> laura.scoccianti@gmail.com</a><br>
+        <a href="https://t.me/laurascotch" style="color:#e84855;"><span
+            class="fa fa-paper-plane text-light fa-lg mx-2"></span> Telegram: @laurascotch</a>
+        <br>
+        <a href="https://github.com/laurascotch" style="color:#e84855;">
+          <span class="fa fa-github text-light fa-lg mx-2"></span> /laurascotch
+        </a> <br>
+      </p>
+      <br><br>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+
+
+</body>
+
+
+
+
+</html>
