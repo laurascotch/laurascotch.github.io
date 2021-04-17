@@ -96,3 +96,19 @@
 	display: inline-block;
 	text-align: center;
 }
+
+.crypto-icon{
+	text-align: left;
+	line-height: 90px;
+	font-size: 30px;
+	font-weight: bolder;
+	color: #e84855;
+}
+
+h5.crypto-tag {
+    color:#aaa;
+}
+
+code {
+	color:#e84855;
+}

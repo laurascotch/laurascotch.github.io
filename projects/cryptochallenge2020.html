@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CryptoChallenge 2020</title>
+  <!-- Basic -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- Site Metas -->
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Site Icons -->
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" type="text/css">
+  <link rel="stylesheet" href="fonts/font-mfizz.css">
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="../style.css">
+  <!-- Responsive CSS -->
+  <link rel="stylesheet" href="../css/responsive.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/custom.css">
+  <script src="../js/modernizr.js"></script> <!-- Modernizr -->
+
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <style>
+    .card-img-top {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    [class='project_title is-visible'] {
+      margin-bottom: 0.75rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 3.5rem;
+      font-weight: 200;
+      line-height: 1.2;
+    }
+
+    [class='project_title_fix'] {
+      margin-bottom: 0.75rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 2rem;
+      font-weight: 200;
+      line-height: 1.2;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      margin-top: -50px;
+      margin-left: -100px;
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="portNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="../index.html">
+        <img class="img-fluid" src="../images/min_light.png" style="max-height:3em;" alt="" />
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fa fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger active" href="../ITportfolio.html">Back to projects</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div id="blog" class="section db">
+    <div class="container">
+      <div class="section-title text-left">
+        <h3><br>NEST CryptoChallenge 2020 (X-Mas Edition)</h3>
+        <p>CTF Event @ Studentato NEST, Trento<br>Participants were asked to solve levels of increasing difficulty.
+          Levels contain problems related to cryptography, algorithms and simple web vulnerabilities.<br>
+          <b><i>You can try them out if you want!</i></b>
+        </p>
+      </div><!-- end title -->
+
+      <div class="message-box" style="color:#afafaf; text-align: justify;">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card text-center"> <img class="card-img-top" src="crypto/Cryptochallenge.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-md-8">
+            <!--<a class="btn btn-link" href="https://github.com/laurascotch/rock-em-sock-em"><i class="fa fa-github fa-fw fa-1x py-1"></i> Find this project on GitHub!</a>-->
+            <h3 class="">Before starting...</h3>
+            <p class="">CryptoChallenge became a sort of tradition in the student residence where I lived during the
+              University years. There has been an edition almost every year since I started living there: at first I was
+              only a participant, but in the 2020 edition I finally joined it as an organizer and challenge-creator
+              together with <a href="https://it.linkedin.com/in/christian-spolaore-0438441a9">Christian</a>, the guy who
+              firstly created the event.<br>
+            </p>
+            <p>Here you can choose to have a look at whichever level you want, while in the real challenge, with people
+              participating both in presence and via Zoom (due to the pandemic), levels where put in password protected
+              zip in a sort of cryptographic matrioska: the password to access each level is the flag of the previous
+              one.
+            </p>
+            <p>Since it was a competition, there were obviously criteria in order to assign points: every level provided a score. Moreover, the first three teams solving up to level 4 would get, respectively 30, 20 and 10 points. The same would happen to the first three teams solving level 7 and level 10.</p>
+            <p>There would be extra points also for the first three teams able to solve everything, respectively 60 points for the first classified, 30 for the second, 10 for the third.</p>
+          </div>
+          <div class="col-md-12">
+            <p>The points assigned for each level were the following:
+              <ul>
+                <li>Level 1: 25 points</li>
+                <li>Level 2: 50 points</li>
+                <li>Level 3: 50 points</li>
+                <li>Level 4: 75 points</li>
+                <li>Level 5: 100 points</li>
+                <li>Level 6: 75 points</li>
+                <li>Level 7: 100 points</li>
+                <li>Level 8: 75 points</li>
+                <li>Level 9: 150 points</li>
+                <li>Level 10: 150 points</li>
+                <li>Level 11: 200 points</li>
+              </ul>
+            </p>
+            <p>If you want to try out the full challenge, you can find the zip file at the end of the page. Only
+              downside? The little story that accompanies every level is in italian.</p>
+            <p>Before leaving you to the CryptoChallenge... If you end up enjoying it, reach out and let us know!</p>
+            <p>NOTE: All flags are in the format <code>flag{something_here}</code>. Some levels my return just the
+              internal part, just remember to add the rest if you try the zipped version.</p>
+          </div>
+        </div>
+        <div class="row">
+          <h3 style="font-size: 40px; font-weight: bolder;">The X-Mas Rescue</h3>
+          <div class="col-md-12">
+            <div class="services-inner-box">
+              <div class="crypto-icon">
+                Level 0 - Introduction
+              </div>
+              <div id="accordion">
+                <h5 class="crypto-tag"> </h5>
+                <p>It's almost Christmas time and everyone is busy getting everything ready: the most magical night of
+                  the year is coming!<br>
+                  Elves are almost done packing up gifts for everyone who's been nice and the sleigh is ready.<br>
+                  Everything seems perfect until, one morning, Santa Claus is woken up by a screaming elf: "Santa!
+                  Santa! The reindeers are gone!"<br><br>
+                  Few moments later, Santa is rushing to the stable... <b>Are you ready to help him? Then go to level 1
+                    and join the rescue!</b></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="services-inner-box">
+              <div class="crypto-icon">
+                Level 1
+              </div>
+              <div id="accordion">
+                <h5 class="crypto-tag"> Problem category: Crypto </h5>
+                <p>The stable is open and there's no reindeer is sight. Santa Claus and the elves are looking for
+                  hints...<br>Suddenly they find something interesting:</p>
+                <h5 style="color:white">658bf873bf8edce31ce35305c5d432bc</h5>
+                <p>BONUS: those who participated to the event, after getting the flag for this level, could choose to go ahead by solving all the levels or, in case they were scared to get stuck, they could try to solve a crossword puzzle (themes: cryptography and Christmas). The flag that they would obtain from that, would make them skip to level 6.</p>
+                <p>It seems really easy, right? Well, definitions were encrypted with an unspecified algorithm. There were three possible encryption/decryption keys, all of them being part of the flag of level 1. Only hint participants had: use <a href="https://www.tools4noobs.com/online_tools/encrypt/" target="_blank">this site</a>. </p>
+                <p>As regards the points, solving the crossword puzzle would grant 265 points (instead of the 275 of levels 2+3+4+5) and would also prevent the team choosing it to get the bonus points for level 4. There was a kind of tradeoff: try getting the maximum amount of points by solving the levels or try beating the other teams by (maybe) going faster and get the bonus points later on.</p>
+                <p><a href="crypto/crosswords.pdf" target="_blank">Download the crossword puzzle (only in italian)</a></p>
+                <a data-toggle="collapse" href="#exp1" role="button" aria-expanded="false" aria-controls="exp1"
+                  class="collapsed" data-parent="#accordion">
+                  <p><i><i class="fas fa-plus-circle"></i> Click for the solution</i></p>
+                </a>
+                <div class="panel-collapse collapse" id="exp1" data-parent="#accordion">
+                  <p>The flag is hashed. It is sufficient to use <a href='https://md5hashing.net/hash'>this site</a> to
+                    discover that the algorithm used is Tiger128.
+                  </p>
+                  <p>Flag: <code>flag{IAmTheGreenVillain}</code></p>
+                  <p>BONUS: As regards the crosswords, the encryption algorithm is Loki97 and the keys were: 
+                    <ul>
+                      <li><code>IAmTheGreenVillain</code> : 8 and 11 across, 4, 7 and 12 down</li>
+                      <li><code>GreenVillain</code> : 1 and 11 down, 5 and 13 across</li>
+                      <li><code>Villain</code> : 3, 9 and 10 across, 2 and 6 down</li>
+                      
+                      </ul>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="services-inner-box">
+              <div class="crypto-icon">
+                Level 2 - Dasher
+              </div>
+              <div id="accordion">
+                <h5 class="crypto-tag"> Problem category: Coding </h5>
+                <p>The green hairs that the elves found in the stable leave no doubt: the Grinch stole the reindeers to
+                  try ruining Christmas once again!</p>
+                <p>Santa Claus decides to face the Grinch. Once he gets to Mount Crumpit, the red hero finds his enemy
+                  at the entrance of a cave.</p>
+                <p>"I know you would come and save your reindeers, my dear Santa! You will find them one by one by going
+                  down the cave, are you brave enough? Oh, I almost forgot: the only way out is by reaching the end of
+                  this place, otherwise you will be trapped in here forever and <i><b>Christmas will be no more!
+                      MUHUHUAHAHAHA</b></i></p>
+                <p>Santa has no choice than enter the cave. As soon as he does it, he hears some heavy iron bars falling
+                  down and closing the entrance of the cave: there's no way out.</p>
+                <p>After walking for some minutes, he finds Dasher closed in a magical cage.</p>
+                <h5 style="color:white">Can you help Santa open the cage? ejXc{O_osBa_y_OnOlrnJH}</h5>
+                <img src="crypto/hint2.jpg" style="object-fit: contain; max-width:600px;">
+                <a data-toggle="collapse" href="#exp2" role="button" aria-expanded="false" aria-controls="exp2"
+                  class="collapsed" data-parent="#accordion">
+                  <p><i><i class="fas fa-plus-circle"></i> Click for the solution</i></p>
+                </a>
+                <div class="panel-collapse collapse" id="exp2" data-parent="#accordion">
+                  <p>Knowing that flags are in the format flag{...}, it was easy to see that <code>f-1 > e</code>,
+                    <code>l-2 > j</code>, <code>a-3 > X ???</code>, <code>g-4 > c</code>
+                  </p>
+                  <p>The hint with the damaged piece of code is useful to understand that everything has been encrypted
+                    with some sort of incremental ROT. The code helps us retrieve the used alphabet.</p>
+                  <p>Flag: <code>flag{U_w1Ll_B_d3f3A7ed}</code></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="services-inner-box">
+              <div class="crypto-icon">
+                Level 3 - Dancer
+              </div>
+              <div id="accordion">
+                <h5 class="crypto-tag"> Problem category: Coding </h5>
+                <p>By riding Dasher, Santa Claus can rapidly get to Dancer. He can see him on the other edge of a cliff,
+                  of which he can't see the bottom.</p>
+                <p>He's too heavy to let Dasher jump over it, so he must use his magic to make a bridge appear...</p>
+                <h5 style="color:white">Can you help Santa? <a href="crypto/level3.pcap" target="_blank">Find the
+                    flag!</a></h5>
+                <p>Hint: you will need Wireshark for this level!</p>
+                <a data-toggle="collapse" href="#exp3" role="button" aria-expanded="false" aria-controls="exp3"
+                  class="collapsed" data-parent="#accordion">
+                  <p><i><i class="fas fa-plus-circle"></i> Click for the solution</i></p>
+                </a>
+                <div class="panel-collapse collapse" id="exp3" data-parent="#accordion">
+                  <p>The file, that we can open with Wireshark, contains data from a packet exchange. By going through
+                    them, we can see that the payload is always the same, apart from one character.</p>
+                  <p>By collecting the changing characters, we get:
+                    <code>ZmxhZ3tnckB0dWl0MHVzXzBwY09kZV8xc19BbHdAeXNfQTZ1U2VkX3QwX3AwMXMwbn0=</code>
+                  </p>
+                  <p>We get the flag by decoding it from Base64</p>
+                  <p>Flag: <code>flag{gr@tuit0us_0pcOde_1s_Alw@ys_A6uSed_t0_p01s0n}</code></p>
+                  <p>Credit for this level: <a href="https://cybertalents.com/" target="_blank">CyberTalents - Learn
+                      section</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="services-inner-box">
+              <div class="crypto-icon">
+                Level 4 - Prancer
+              </div>
+              <div id="accordion">
+                <h5 class="crypto-tag"> Problem category: Web </h5>
+                <p>Santa goes ahead with the rescued reindeers and suddenly finds Prancer. The poor one is blocked by a
+                  chain that is protected by the Grinch's dark magic.</p>
+                <h5 style="color:white">Do you have the power to help Santa? <a href="http://35.193.45.56/adminpower/"
+                    target="_blank">Find the flag!</a></h5>
+                <a data-toggle="collapse" href="#exp4" role="button" aria-expanded="false" aria-controls="exp4"
+                  class="collapsed" data-parent="#accordion">
+                  <p><i><i class="fas fa-plus-circle"></i> Click for the solution</i></p>
+                </a>
+                <div class="panel-collapse collapse" id="exp4" data-parent="#accordion">
+                  <p>By inspecting the source code of the web page, we can find a TO DO... comment with some
+                    credentials. We can use them to login and therefore we get a cookie. By using a cookie editor of our
+                    choice, we change the role inside it from support to admin. After that, by refreshing the page we
+                    get the flag.</p>
+                  <p>Flag: <code>flag{hiadminyouhavethepower}</code></p>
+                  <p>Credit for this level: <a href="https://cybertalents.com/" target="_blank">CyberTalents - Learn
+                      section</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="services-inner-box">
+              <div class="crypto-icon">
+                Level 5 - Vixen
+              </div>
+              <div id="accordion">
+                <h5 class="crypto-tag"> Problem category: Coding </h5>
+                <p>After a bit of walking, Santa suddenly finds himself in a huge hall. He can hear the tingling bell of
+                  Vixen, but can't see him. Suddenly Dasher, while moving towards the sound, is stopped by a magical
+                  barrier. Santa understands that the hall is just an illusion and he must use his magic to make it
+                  disappear.</p>
+                <h5 style="color:white">Do you have the magic to help Santa?<br>
+
+                  15345857135052644158 * x[0] mod 15914389274045831441 = 5496069744671762969<br>
+                  10107862342967460188 * x[1] mod 12471333000718257439 = 3739073456365071129<br>
+                  15514951512896411 * x[2] mod 11189085043185963643 = 1242686060606352731<br>
+                  4918093547848646552 * x[3] mod 14953553045254805869 = 13268233035734349332<br>
+                  9458472078791077712 * x[4] mod 16969044464796096757 = 21958310249273241<br>
+                  10389810153032407159 * x[5] mod 12219369241978883401 = 54658896139818136<br>
+                  10317166141181737080 * x[6] mod 11051035063490494121 = 3862128008828462065<br>
+                  4739071230119101568 * x[7] mod 12446419077417014895 = 1642093644961093455<br>
+                  5602877978471499087 * x[8] mod 17033822019842116078 = 4517971400919393232<br>
+                  6817739495547298027 * x[9] mod 9516363895804911673 = 3823736206019041030<br>
+                  6427678547440599488 * x[10] mod 15079736889469193431 = 6236168567896370319<br>
+                  9457480281190568299 * x[11] mod 10650632135951148921 = 4874572534414204388<br>
+                  3811243068786264022 * x[12] mod 17812647846133398533 = 3708424310874387741<br>
+                  <br>
+                  Flag format: chr(x[0]%256)+chr(x[1]%256)+...<br>
+                </h5>
+                <p>Hint: from Crypto.Util.number import inverse</p>
+                <a data-toggle="collapse" href="#exp5" role="button" aria-expanded="false" aria-controls="exp5"
+                  class="collapsed" data-parent="#accordion">
+                  <p><i><i class="fas fa-plus-circle"></i> Click for the solution</i></p>
+                </a>
+                <div class="panel-collapse collapse" id="exp5" data-parent="#accordion">
+                  <p>We need to solve the modular equations.</p>
+                  <p>Flag: <code>flag{U_f0und_V1X3N}</code></p>
+                  <p>Possible code:</p>
+                  <pre style="color: #afafaf;"><code>
+                    from Crypto.Util.number import inverse
+                    import numpy as np
+                    
+                    fh = open(&quot;vixen.txt&quot;,&#39;r&#39;)
+                    all_lines = fh.readlines()
+                    fh.close()
+                    
+                    a = []
+                    n = []
+                    b = []
+                    
+                    for line in all_lines:
+                        val = line.split()
+                        a.append(val[0])
+                        n.append(val[4])
+                        b.append(val[6])
+                        print(line)
+                    
+                    x = &#39;&#39;
+                    
+                    for i in range(len(a)):
+                        x1 = (inverse(int(a[i]),int(n[i])) * int(b[i])) % int(n[i])
+                        x2 = x1%256
+                        print(x2)
+                        x = x + chr(x2)
+                    
+                    output = open(&quot;output.txt&quot;, &#39;w&#39;)
+                    output.write(x)
+                    output.close()
+                    </code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="services-inner-box">
+              <div class="crypto-icon">
+                Level 6 - Comet
+              </div>
+              <div id="accordion">
+                <h5 class="crypto-tag"> Problem category: Crypto </h5>
+                <p>After breaking the barrier, Santa is reunited to Vixen and can continue the rescue. Suddenly he hears
+                  a sound... Its <i>reindeer-ish</i>!</p>
+                <h5 style="color:white">Can you translate it? ;;.; ;.;; ;. ..; ? ;; ;;; ? .;.. ... ;;. ? ;;.; ... ;;. .;
+                  .;; ? .;.; ... .. ; . .;.;.. ?</h5>
+
+                <a data-toggle="collapse" href="#exp6" role="button" aria-expanded="false" aria-controls="exp6"
+                  class="collapsed" data-parent="#accordion">
+                  <p><i><i class="fas fa-plus-circle"></i> Click for the solution</i></p>
+                </a>
+                <div class="panel-collapse collapse" id="exp6" data-parent="#accordion">
+                  <p>It is just a morse code, where <code>.</code> is replaced with <code>;</code> and <code>-</code> is
+                    replaced by <code>.</code> ... Easy, right? <code>?</code> are there only to bother you.</p>
+                  <p>Since we don't have spaces in out flags, we replace them with <code>_</code></p>
+                  <p>Flag: <code>flag{you_found_comet!}</code></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="services-inner-box">
+              <div class="crypto-icon">
+                Level 7 - Cupid
+              </div>
+              <div id="accordion">
+                <h5 class="crypto-tag"> Problem category: Coding </h5>
+                <p>By now, Santa is halfway through its rescue and is quite surprised by how easily he got there. His
+                  doubts are dispelled when he finds 10 identical copies of Cupid, while a gloomy voice affirms "Chose
+                  the wrong one and the others will transform in hungry bears!"</p>
+                <h5 style="color:white">Can you find the detail? <a href="crypto/Cupid1.zip" target="_blank">Try it!</a>
+                </h5>
+
+                <a data-toggle="collapse" href="#exp7" role="button" aria-expanded="false" aria-controls="exp7"
+                  class="collapsed" data-parent="#accordion">
+                  <p><i><i class="fas fa-plus-circle"></i> Click for the solution</i></p>
+                </a>
+                <div class="panel-collapse collapse" id="exp7" data-parent="#accordion">
+                  <p>Inside Cupi1.zip (the file you download) there are 2 <i>almost</i> identical images, an incomplete
+                    python script and a password protected zip (Cupid2.zip).</p>
+                  <p>The code executes a bruteforce to find the password of the internal zip, whose format appears to be
+                    <code>xyr1g1b1r2g2b2</code>. It is clear that it has something to do with the images.</p>
+                  <p>It is possible to run the bruteforce, but it may take a lot of time.</p>
+                  <p>The solution to this lies in the fact that, from the password format, we can understand that we are
+                    looking for a particular pixel that changes color between the two "identical" images.</p>
+                  <p>By opening the last zip, we find the flag to access the next level.</p>
+                  <p>Flag: <code>flag{L3Ts_F1nD_D0nN3R}</code></p>
+                  <p>Possible code:</p>
+                  <pre style="color: #afafaf;"><code class='language-python' lang='python'>
+                    import  numpy as np
+                    import cv2
+                    from zipfile import ZipFile
+                    
+                    for i in range(1,11):
+                    
+                        i1 = &#39;&#39;
+                        i2 = &#39;_b&#39;
+                    
+                        i1 = str(i) + i1 + &#39;.png&#39;
+                        i2 = str(i) + i2 + &#39;.png&#39;
+                    
+                        img1 = cv2.imread(i1)
+                        img2 = cv2.imread(i2)
+                        w1, h1 = img1.shape[:2]
+                        # w2, h2 = img2.shape[:2]
+                        img2_flip = img2
+                        img2_rot = img2
+                        
+                        indices = np.where(img1 != img2)
+                        x = indices[0].tolist()[0]
+                        y = indices[1].tolist[0]
+                    
+                        password = &#39;&#39; + str(x) + str(y)
+                    
+                        r1 = img1[y,x,2]
+                        g1 = img1[y,x,1]
+                        b1 = img1[y,x,0]
+                        r2 = img2[y,x,2]
+                        g2 = img2[y,x,1]
+                        b2 = img2[y,x,0]
+                    
+                        rgb1 = &#39;{:0{}X}&#39;.format(r1, 2) + &#39;{:0{}X}&#39;.format(g1, 2) + &#39;{:0{}X}&#39;.format(b1, 2)
+                        rgb2 = &#39;{:0{}X}&#39;.format(r2, 2) + &#39;{:0{}X}&#39;.format(g2, 2) + &#39;{:0{}X}&#39;.format(b2, 2)
+                    
+                        password = b&#39;&#39; + password + rgb1 + rgb2
+                    
+                        print(password)
+                    
+                        zip_file = &#39;Cupid&#39; + str(i+1) + &#39;.zip&#39;
+                        with ZipFile(zip_file) as z:
+                            z.extractall(pwd=password)
+                        
+                    </code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="services-inner-box">
+              <div class="crypto-icon">
+                Level 8 - Donner
+              </div>
+              <div id="accordion">
+                <h5 class="crypto-tag"> Problem category: Web </h5>
+                <p>Obvioiusly Santa had no trouble in indentifying his dear Cupid. The hero is easily advancing in his
+                  mission and he easily finds also Donner. The Grinch loses its pationce and decides to play dirty: he
+                  uses his magic to cause a rockslide and stop Santa.</p>
+                <h5 style="color:white"> <a href="http://34.77.37.110//encrypted-database/" target="_blank">Help Santa
+                    breach the rockslide!</a></h5>
+                <a data-toggle="collapse" href="#exp8" role="button" aria-expanded="false" aria-controls="exp8"
+                  class="collapsed" data-parent="#accordion">
+                  <p><i><i class="fas fa-plus-circle"></i> Click for the solution</i></p>
+                </a>
+                <div class="panel-collapse collapse" id="exp8" data-parent="#accordion">
+                  <p>SQL injection doesn't work and we can't find any other useful vulnerability.</p>
+                  <p>Anyway, by inspecting the source code, we can notice
+                    <code>&lt;script src=&quot;secret-admin/assets/app.js&quot;&gt;&lt;/script&gt;</code></p>
+                  <p>Let's try to explore it! </p>
+                  <p>At /app.js we find some javascript code - nothing interesting.</p>
+                  <p>At /assets, we don't have permissions.</p>
+                  <p>At /secret-admin, we find a login form: interesting, but once again there's no hope of using SQL
+                    injection.</p>
+                  <p>Again, by having a look at the source code, we can notice an hidden field:
+                    <code>&lt;input type=&quot;hidden&quot; name=&quot;db&quot; value=&quot;hidden-database/db.json&quot; /&gt;</code>.
+                    If we navigate towards http://34.77.37.110//encrypted-database/secret-admin/hidden-database/db.json,
+                    we can retrieve the flag! We can easily see that is hashed, we just need to use the same website
+                    from Level 1</p>
+                  <p>Flag: <code>flag{badboy}</code></p>
+                  <p>Credit for this level: <a href="https://cybertalents.com/" target="_blank">CyberTalents - Learn
+                      section</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="services-inner-box">
+              <div class="crypto-icon">
+                Level 9 - Blitzen
+              </div>
+              <div id="accordion">
+                <h5 class="crypto-tag"> Problem category: Crypto </h5>
+                <p>Now only Blitzen and Rudolph are missing. After opening a way through the rockslide, Santa and his
+                  reindeers go ahead until they can see Blitzen. They are almost reunited, when an ice golem appears
+                  between them!</p>
+                <h5 style="color:white">Can Santa defeat the golem? <a href="crypto/blitzen.zip" target="_blank">Help
+                    him!</a></h5>
+
+                <a data-toggle="collapse" href="#exp9" role="button" aria-expanded="false" aria-controls="exp9"
+                  class="collapsed" data-parent="#accordion">
+                  <p><i><i class="fas fa-plus-circle"></i> Click for the solution</i></p>
+                </a>
+                <div class="panel-collapse collapse" id="exp9" data-parent="#accordion">
+                  <p>We need to retrieve the plaintext by using RSA. Follows one way to do it.</p>
+                  <p>In a Linux terminal: <code>openssl rsa -noout -text -in key.pem</code>. We convert from hex to dec:
+                    <code>privateExponent</code>, <code>prime1</code>, <code>prime2</code>.</p>
+                  <p>Then we can use the following code:</p>
+                  <pre style="color: #afafaf;"><code class='language-python' lang='python'>
+                    from Crypto.Util.number import inverse, long_to_bytes
+                    import binascii
+                    
+                    p = 13320748866201356181344166184421375497515625622316425506199081642260132991766218637808281734634788900326296409095792329843375057734871609874138905359078279
+                    q = 12586544580050654069851761426383855110824433050042398629881778466506902639279324122929784337688335994244229757862628435521142421664152251599853729381586747
+                    
+                    n = p * q
+                    e = 65537
+                    d = 62578162879017853830660563082521971365342607056758283991897166652869268968888168009118202924611794330146233439030831919998733753664688913801556055028409982828860875451021890220425040859863493473806287464347848206762380343020116142209477531891891864739024221989238967412493437405671342666020751878164378277037
+                    
+                    with open(&#39;cipher&#39;, &#39;rb&#39;) as file:
+                        hexdata = binascii.hexlify(file.read())
+                    
+                    ct = int(hexdata, 16)
+                    message = pow(ct, d, n)
+                    
+                    print(long_to_bytes(message))
+                    </code></pre>
+                  <p>Where:
+                  <ul>
+                    <li><code>p = prime1</code></li>
+                    <li><code>q = prime2</code></li>
+                    <li><code>d = privateExponent</code></li>
+
+                  </ul>
+                  </p>
+                  <p>The output is:</p>
+                  <pre style="color: #afafaf;"><code>b&#39;\x02\xe0l\xcdikt\xf0\x18^l\n(\xed\x94\xb9\x9dA\\`\xe4:\xa4;\rY\xdb\x08\xa6B\xa0*F{H\x81\xfc\xdf\xf8\xf3\xa5\xca\xb0\xa0\xc2\xe9\xf5sM }\x98\x14\x88p1P\x9a\xf4\x9e\x1bs\xa9\x86\x1d\x15\xfclU \x85\xf4\xb5\xc2\x1b\x88\\\x85\xcb\xe3;\xd6Vu\xc3e#9Fy\x8c\x0e\xd6s\x9a \x0emv\xddoN\xae\x96\x0c\xa1\xd0\x00flag{RSA_nice_try}\n&#39;
+                  </code></pre>
+                  <p>Flag: <code>flag{RSA_nice_try}</code></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="services-inner-box">
+              <div class="crypto-icon">
+                Level 10 - Rudolph
+              </div>
+              <div id="accordion">
+                <h5 class="crypto-tag"> Problem category: Crypto </h5>
+                <p>With lots of effort, Santa manages to melt the ice golem, but his lantern went out, and the hero and his magical reindeers are now stumbling around in the dark. Lucky them, Rudolph, the red-nosed reindeer, hears the sound of the bells and starts running towards them, lighting up the cave with his bright nose.</p>
+                <p>Suddenly a magical rope appears and starts strangling the poor animal: Santa must again use his magic.</p>
+                <h5 style="color:white">Santa is really tired, can you help him? <a href="crypto/rudolph.zip" target="_blank">Of course you can!</a></h5>
+
+                <a data-toggle="collapse" href="#exp10" role="button" aria-expanded="false" aria-controls="exp10"
+                  class="collapsed" data-parent="#accordion">
+                  <p><i><i class="fas fa-plus-circle"></i> Click for the solution</i></p>
+                </a>
+                <div class="panel-collapse collapse" id="exp10" data-parent="#accordion">
+                  <p>rudolph.py shows the encryption algorithm: we must reverse it in order to get the plain text.</p>
+                  <p>The following is the decryption code we should get by "reversing" the encryption:</p>
+                  <pre style="color: #afafaf;"><code class='language-python' lang='python'>
+                    def decrypt(block):
+                    a, b, c, d = unpack(&quot;&lt;4I&quot;, block)
+                    for i in range(32):
+                        # decrypting the second step in encrypt
+                        tempa = a
+                        d = d ^ 1337
+                        a = c ^ (F(d | F(d) ^ d))
+                        b = b ^ (F(d ^ F(a) ^ (d | a)))
+                        c = tempa ^ (F(d | F(b ^ F(a)) ^ F(d | b) ^ a))
+                        # decrypting the frist step in encrypt
+                        tempa = a
+                        a = d ^ 31337
+                        d = c ^ (F(a | F(a) ^ a))
+                        c = b ^ (F(a ^ F(d) ^ (a | d)))
+                        b = tempa ^ (F(a | F(c ^ F(d)) ^ F(a | c) ^ d))
+                    return pack(&quot;&lt;4I&quot;, a, b, c, d)
+                
+                    ct = open(&quot;flag.txt&quot;, &quot;rb&quot;).read()
+                    pt = decrypt(ct)
+                    print(str(pt))
+                </code></pre>
+                  <p>Flag: <code>flag{reindeers}</code></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="services-inner-box">
+              <div class="crypto-icon">
+                Level 11 - THE GRINCH
+              </div>
+              <div id="accordion">
+                <h5 class="crypto-tag"> Problem category: Crypto </h5>
+                <p>As Santa already expected, the Grinch broke the pact: there's no way out at the end of the cave. The hero tries to go back to the entrance together with his reindeers, but the cave starts collapsing.</p>
+                <h5 style="color:white">Will Santa be able to draw all his magical energies and finally save Christmas? <a href="crypto/grinch.zip" target="_blank">Help him defeat the Grinch!</a></h5>
+
+                <a data-toggle="collapse" href="#exp11" role="button" aria-expanded="false" aria-controls="exp11"
+                  class="collapsed" data-parent="#accordion">
+                  <p><i><i class="fas fa-plus-circle"></i> Click for the solution</i></p>
+                </a>
+                <div class="panel-collapse collapse" id="exp11" data-parent="#accordion">
+                  <p>The zip contains an encrypted file and the encryption algorithm. By having a look at it, we can understand that it's a kind of "triple" RSA.</p>
+                  <p>As a first step, we need to factorize <code>N</code>, so to retrieve three prime numbers:
+                    <ul>
+                      <li><code>p1 = 6980725708436535193</code></li>
+                      <li><code>p2 = 12560041438154300011</code></li>
+                      <li><code>p3 = 335045466549163140819709404768107130979</code></li>
+                      
+                      </ul>
+                  </p>
+                  <p>Then, we follow the RSA algorithm, so we compute:
+                    <ul>
+                      <li><code>phi = (p1 - 1) * (p2 - 1) * (p3 - 1)</code></li>
+                      <li><code>D = [inverse(E[0], phi), inverse(E[1], phi), inverse(E[2], phi)]</code> (E era fornito nel codice)</li>
+                      </ul>
+                  </p>
+                  <p>And finally we get the decryption function: <code>pt = pow(pow(pow(ct, D[2], N)-1, D[1], N)-1, D[0], N)</code>
+                  </p>
+                  <p>As a last step, we must convert the plaintext <a href='https://onlineasciitools.com/convert-decimal-to-ascii'>from dec to ascii</a>.</p>
+                  <p>Flag: <code>flag{U_D3f3AteD_th3_Gr1NcH}</code></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="services-inner-box">
+              <div class="crypto-icon">
+                Epilogue
+              </div>
+              <div id="accordion">
+                <h5 class="crypto-tag"></h5>
+                <p>Thanks to the magic of Christmas (and you!), Santa is able to save himself and the reindeers from the collapsing cave! Unluckily, the defeated Grinch got away before the red hero could face him, what a sore loser!</p>
+                <h5 style="color:white">Congratulations, you saved Christmas!</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <p>Are you curious to try the whole game?</p>
+            <a class="btn btn-primary" href="crypto/TheXmasRescue.zip" target="_blank" role="button" style="background-color: #e84855;">Download the complete CryptoChallenge!</a>
+            <p>This is the exact same zip file that participants faced during the official event.</p>
+            <p>The winners were able to solve all levels in 3 hours and 25 minute, with a total of 1180 points (1050 from the levels, 30 bonus points after level 4, 10 after level 7, 30 after level 10 and finally 60 points after level 11).</p>
+            <p>The team who classified second finished the challenge in 3 hours and 41 minutes, with a total of 1140 points (1050 from the levels, 10 after level 4, 30 after level 7, 20 after level 10, 30 after level 11).</p>
+            <p>The third classified needed 3 hours and 50 minutes to solve everything, with a total of 1110 points (1050 from levels, 20 after level 4, 20 after level 7, 10 after level 10, 10 after level 11).</p>
+            <p>There were other 3 teams participating: of these, the best one solved up to level 6 and achieved 375 points.</p>
+            <p>Could you end up on the podium? If yes, I'm happy if you let me know!</p>
+          </div>
+          <div class="col-md-12" style="text-align: center;">
+            <p>Some of the participants with their super cute little trophies 😄</p>
+            <img src="crypto/groupphoto.jpg" style="object-fit: contain; max-width:1000px;">
+          </div>
+
+        </div>
+
+        
+      </div><!-- end messagebox -->
+
+    </div>
+  </div>
+
+
+
+
+  <div class="py-5" style="background-color: #222;" id="contacts">
+    <div class="container">
+      <br><br>
+      <h1 class="display-4" style="color:#ddd">Contacts</h1>
+      <p style="color:white;"><span class="fas fa-map-marker-alt text-light fa-lg mx-2"></span> Currently based in:
+        Trento, Italy<br>
+        <a href="mailto:laura.scoccianti@gmail.com" style="color:#e84855;"><span
+            class="fa fa-envelope text-light fa-lg mx-2"></span> laura.scoccianti@gmail.com</a><br>
+        <a href="https://t.me/laurascotch" style="color:#e84855;"><span
+            class="fa fa-paper-plane text-light fa-lg mx-2"></span> Telegram: @laurascotch</a>
+        <br>
+        <a href="https://github.com/laurascotch" style="color:#e84855;">
+          <span class="fa fa-github text-light fa-lg mx-2"></span> /laurascotch
+        </a> <br>
+      </p>
+      <br><br>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+
+
+</body>
+
+
+
+
+</html>
