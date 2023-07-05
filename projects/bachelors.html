@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Portfolio Details - Personal Bootstrap Template</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="../assets/img/favicon.png" rel="icon">
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: Personal
+  * Updated: Jun 18 2023 with Bootstrap v5.3.0
+  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+    <main id="main">
+
+        <!-- ======= Portfolio Details ======= -->
+        <div id="portfolio-details" class="portfolio-details">
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-lg-8">
+                        <h2 class="portfolio-title">Studio e sviluppo di un protocollo di comunicazione per servizi non verbali per dispositivi "wearable"
+                            <br><i>Development of a communication protocol for wearable devices for non verbal communication</i></h2>
+
+                        <h3 class="">Abstract</h3>
+                        <p class=""> The aim of the project, which was developed during the internship at Fondazione Bruno Kessler (Trento), is to develop a network of wearable devices in support of basic communication between climbers.
+                            <br> Someone before me had started to work on the project, achieving a one-one communication (like walkie-talkies). The main objective of my work was to overcome the limitations of standard radios, by developing a protocol
+                            able to achieve message relaying between devices.<br> Such modifications to the existing software triggered a phase of re-design of the hardware and of human-machine interaction.</p>
+
+                        <h3>The importance of communication in climbing</h3>
+                        <p>Communication has a fundamental importance in many activities. Verbal communication is considered the easiest and fastest, but this isn't always true.<br>The biggest difficulties involve the distance, the presence of physical obstacles
+                            or of some particular noisy events between speakers.<br><br>A real life example of these problems can be observed in climbing. In this sport, communication plays a key role in coordinating belaying operations between climbers.
+                            <br></p>
+                        <h4>Existing solutions</h4>
+                        <p>
+                            A common approach for nonverbal communication between climbers is the use of rope tugs. Unfortunately, this system introduces a significant amount of ambiguity.<br> Radios can be used too, but they have some drawbacks like
+                            weight and costs. More over, they couldn't be able to cover long distances or to deliver a good transmission clarity if there's a huge rock obstacle between the communicating devices.
+                        </p>
+                        <p>Speaking about smartphones (and smartwatches), the main problem is that many climbing environments don't have adequate telephone or internet/4G coverage.</p>
+                        <p><i>If you want to know more about communication in climbing, I suggest you read <a
+                  href="https://americanalpineclub.org/resources-blog/2017/1/19/4xm1fcsag6b7xqf1p1w1qp7vdpp1ha">this article</a>.</i></p>
+                        <h4>Environmental issues</h4>
+                        <img class="card-img-top" src="../assets/img/portfolio/bachelor/passamex-01.png" style="height: 30rem; width: auto; background-color: white">
+                        <p class="">One of the main problems with radios is the impossibility to communicate between A and C because of the rock obstacle. The developed protocol enables the communication between them by using a third device (B) as an intermediate
+                            hop in the network.</p>
+                        <h3 class="">Ad hoc protocol - Main features</h3>
+                        <p class="">The protocol, which guarantees message relaying, is based upon a sequence number controlled flooding mechanism. The picture shows the flow diagram of the algorithm used for retransmissions. </p>
+                        <p>Every node of the network keeps a counter (sequence) that is incremented at each message sent. Every node also keeps a data structure in which it saves the pair &lt;source_ID, sequence_number&gt;, where the sequence number is the
+                            last one received from that particular source. When a devices receives a message, checks if the destination ID is equal to its own ID, than checks for the sequence number to be newer that the last from the source device and
+                            decides if the message needs to be displayed, retransmitted in broadcast (after a random time of maximum 500ms), or dropped.<br><b>More details can be found in the full PDF (written in Italian).</b></p>
+
+                    </div>
+
+                    <div class="col-lg-4 portfolio-info">
+                        <h3>Project information</h3>
+                        <ul>
+                            <li><strong>Category</strong>: Networks and embedded programming</li>
+                            <li><strong>Context</strong>: Bachelor's Degree in Computer Science</li>
+                            <li><strong>Project date</strong>: March to June, 2019</li>
+                            <li><strong>Full text</strong>: <a href="https://drive.google.com/file/d/1aVmgsGG_uPFsSV-A_G8pGmN_w7o3Tdif/view?usp=sharing" target="_blank">PDF (Italian)</a></li>
+                        </ul>
+
+                        <p>
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- End Portfolio Details -->
+
+    </main>
+    <!-- End #main -->
+
+    <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/personal-free-resume-bootstrap-template/ -->
+        Template by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+
+    <!-- Vendor JS Files -->
+    <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="../assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
